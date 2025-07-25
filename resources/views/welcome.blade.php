@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{ asset('images/ite.ico') }}" type="image/x-icon">
-    <title>Búsqueda de Colegios</title>
+    <title>Colegios en Bolivia | Mapa Educativo con Geolocalización</title>
+    <meta name="description" content="Mapa interactivo de colegios en Bolivia con datos de ubicación, distritos y códigos RUE. Encuentra escuelas por departamento.">
+    <meta name="keywords" content="colegios Bolivia, mapa educativo, geolocalización escuelas, RUE Bolivia">
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
+
     <!-- Tailwind CDN para pruebas rápidas, para producción usa instalación local -->
     <script src="https://cdn.tailwindcss.com"></script>
 

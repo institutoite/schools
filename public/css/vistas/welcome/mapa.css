@@ -22,3 +22,43 @@
             margin: 0 0 5px;
             color: #777;
         }
+       /* Estilo para el popup transparente */
+        .transparent-popup {
+            background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con 80% de opacidad */
+            backdrop-filter: blur(5px); /* Efecto de desenfoque (opcional) */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        /* Estilo para el texto dentro del popup */
+        .transparent-popup h4, 
+        .transparent-popup b, 
+        .transparent-popup br {
+            color: #333; /* Color de texto oscuro para mejor legibilidad */
+            margin: 5px 0;
+        }
+
+        /* Opcional: Ajustar el tamaño máximo del popup */
+        .transparent-popup {
+            max-width: 300px; /* Evita que el popup sea demasiado ancho */
+        }
+        /* Fondo transparente del contenedor principal del popup */
+        .leaflet-popup-content-wrapper {
+            background: rgba(255, 255, 255, 0.01) !important; /* Fondo semi-transparente */
+            backdrop-filter: blur(5px) !important; /* Efecto de vidrio */
+            border-radius: 10px !important;
+            box-shadow: none !important; /* Opcional: elimina la sombra predeterminada */
+        }
+
+        /* Contenedor del contenido (elimina fondos sólidos) */
+        .leaflet-popup-content {
+            background: transparent !important;
+            margin: 0 !important; /* Elimina márgenes predeterminados */
+        }
+
+        /* Flecha del popup (opcional) */
+        .leaflet-popup-tip {
+            background: rgba(255, 255, 255, 0.01) !important;
+            backdrop-filter: blur(5px) !important;
+        }

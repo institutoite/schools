@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha de Colegio</title>
+    <link rel="icon" href="{{ asset('images/ite.ico') }}" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -182,7 +183,7 @@
         </div>
 
         @php
-            $direccion="https://maps.google.com/?q=".$school->ubicacion->latitud.",".$school->ubicacion->longitud."&z=5&t=k";
+            $direccion="https://maps.google.com/?q=".$school->ubicacion->latitud.",".$school->ubicacion->longitud."&z=12&t=k";
             
         @endphp
 
@@ -191,7 +192,7 @@
             <div class="text-center mt-6">
                 <a target="_blank" href="{{$direccion}}" target="_blank"
                    class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-bold shadow hover:bg-secondary transition">
-                    <i class="fas fa-file-pdf"></i> Ver Ubicación
+                    <i class="fa-solid fa-location-dot fa-beat"></i> Ver Google Maps
                 </a>
             </div>
         @endif
@@ -452,13 +453,16 @@
             // 4. VENTANA EMERGENTE (POPUP) TRANSPARENTE
             colegioMarker.bindPopup(`
                 <div class="transparent-popup">
-                    <h4>Colegio Ejemplo</h4>
-                    <b>Ubicación:</b> Santa Cruz de la Sierra<br>
+                    <h4><b>Colegio:</b>${schoolData.nombre}</h4>
+                    <b>Departamento:</b> ${schoolData.ubicacion.departamento} <br>
+                    <b>Provincia:</b> ${schoolData.ubicacion.provincia} <br>
+                    <b>Municipio:</b> ${schoolData.ubicacion.municipio} <br>
+                    <b>Distrito:</b> ${schoolData.ubicacion.distrito} <br>
                     <b>Coordenadas:</b><br>
-                    Latitud: ${colegioCoords[0].toFixed(6)}<br>
-                    Longitud: ${colegioCoords[1].toFixed(6)}<br>
-                    <b>RUE:</b> 987654<br>
-                    <b>Nivel:</b> Secundaria
+                    <b>Latitud:</b> ${colegioCoords[0].toFixed(6)}<br>
+                    <b>Longitud:</b> ${colegioCoords[1].toFixed(6)}<br>
+                    <b>RUE:</b> ${schoolData.codigo_rue}<br>
+                    <b>Nivel:</b> ${schoolData.niveles}<br>
                 </div>
             `, {
                 className: 'transparent-popup'  // Aplicamos nuestra clase CSS personalizada

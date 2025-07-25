@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{ asset('images/ite.ico') }}" type="image/x-icon">
     <title>Búsqueda de Colegios</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
     <!-- Tailwind CDN para pruebas rápidas, para producción usa instalación local -->
     <script src="https://cdn.tailwindcss.com"></script>
 

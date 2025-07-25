@@ -1,0 +1,2878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
+	<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+		<Author/>
+		<Title/>
+		<Description/>
+		<Subject/>
+	</DocumentProperties>
+	<Styles>
+		<Style ss:ID="HyperlinkId" ss:Name="Hyperlink">
+			<Font ss:Color="#0000ff"/>
+		</Style>
+		<Style ss:ID="1">
+			<NumberFormat ss:Format="yyyy-M-d HH:mm:ss AM/PM"/>
+		</Style>
+		<Style ss:ID="31">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="36">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="30">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="34">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="33">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="28">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="sans-serif" ss:Size="10.0" ss:Color="#000000"/>
+			<NumberFormat ss:Format="[$-C0A]d/M/yyyy"/>
+		</Style>
+		<Style ss:ID="21">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Bold="1" ss:Color="#ffffff"/>
+			<Interior ss:Color="#808080" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="24">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="26">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="32">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="22">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="29">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="sans-serif" ss:Size="10.0" ss:Color="#000000"/>
+			<NumberFormat ss:Format="[$-C0A]d/M/yyyy"/>
+		</Style>
+		<Style ss:ID="20">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Bold="1" ss:Color="#ffffff"/>
+			<Interior ss:Color="#808080" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="25">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="27">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="35">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="23">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+	</Styles>
+	<Names>
+		<NamedRange ss:Name="__bookmark_1" ss:RefersTo="Report!R1C1:R83C10"/>
+	</Names>
+
+<Worksheet ss:Name="Report">
+	<ss:Table>
+		<ss:Column ss:Width="75.52" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.52" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.52" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.52" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="21">
+				<Data ss:Type="String">DISTRITO</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="21">
+				<Data ss:Type="String">CÓDIGO</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="21">
+				<Data ss:Type="String">NOMBRE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="21">
+				<Data ss:Type="String">EDUCACIÓN</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="21">
+				<Data ss:Type="String">DEPENDENCIA</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="21">
+				<Data ss:Type="String">RESOLUCIÓN</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="21">
+				<Data ss:Type="String">FECHA DE RESOLUCIÓN</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="21">
+				<Data ss:Type="String">ZONA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="21">
+				<Data ss:Type="String">DIRECCIÓN</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="21">
+				<Data ss:Type="String">ESTADO</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470003</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MODESTO OMISTE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 093/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-17T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">2</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">25 DE JUNIO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470040</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CHIRIHUANA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 054/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-14T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CHIRIHUANA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CHIRIHUANA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470056</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">USTAYA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 094/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">USTAYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">USTAYA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470050</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">JANCOLAYME</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 067/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">JANCOLAYME</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">JANCOLAYME</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470052</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN JOSE DE IRPA IRPA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 098/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">IRPA IRPA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">IRPA IRPA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470085</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ACOPARAYA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">025/2007</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2007-02-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">AKOPARAYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AKOPARAYA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470069</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">RAFAEL BUSTILLOS A</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 084/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ZONA 4</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE COLQUECHACA S/N</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470054</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">TUPAC KATARI DE BELEN</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 066/2011</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2011-02-14T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CMD. BELEN</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CMD. BELEN</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470013</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">URURUMA ALTA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 082/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">URURUMA ALTA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">URURUMA ALTA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470044</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LAGUNILLAS</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 125/09</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-06-09T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LAGUNILLAS</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">LAGUNILLAS</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470021</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PISTA CALAZAYA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0105/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PISTA CALASAYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PISTA CALASAYA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470043</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CALA CHULLPA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0101/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CALA CHULLPA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALA CHULLPA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470059</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">WATARIA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0113/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-21T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">WATARIA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">WATARIA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470004</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">EDUARDO ABAROA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 060/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">8</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CAMPAMENTO MIRAFLORES</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470015</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">RAMARANI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 062/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">RAMARANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">RAMARANI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470037</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CHILLCA PALCA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 056/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SOCAYAPU</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CHILLCA PALCA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470063</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CATARFAYA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 059/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CATARFAYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CATARFAYA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470041</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LAJRAHUISA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0102/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LAJRAHUISA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">LAJRAHUISA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470074</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">NÚCLEO TECNOLÓGICO PRODUCTIVO RAFAEL BUSTILLO UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 221/2021</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2021-07-29T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ZONA 4</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">Calle Colquechaca ente calvimontes y Sainz s/n Uncía</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470023</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">JAYO JAYO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 074/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">JAYO JAYO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">JAYO JAYO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470019</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MARACA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 061/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MARACA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">MARACA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470053</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MIKANI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 326/2013</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2013-06-28T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MIKANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">Comunidad Mikani</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470031</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">TARUHUTA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 077/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">TARUHUTA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">TARUHUTA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470049</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">TORORIA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 068/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">TORORIA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">TORORIA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470012</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">URURUMA BAJA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 088/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-17T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">URURUMA BAJA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">URURUMA BAJA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470079</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">IRPA IRPA ALTA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0115/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-23T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">IRPA IRPA ALTA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">IRPA IRPA ALTA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470007</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">RAFAEL BUSTILLOS C</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 091/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-17T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ZONA 4</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE COLQUECHACA S/N</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470087</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MARIA AYMA MAMANI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 060/2022</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2022-02-23T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ZON N° 11</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470028</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">JUNTUMA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 102/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-02-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">JUNTUMA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">JUNTUMA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470006</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">INDEPENDENCIA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 222/2023</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2023-06-13T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">1</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">UNCIA CALLE 4 DE JUNIO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470073</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PALCOTA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 078/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PALCOTA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PALCOTA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470018</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">HUAYLLANI CHICO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">1900-01-01T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">HUAYLLANI CHICO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">HUAYLLANI CHICO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470032</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">HUACUTA A</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 072/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">HUACUTA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">HUACUTA  "A"</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470064</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">VILA VILA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 100/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-02-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">VILA VILA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">VILA VILA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470081</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN ANTONIO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 521/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-10-21T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">POTOSI - ORURO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALA CALA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470035</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MOROCOMARCA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 225/2023</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2023-06-13T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MOROCOMARCA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">MOROCOMARCA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470057</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">HUACUTA B</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0120/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-23T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">HUACUTA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">HUACUTA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470001</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ADELA ZAMUDIO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 075/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">2</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PLAZA ANTOFAGASTA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470045</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PATA PATA GRANDE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0119/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-23T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PATA PATA GRANDE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PATA PATA GRANDE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470033</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PAIRUMANI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0107/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PAIRUMANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PAIRUMANI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470072</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">KAROJO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 085/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-17T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD KAROJO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">KAROJO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470010</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">COLCOMA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0100/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ALTA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">COLCOMA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470047</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">TIRANI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 052/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-14T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">TIRANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">TIRANI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470027</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CHULLUNQUIANI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 066/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CHULLUNQUIANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CHULLUNQUIANI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470026</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">JACHOJO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 065/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">JACHOJO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">JACHOJO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470066</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">THAYOMA PALCA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 101/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-02-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">THAYOMA PALCA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">THAYOMA PALCA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470034</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PAMPAJASI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0106/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PAMPAJASI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PAMPAJASI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470016</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CALAZAYA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 063/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CALAZAYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALAZAYA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470025</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CHOCO CHICO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">1900-01-01T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CHOCOHUA Y LLAMARCA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CHOCO CHICO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470005</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 537/2016</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2016-10-07T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">4</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">COLQUECHACA S/N</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470077</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CHIROYA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 98/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-02-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CHIROYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CHIROYA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470060</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">COCHI COCHI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 274/2022</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2022-08-08T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COCHI COCHI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">COCHI COCHI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470051</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ISMAEL MONTES</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 086/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-17T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CHUQUIHUTA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CHUQUIHUTA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470082</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PABLO ZARATE VILLCA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0110/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CHUQUIHUTA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CHUQUIHUTA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470024</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LAHUA LAHUA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0103/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LAHUA LAHUA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">LAHUA LAHUA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470048</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">21 DE SEPTIEMBRE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 051/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-14T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ESQUENCACHI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ESQUENCACHI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470030</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">TOMOYO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0108/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">TOMOYO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">TOMOYO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470062</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">KAÑUPACHA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0112/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-21T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">KAÑUPACHA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">KAÑUPACHA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470014</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">YAURIRI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 081/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">YAURIRI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470017</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">HUAYLLANI GRANDE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">1900-01-01T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470029</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CHOCO GRANDE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0109/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CHOCO GRANDE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CHOCO GRANDE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470084</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PAYRUMANI CALA CALA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 226/2022</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2022-07-27T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PAIRUMANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA THACOPALCA-VILLA ALCARAPI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470046</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MCAL. SUCRE PATAPATA CHICO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 053/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-14T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PATA PATA CHICO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PATA PATA CHICO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470038</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">KARA KARA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 055/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-14T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">BAJA DE LA COMUNIDAD</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">KHARA KHARA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470009</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">NEQUERI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 070/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ÑEQUERI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">La unidad educativa se halla a lado derecho del Regimiento "Illimani" 21 de infantería</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470002</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">JUANA AZURDUY DE PADILLA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A.169/2022</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2022-05-23T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">4</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">MANUEL BENAVENTE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470086</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MARK'AWI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">027/2007</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2007-02-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MARCABI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">Markawi</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470036</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">6 DE JUNIO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 057/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD CALA CALA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALA CALA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470055</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CHOJLLONQUERI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 096/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CHOJLLONQUERI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CHOJLLONQUERI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470061</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LULUNI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 99/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-02-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LULUNI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">LULUNI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470011</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">VILLCAPUJYO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 069/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">VILLCAPUJYO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">VILLCAPUJYO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470080</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CONDORIRI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0114/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-21T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">TOMOYO CONDORIRI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CONDORIRI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470065</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CUYACACHI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 080/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CUYACACHI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CUYACACHI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470039</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SACA SACA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 089/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-17T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SACA SACA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">SACA SACA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470075</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAROKA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 97/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-02-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAROKA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">SAROKA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470008</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MERKAYMAYA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 071/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MERKAYMAYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">MERKAYMAYA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470020</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PAMPOYO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 103/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-02-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PAMPOYO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PAMPOYO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470022</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ZUNUYO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0104/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ZUNUYO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ZUNUYO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470058</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">TOCORIA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 095/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-04-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">TOCORIA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">TACOPALCA TOCORIA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470089</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN MIGUEL</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 013/2023</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2023-02-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">8</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CAMPAMENTO MIRAFLORES</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">UNCIA</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">81470083</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">POLICARPIO COLQUE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 059/2020</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2020-03-04T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD CALA CALA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALA CALA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="33"/>
+			<Cell ss:Index="2" ss:StyleID="34"/>
+			<Cell ss:Index="3" ss:StyleID="34"/>
+			<Cell ss:Index="4" ss:StyleID="34"/>
+			<Cell ss:Index="5" ss:StyleID="34"/>
+			<Cell ss:Index="6" ss:StyleID="34"/>
+			<Cell ss:Index="7" ss:StyleID="34"/>
+			<Cell ss:Index="8" ss:StyleID="34"/>
+			<Cell ss:Index="9" ss:StyleID="34"/>
+			<Cell ss:Index="10" ss:StyleID="35"/>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="36" ss:MergeAcross="9">
+				<Data ss:Type="String">11 de jul. de 2025 12:26 AM</Data>
+			</Cell>
+		</Row>
+	</ss:Table>
+	<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+		<PageSetup>
+			<PageMargins x:Bottom="0.25" x:Left="0.25" x:Right="0.25" x:Top="0.25"/>
+			<Layout x:Orientation="Landscape"/>
+		</PageSetup>
+		<Print>
+			<PaperSizeIndex>1</PaperSizeIndex>
+		</Print>
+	</WorksheetOptions>
+</Worksheet>
+</Workbook>

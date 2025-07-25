@@ -1,0 +1,3390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
+	<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+		<Author/>
+		<Title/>
+		<Description/>
+		<Subject/>
+	</DocumentProperties>
+	<Styles>
+		<Style ss:ID="HyperlinkId" ss:Name="Hyperlink">
+			<Font ss:Color="#0000ff"/>
+		</Style>
+		<Style ss:ID="1">
+			<NumberFormat ss:Format="yyyy-M-d HH:mm:ss AM/PM"/>
+		</Style>
+		<Style ss:ID="31">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="36">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="30">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="34">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="33">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="28">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="sans-serif" ss:Size="10.0" ss:Color="#000000"/>
+			<NumberFormat ss:Format="[$-C0A]d/M/yyyy"/>
+		</Style>
+		<Style ss:ID="21">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Bold="1" ss:Color="#ffffff"/>
+			<Interior ss:Color="#808080" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="24">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="26">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="32">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="22">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="29">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="sans-serif" ss:Size="10.0" ss:Color="#000000"/>
+			<NumberFormat ss:Format="[$-C0A]d/M/yyyy"/>
+		</Style>
+		<Style ss:ID="20">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Bold="1" ss:Color="#ffffff"/>
+			<Interior ss:Color="#808080" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="25">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="27">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="35">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="23">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+	</Styles>
+	<Names>
+		<NamedRange ss:Name="__bookmark_1" ss:RefersTo="Report!R1C1:R99C10"/>
+	</Names>
+
+<Worksheet ss:Name="Report">
+	<ss:Table>
+		<ss:Column ss:Width="75.52" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.52" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.52" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.52" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="21">
+				<Data ss:Type="String">DISTRITO</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="21">
+				<Data ss:Type="String">CÓDIGO</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="21">
+				<Data ss:Type="String">NOMBRE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="21">
+				<Data ss:Type="String">EDUCACIÓN</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="21">
+				<Data ss:Type="String">DEPENDENCIA</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="21">
+				<Data ss:Type="String">RESOLUCIÓN</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="21">
+				<Data ss:Type="String">FECHA DE RESOLUCIÓN</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="21">
+				<Data ss:Type="String">ZONA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="21">
+				<Data ss:Type="String">DIRECCIÓN</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="21">
+				<Data ss:Type="String">ESTADO</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220044</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SANTA FE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1020/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-07-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SANTA FE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">SANTA FE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220043</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN PEDRO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 623/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-12-30T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN PEDRO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">SAN PEDRO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220066</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">BOLIVIANA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Privada</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">2494</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">1988-09-26T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CENTRAL</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. 25 DE MAYO Nro 317</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220059</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MEJILLONES</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 455/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-09-09T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">16 DE JULIO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE TRINIDAD</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220088</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PALMA SOLA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1116/2022</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2022-12-13T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PALMA SOLA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">RIO MAMORE MARGEN DERECHO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220033</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ABAROA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 323/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-06-28T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SANTA EMILIA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CMD. SANTA EMILIA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220002</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">OSCAR UNZAGA DE LA VEGA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 160/2018</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-03-27T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">HERNANDO SILES</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE 16 DE JULIO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220025</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">9 DE ABRIL</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 394/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN MARTIN II</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. 16 DE JULIO FINAL BARRIO SAN MARTIN II</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220019</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MCAL. ANDRES DE SANTA CRUZ</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 31/2005</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2005-04-27T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">NICOLAS SUAREZ</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. UNZAGA Y ALPIRE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220065</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN ANTONIO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 388/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">27 DE NOVIEMBRE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CMD. 27 DE NOVIEMBRE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220083</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN FRANCISCO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 796/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-05-31T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD SAN FRANCISCO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD SAN FRANCISCO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220010</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SANTA ROSA KM.8</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 196/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-04-22T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SANTA ROSA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA CACHUELA ESPERANZA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220067</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">NUEVA VIDA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Privada</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">254</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">1991-03-18T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">16 DE JULIO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE SIRIO SIMONI ESQ. 16 DE JULIO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220007</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CARLOS LOAYZA BELTRAN</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 360/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-07-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LAS POZAS</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. 9 DE ABRIL ESQ. ANTONIO VACA DIEZ</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220090</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LIC. IRAN RIBERA OJOPI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 54/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-01-23T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CAMINO E HIDROELÉCTRICA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD SAN FRANCISCO DEL YATA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220035</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">FIRMEZA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 202/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-05-24T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">FIRMEZA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">FIRMEZA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220036</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LA ESPERANZA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">1900-01-01T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LA ESPERANZA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CMD. LA ESPERANZA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220095</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LA ESPERANZA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1166/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-31T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD CAMPESINA LA ESPERANZA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD LA ESPERANZA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220008</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">DR. ANTONIO VACA DIEZ</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 468/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-04-05T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LAS POZAS</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. 9 DE ABRIL Nro 1 Y Nro 9</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220047</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">NACIONAL BENI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 359/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-07-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CENTRAL</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. GENERAL FEDERICO ROMAN</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220144</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">12 DE JULIO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">1900-01-01T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">12 DE JUNIO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">KM. 87 CARRETERA RIBERALTA COBIJA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220061</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ROBERTO FRANSEN</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Privada</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 210/2020</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2020-02-19T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CENTRAL</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. GENERAL FEDERICO ROMAN</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220031</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">2 DE OCTUBRE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 144/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-03-22T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">2 DE OCTUBRE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">2 DE OCTUBRE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220145</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SANTA TERESA DE ANTOFAGASTA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 886/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-06-13T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SANTA TERESA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA CACHUELA E. GUAYARA KM. 15</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220093</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PUERTO COIMBRA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 210/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-05-03T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PUERTO COIMBRA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">RIO MAMORE MARGEN IZQUIERDO 12 HORAS</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220028</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MEJILLONES I</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 315/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-06-09T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">16 DE JULIO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE TRINIDAD</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220022</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">21 DE SEPTIEMBRE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 358/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-07-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">NICOLAS SUAREZ</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">JULIO VIEIRA Nro 600</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220064</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">18 DE NOVIEMBRE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Privada</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">1855</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">1990-06-19T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CENTRAL</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE RIBERALTA ESQ. TARIJA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220073</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">VILLA UNION</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 146/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-04-19T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">VILLA UNION</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">VILLA UNION</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220078</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">JUDITH DE SUAREZ</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 157/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-03-26T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CASA TEJA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA RIBERALTA A CACHUELA KM. 110</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220012</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">VENEZUELA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 13/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-01-14T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">HERNANDO SILES</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE 16 DE JULIO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220021</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">1RO. DE MAYO DE GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 324/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-06-29T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD 1RO. DE MAYO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">KM 14</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220081</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">27 DE MAYO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 457/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-09-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD 14 DE SEPTIEMBRE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220014</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">GUILLERMINA MELHO MICHELIN</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 221/2013</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2013-12-27T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">16 DE JULIO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. TRINIDAD ESQ. EXALTACION</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220001</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">1RO. DE MAYO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 226/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-01-25T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">HERNANDO SILES</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">JULIO VIEIRA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220009</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">INMACULADA CONCEPCION</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 797/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-05-31T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CENTRAL</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. GENERAL FEDERICO ROMAN</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220038</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PORVENIR</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 100/2021</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2021-03-05T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PORVENIR</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PORVENIR</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220063</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">JORGE ANTELO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Privada</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 290/2020</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2020-03-06T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">BARRIO NICOLAS SUAREZ</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AVENIDA FEDERICO ROMÁN, ENTRE JULIO VIEIRA Y TARIJA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220091</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PUERTO BOLIVAR</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 213/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-05-03T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PUERTO BOLIVAR</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">RIO MAMORE MARGEN IZQUIERDO 30 HORAS</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220041</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN JUAN</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 386/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN JUAN</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">SAN JUAN</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220042</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN MIGUEL</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 452/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-04-02T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN MIGUEL</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">SAN MIGUEL</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220032</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">26 DE MARZO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 309/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-06-22T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">26 DE MARZO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">26 DE MARZO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220040</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN JOSE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 158/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-03-30T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN JOSE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETA GUAYARA SAN JOSE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220004</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LUIS AÑEZ ORTIZ</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Convenio</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 322/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-06-28T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">AEROPUERTO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">25 DE MAYO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220095</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">RANCHO GRANDE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 95/2021</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2021-03-04T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">RANCHO GRANDE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">RIO MAMORE DE GUAYARA A 14 HRS. ARRIBA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220030</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN MARTIN DE PORRES I</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 392/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN MARTIN</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">Av. Trinidad entre la calle San Ingnacio.</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220137</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SANTA ANITA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 211/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-05-03T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PUERTO CARRERO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">RIO MAMORE DE GUAYARA A 5 HRS. ARRIBADA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220084</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">VILLA NUEVA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 464/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-09-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD VILLA NUEVA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220026</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ALTO DE LA ALIANZA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 159/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-03-30T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">FE Y ESPERANZA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE REYES</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220071</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">INCOS GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">1900-01-01T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220058</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SANTA LUCIA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 887/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-06-13T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SANTA LUCIA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CMD. SANTA LUCIA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220091</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PAPIOS S.R.L.</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Privada</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1136/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-08-08T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CENTRAL</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AVENIDA OSCAR UNZAGA DE LA VEGA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220212</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ELIZARDO PEREZ</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1132/2022</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2022-12-27T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ROSARIO DEL YATA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA RIBERALTA GUAYARA KM. 55</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220060</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ELMER BOTTSFORD</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Privada</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1178/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-08-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">YACIMIENTOS</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE 18 DE NOVIEMBRE ESQ. 6 DE AGOSTO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220082</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN JUAN RIO MAMORE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 462/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-09-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN JUAN</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220077</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">18 DE JUNIO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1566/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-11-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">18 DE JUNIO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CMD. 18 DE JUNIO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220013</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SIMON BOLIVAR</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 14/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-01-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN MIGUEL</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ESQ. DR. OSCAR UNZAGA DE LA VEGA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220005</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN JOSE FE Y ALEGRIA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Convenio</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 324/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-06-29T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">AEROPUERTO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">25 DE MAYO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220094</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ADELINA NOCRE CHORE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1133/2022</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2022-12-27T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">8 DE FEBRERO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA GUAYARAMERIN - RIBERALTA A 23 KM</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220097</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN AGUSTIN KM. 21</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1545/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-11-07T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN AGUSTIN</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA RIBERALTA GUAYARA KM. 66</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220096</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ROSARIO DEL YATA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 210/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-05-03T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ROSARIO DEL YATA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA RIBERALTA GUAYARA KM. 55</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220017</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MANUEL VICENTE BALLIVIAN</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 785/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-05-31T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CENTRAL</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. GENERAL FEDERICO ROMAN</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220114</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">VILLA BELLA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1251/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-09-02T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">VILLA BELLA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA CACHUELA A VILLA BELLA KM. 37</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220003</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">BELEN</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 391/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">BELEN</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">22 DE JULIO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220119</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LA ESPERANZA DEL MAMORE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 214/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-02-03T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LA ESPERANZA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">RIO MAMORE 30 HORAS DE ARRIBADA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220079</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">RICHARD GATES</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Privada</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">42/2008</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2008-03-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">BOCA RIO YATA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">A 30 KM. CARRETERA A RIBERALTA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220049</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">NACIONAL DE GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 320/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-06-28T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">NICOLAS SUAREZ</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. UNZAGA Y ALPIRE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220023</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">BOLIVIA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 385/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">NICOLAS SUAREZ</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">JULIO VIEIRA Nro 600</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220020</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">GUAYARAGUAZU</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 156/2018</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2018-03-22T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">GUAYARAGUAZU</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">GUAYARAGUAZU</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220015</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MIGUEL COIMBRA BEJARANO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 67/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-01-25T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LAS POZAS</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. 9 DE ABRIL Nro 1 Y Nro 9</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220158</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN LORENZO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 13/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-01-13T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN LORENZO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">RIO MAMORE MARGEN IZQUIERDO 30 HORAS</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220105</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN ROQUE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1115/2022</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2022-12-13T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN ROQUE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">RIO MAMORE DE GUAYARA A 6 HRS. ARRIBADA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220088</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LAS ARDILLITAS</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Privada</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 565/2017</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2017-11-30T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">22 DE SEPTIEMBRE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE 24 DE SEPTIEMBRE S/N</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220078</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">8 DE DICIEMBRE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">37/2005</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2005-09-08T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">8 DE DICIEMBRE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE 6 DE JUNIO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220051</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN MARTIN DE PORRES II</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 617/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-12-29T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN MARTIN</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">Av. Trinidad entre la calle San Ingnacio.</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220018</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MIGUEL ANTELO ANTELO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 306/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-06-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">AEROPUERTO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">FINAL SAN JOAQUIN</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220056</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">BARRANCO COLORADO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 671/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-05-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">BARRANCO COLORADO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">RIO MAMORE MARGEN DERECHO A 12 HRS.</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220024</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">FEDEX CHACO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 305/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-06-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">EL CARMEN</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">MAMORE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220045</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MANUEL ANTONIO OJOPI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 266/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-05-24T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LAS POZAS</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. 9 DE ABRIL ESQ. ANTONIO VACA DIEZ</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220011</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">NICOLAS SUAREZ CALLAU</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 15/2015</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2015-01-30T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">FE Y ESPERANZA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE REYES</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220080</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SANTA FE DE LA CRUZ</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 458/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-09-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD SANTA FE DE LA CRUZ</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220006</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">6 DE JUNIO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 449/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-09-09T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">8 DE DICIEMBRE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">6 DE JUNIO ESQ.JUANA AZURDUY DE PADILLA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220086</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ARMANDO MOLLINEDO BACARREZA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 245/2020</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2020-02-27T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LOS ALMENDROS</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">LOS ALMENDROS</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220037</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LOS ALMENDROS</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 672/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-05-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LOS ALMENDROS</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">LOS ALMENDROS</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220121</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LA UNION</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1731/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-12-12T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LA UNION</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA RIBERALTA GUAYARA KM. 66</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220034</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CACHUELA MAMORE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 798/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-05-31T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CACHUELA MAMORE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CACHUELA MAMORE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220027</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LIBERTADOR SIMON BOLIVAR</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 321/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-06-28T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN MIGUEL</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ESQ. DR. OSCAR UNZAGA DE LA VEGA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220016</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">BRASIL</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 340/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-06-29T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">16 DE JULIO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. TRINIDAD ESQ. EXALTACION</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220068</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAN CRISTOBAL</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 184/2012</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2012-12-11T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CENTRAL</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. ORURO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220072</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">NACIONAL DE BELLAS ARTES</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 013/2014</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2014-01-21T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">NICOLAS SUAREZ</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. UNZAGA Y ALPIRE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220075</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ESPERANZA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">1900-01-01T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ESPERANZA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA A RIBERALTA KM. 21</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220069</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PROF. LUCINDA SOLIZ SAAVEDRA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 885/2021</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2021-11-28T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LAS POZAS</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">AV. 9 DE ABRIL ESQ. ANTONIO VACA DIEZ</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220076</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PACIFICO FELETTI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Convenio</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">070/98</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">1998-03-03T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220085</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">VICTOR RODRIGUEZ CORDOVA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 097/2005</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2005-12-26T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">16 DE JULIO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE TRINIDAD</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220074</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CARITAS</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Convenio</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A.  1127/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-11T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAN JOAQUIN</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">72220087</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAGRADA FAMILIA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Convenio</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 680/2023</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2023-07-27T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">BARRIO SAN MARTIN DE PORRES I</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ENTRE CALLES, 1RO. DE MAYO Y SAN IGNACIO DE MOXOS</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">GUAYARAMERIN</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">82220199</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">HERMES RIBERA RIVERO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 98/2017</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2017-02-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LOS ALMENDROS</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">LOS ALMENDROS</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="33"/>
+			<Cell ss:Index="2" ss:StyleID="34"/>
+			<Cell ss:Index="3" ss:StyleID="34"/>
+			<Cell ss:Index="4" ss:StyleID="34"/>
+			<Cell ss:Index="5" ss:StyleID="34"/>
+			<Cell ss:Index="6" ss:StyleID="34"/>
+			<Cell ss:Index="7" ss:StyleID="34"/>
+			<Cell ss:Index="8" ss:StyleID="34"/>
+			<Cell ss:Index="9" ss:StyleID="34"/>
+			<Cell ss:Index="10" ss:StyleID="35"/>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="36" ss:MergeAcross="9">
+				<Data ss:Type="String">11 de jul. de 2025 12:10 AM</Data>
+			</Cell>
+		</Row>
+	</ss:Table>
+	<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+		<PageSetup>
+			<PageMargins x:Bottom="0.25" x:Left="0.25" x:Right="0.25" x:Top="0.25"/>
+			<Layout x:Orientation="Landscape"/>
+		</PageSetup>
+		<Print>
+			<PaperSizeIndex>1</PaperSizeIndex>
+		</Print>
+	</WorksheetOptions>
+</Worksheet>
+</Workbook>

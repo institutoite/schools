@@ -1,0 +1,2462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
+	<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+		<Author/>
+		<Title/>
+		<Description/>
+		<Subject/>
+	</DocumentProperties>
+	<Styles>
+		<Style ss:ID="HyperlinkId" ss:Name="Hyperlink">
+			<Font ss:Color="#0000ff"/>
+		</Style>
+		<Style ss:ID="1">
+			<NumberFormat ss:Format="yyyy-M-d HH:mm:ss AM/PM"/>
+		</Style>
+		<Style ss:ID="31">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="36">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="30">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="34">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="33">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="28">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="sans-serif" ss:Size="10.0" ss:Color="#000000"/>
+			<NumberFormat ss:Format="[$-C0A]d/M/yyyy"/>
+		</Style>
+		<Style ss:ID="21">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Bold="1" ss:Color="#ffffff"/>
+			<Interior ss:Color="#808080" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="24">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="26">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="32">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="22">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="29">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="sans-serif" ss:Size="10.0" ss:Color="#000000"/>
+			<NumberFormat ss:Format="[$-C0A]d/M/yyyy"/>
+		</Style>
+		<Style ss:ID="20">
+			<Alignment ss:Horizontal="Center" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom"/>
+				<Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Bold="1" ss:Color="#ffffff"/>
+			<Interior ss:Color="#808080" ss:Pattern="Solid"/>
+		</Style>
+		<Style ss:ID="25">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="27">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="35">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+		<Style ss:ID="23">
+			<Alignment ss:Horizontal="Left" ss:Vertical="Top" ss:WrapText="1"/>
+			<Borders>
+				<Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Top"/>
+				<Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="#000000"/>
+				<Border ss:Position="DiagonalLeft"/>
+			</Borders>
+			<Font ss:FontName="serif" ss:Size="10.0" ss:Color="#000000"/>
+		</Style>
+	</Styles>
+	<Names>
+		<NamedRange ss:Name="__bookmark_1" ss:RefersTo="Report!R1C1:R70C10"/>
+	</Names>
+
+<Worksheet ss:Name="Report">
+	<ss:Table>
+		<ss:Column ss:Width="75.52" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.52" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.52" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.52" ss:AutoFitWidth="0"/>
+		<ss:Column ss:Width="75.648" ss:AutoFitWidth="0"/>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="21">
+				<Data ss:Type="String">DISTRITO</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="21">
+				<Data ss:Type="String">CÓDIGO</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="21">
+				<Data ss:Type="String">NOMBRE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="21">
+				<Data ss:Type="String">EDUCACIÓN</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="21">
+				<Data ss:Type="String">DEPENDENCIA</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="21">
+				<Data ss:Type="String">RESOLUCIÓN</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="21">
+				<Data ss:Type="String">FECHA DE RESOLUCIÓN</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="21">
+				<Data ss:Type="String">ZONA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="21">
+				<Data ss:Type="String">DIRECCIÓN</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="21">
+				<Data ss:Type="String">ESTADO</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900049</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">TOPATER</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0690/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-11-14T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">VILOMA GRANDE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CAMINO VECINAL</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900042</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CARAMARCA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">650/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CARAMARCA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARAMARCA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900012</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SAUCE RANCHO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 3198/2011</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2011-12-06T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SAUCE RANCHO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">SAUCE RANCHO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900028</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PIRQUE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 5433/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-03T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PIRQUE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PIRQUE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900020</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LAPIANI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0344/2012</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2012-02-13T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LAPIANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">LAPIANI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900006</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CULTANI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">600/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CULTANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CULTANI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900014</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MANUEL CLAURE ANTEZANA I</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 6214/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-31T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">VINTO CHICO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ECIA. VINTO CHICO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900023</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MONTENEGRO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 3028/2018</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2018-07-16T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MONTENEGRO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">MONTENEGRO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900033</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">TORIBIO CLAURE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 3199/2011</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2011-12-06T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SIQUI SIQUIA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">SIQUI SIQUIA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900062</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">VILLA SIVINGANI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">630/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">VILLA SIVINGANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">VILLA SIVINGANI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900067</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">COHACHACA CHICO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 3162/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-12-29T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COHACHACA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">COHACHACA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900074</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">BENIGNO BAZOALDO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0102/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-01-18T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PAROTANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900075</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">GUALBERTO VILLARROEL</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 5166/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-12-30T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MALLCO CHAPI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">MALLCO CHAPI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900009</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CHOROJO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">592/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CHOROJO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CHOROJO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900047</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">VIRGEN DEL CARMEN</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 6069/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ITAPAYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ITAPAYA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900058</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">JANKOAJE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 2869/2009</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2009-11-23T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SINDICATO UCHU UCHU</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ANKOAGE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900068</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">TUTUPAYA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0007/2006</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2006-01-09T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SINDICATO JARAÑA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">JARAÑA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900076</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ISIDORO CARRASCO OLGUIN</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0797/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-12-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CARAMARCA OTAVI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD CARAMARCA OTAVI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900051</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">THAKORUMA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 5432/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-03T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">THAKORUMA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">THAKORUMA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900043</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CARAMARCA COLLPA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">648/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CARAMARCA COLLPA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARAMARCA COLLPA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900013</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SORATA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">646/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SORATA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">SORATA PARADA CUATRO CARRETERA CBBA. ORURO KM 25 A 5 CUADRAS DE LA CARRETERA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900027</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PIRHUAS</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 018/2020</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2020-01-13T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PIRHUAS</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PIRHUAS</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900008</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CHILTUPAMPA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 6213/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-30T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CHILTUPAMPA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ECIA. CHILTUPAMPA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900078</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MARCELO QUIROGA SANTA CRUZ</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 00263/2015</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2015-02-12T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">TAJRA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CAMINO PAROTANI - CAPINOTA - TAJRA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900077</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LINK'U</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 3512/2013</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2013-12-30T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">AYOMA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE LIN'KU S/N</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900061</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CIUDAD DEL NIÑO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Convenio</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">106/01</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2001-03-09T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ITAPAYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ITAPAYA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900038</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">VILOMA CALA CALA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 3197/2011</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2011-12-06T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">VILOMA CALA CALA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">VILOMA CALA CALA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900073</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">20 DE OCTUBRE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 009/2010</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2010-01-04T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MONTECANTO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900039</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">AMERICAS</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">626/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">VILOMA GRANDE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">VILOMA GRANDE</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900026</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CARLOS QUITON CABALLERO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 6091/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PAROTANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PAROTANI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900088</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">4 DE OCTUBRE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 4573/2023</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2023-10-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD  SALTO PLAYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD SALTO PLAYA  CALLE INNOMINADA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900060</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LOKOLOKONI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0700/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-10-14T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LOKOLOKONI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">LOKOLOKONI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900032</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">VILA VILA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 6208/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-31T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">VILA VILA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">SINDICATO VILA VILA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900070</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">JUAN XXIII</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Convenio</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">3080/2006</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2006-11-23T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SUTICOLLO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">KILOMETRO 27 1/2 CARRETERA A ORURO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900022</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MALLCO RANCHO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0309/2007</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2007-02-13T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MALLCO RANCHO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">MALLCO RANCHO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900048</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">EDUARDO ABAROA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 6070/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-20T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ESTACION</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PAROTANI CAMPAMENTO FERROVIARIO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900064</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SIMON BOLIVAR</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Privada</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1349/2013</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2013-06-13T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE VILOMA Nº 067</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900081</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">DANIEL ALBORNOZ  I</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0409/2018</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2018-02-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MONTECANTO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA A LA PAZ KM. 22</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900080</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">EVO MORALES AYMA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0544/2018</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2018-03-01T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PAROTANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">1 KM. DE LA PLAZA DE PAROTANI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900031</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">GERMAN BUSCH</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0582/2008</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2008-03-19T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PAYACOLLO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">SINDICATO PAYACOLLO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900045</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">RODOLFO MERCADO ROSALES</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0703/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-11-15T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE AYOMA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900016</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">HAMIRAYA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 6212/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-31T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">HAMIRAYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">HAMIRAYA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900011</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MUÑANI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">604/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MUÑANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ECIA. MUÑANI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900001</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CHACAPAYA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">588/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CHACAPAYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CHACAPAYA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900036</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">TONCOMA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0701/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-10-14T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">TONCOMA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">TONCOMA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900083</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ARRUMIRI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0711/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-11-21T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ARRUMIRI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD ARRUMIRI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900069</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MALLACABA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0820/2019</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2019-12-27T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SINDICATO MALLA KAWA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">MALLA KAWA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900079</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">27 DE MAYO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0493/2017</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2017-02-23T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">PIRHUAS</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">PIRHUAS</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">50900037</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CUCHILLANI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">1900-01-01T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CUCHILLANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CUCHILLANI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900085</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">PATRIA NUEVA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 012/2020</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2020-01-09T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SORATA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">OTB SORATA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900041</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MANUEL CLAURE ANTEZANA II</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">624/000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">VINTO CHICO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ECIA. VINTO CHICO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900087</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">DR. CARLOS MONTENEGRO A</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 079/2020</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2020-03-06T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MONTENEGRO CENTRAL</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CARRETERA CONFITAL KM. 24  DETRÁS DE LA POSTA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900044</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">23 DE MARZO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 2192/2023</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2023-06-22T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE ABAROA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900086</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">LA COLONIA SUTICOLLO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">RA NO. 5419/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-03T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">LA COLONIA SUTICOLLO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD OTB  COLONIA SUTICOLLO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900050</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">ANDRES UZEDA OCAMPO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">594/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE AYOMA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900017</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">RENE BARRIENTOS ORTUÑO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 2198/2023</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2023-06-22T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">ITAPAYA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ITAPAYA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900084</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">GENOVEVA RIOS</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 08/2020</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2020-01-08T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">COLLPA PAMPA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">COMUNIDAD COLLPA PAMPA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900002</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CHAPINI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 5404/2024</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2024-12-03T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CHAPINI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CHAPINI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900037</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">UCHU UCHU</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">632/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">UCHU UCHU</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">UCHU UCHU</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900046</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MCAL. SUCRE</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 051/2020</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2020-02-07T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE ABAROA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900066</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">MILLOMA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">610/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MILLOMA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">MILLOMA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900071</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SANTIAGO DOLZ</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 1615/2008</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2008-08-08T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900021</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">3 DE ABRIL</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 040/2020</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2020-01-28T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MALLCO CHAPI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">MALLCO CHAPI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900015</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CAPELLANI</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">590/2000</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2000-08-10T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CAPELLANI</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">ECIA. CAPELLANI</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Cerrada</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900034</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">SUTICOLLO</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0579/2008</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2008-03-19T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SUTICOLLO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">SUTICOLLO</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900007</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">CAVILOMA</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Regular</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 0583/2008</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2008-03-19T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">CAVILOMA</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CAVILOMA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900072</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">DANIEL ALBORNOZ</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 2455/2023</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2023-07-06T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String">CALLE AYOMA</Data>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="23">
+				<Data ss:Type="String">SIPE SIPE</Data>
+			</Cell>
+			<Cell ss:Index="2" ss:StyleID="25">
+				<Data ss:Type="Number">70900082</Data>
+			</Cell>
+			<Cell ss:Index="3" ss:StyleID="27">
+				<Data ss:Type="String">2 DE ABRIL</Data>
+			</Cell>
+			<Cell ss:Index="4" ss:StyleID="27">
+				<Data ss:Type="String">Alternativa y Especial</Data>
+			</Cell>
+			<Cell ss:Index="5" ss:StyleID="27">
+				<Data ss:Type="String">Fiscal</Data>
+			</Cell>
+			<Cell ss:Index="6" ss:StyleID="27">
+				<Data ss:Type="String">R.A. 262/2018</Data>
+			</Cell>
+			<Cell ss:Index="7" ss:StyleID="29">
+				<Data ss:Type="DateTime">2018-01-29T00:00:00.000</Data>
+			</Cell>
+			<Cell ss:Index="8" ss:StyleID="27">
+				<Data ss:Type="String">MONTECANTO</Data>
+			</Cell>
+			<Cell ss:Index="9" ss:StyleID="27">
+				<Data ss:Type="String"/>
+			</Cell>
+			<Cell ss:Index="10" ss:StyleID="27">
+				<Data ss:Type="String">Abierta</Data>
+			</Cell>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="33"/>
+			<Cell ss:Index="2" ss:StyleID="34"/>
+			<Cell ss:Index="3" ss:StyleID="34"/>
+			<Cell ss:Index="4" ss:StyleID="34"/>
+			<Cell ss:Index="5" ss:StyleID="34"/>
+			<Cell ss:Index="6" ss:StyleID="34"/>
+			<Cell ss:Index="7" ss:StyleID="34"/>
+			<Cell ss:Index="8" ss:StyleID="34"/>
+			<Cell ss:Index="9" ss:StyleID="34"/>
+			<Cell ss:Index="10" ss:StyleID="35"/>
+		</Row>
+		<Row ss:AutoFitHeight="1">
+			<Cell ss:Index="1" ss:StyleID="36" ss:MergeAcross="9">
+				<Data ss:Type="String">11 de jul. de 2025 12:01 AM</Data>
+			</Cell>
+		</Row>
+	</ss:Table>
+	<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+		<PageSetup>
+			<PageMargins x:Bottom="0.25" x:Left="0.25" x:Right="0.25" x:Top="0.25"/>
+			<Layout x:Orientation="Landscape"/>
+		</PageSetup>
+		<Print>
+			<PaperSizeIndex>1</PaperSizeIndex>
+		</Print>
+	</WorksheetOptions>
+</Worksheet>
+</Workbook>

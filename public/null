@@ -1,0 +1,157 @@
+use App\Models\School;
+$colegiosSinMatricula = School::whereDoesntHave('estadisticas', function($query) {
+    $query->where('categoria', 'matricula');
+})->get();
+use App\Models\School;
+$colegiosSinMatricula = School::whereDoesntHave('estadisticas', function($query) {
+    $query->where('categoria', 'matricula');
+})->select("codigo_rue")->get();
+use App\Models\School;
+$colegiosSinMatricula = School::whereDoesntHave('estadisticas', function($query) {
+    $query->where('categoria', 'matricula');
+})->select("codigo_rue");
+use App\Models\School;
+$colegiosSinMatricula = School::whereDoesntHave('estadisticas', function($query) {
+    $query->where('categoria', 'matricula');
+})->select("codigo_rue")->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::where('departamento', 'Pando')
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Pando');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Santa Cruz');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Pando');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Santa Cruz');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Santa Cruz');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Pando');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Beni');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Beni');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Chuquisaca');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Cochabamba');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'La Paz');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'La Paz');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Oruro');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Potosi');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Potosi');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Potosí');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();
+use App\Models\School;
+$colegiosSinMatriculaPando = School::whereHas('ubicacion', function($query) {
+        $query->where('departamento', 'Santa Cruz');
+    })
+    ->whereDoesntHave('estadisticas', function($query) {
+        $query->where('categoria', 'matricula');
+    })
+    ->get();

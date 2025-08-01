@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\School;
 use App\Http\Requests\StoreSchoolRequest;
 use App\Http\Requests\UpdateSchoolRequest;
+use App\Models\Estadistica;
 use App\Models\Ubicacion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class SchoolController extends Controller
 {
@@ -442,5 +444,166 @@ public function index(Request $request)
     public function destroy(School $school)
     {
         //
+    }
+    public function densidadEducativa(Request $request)
+    {
+        // Get the most recent year with data
+        $latestYear = \App\Models\Estadistica::where('categoria', 'matricula')
+            ->max('anio') ?? 2023;
+        
+        $departamento = $request->get('departamento');
+        $provincia = $request->get('provincia');
+        
+        if ($departamento && !$provincia) {
+            // Show data by provinces within the selected department
+            $results = Ubicacion::query()
+                ->select('provincia')
+                ->selectRaw('COUNT(DISTINCT schools.id) as cantidad_colegios')
+                ->selectRaw('COALESCE(SUM(estadisticas.total), 0) as total_estudiantes')
+                ->selectRaw('ROUND(COUNT(DISTINCT schools.id) * 100.0 / (SELECT COUNT(*) FROM schools), 2) as densidad')
+                ->join('schools', 'ubicacions.school_id', '=', 'schools.id')
+                ->leftJoin('estadisticas', function($join) use ($latestYear) {
+                    $join->on('estadisticas.school_id', '=', 'schools.id')
+                        ->where('estadisticas.categoria', '=', 'matricula')
+                        ->where('estadisticas.anio', '=', $latestYear);
+                })
+                ->where('departamento', $departamento)
+                ->groupBy('provincia')
+                ->orderBy('cantidad_colegios', 'desc')
+                ->get();
+            
+            // Calculate totals for the department
+            $total_colegios = $results->sum('cantidad_colegios');
+            $total_estudiantes = $results->sum('total_estudiantes');
+            $densidad_promedio = $results->avg('densidad');
+            $cantidad_provincias = $results->count();
+            
+            // Get all provinces for the filter
+            $provincias = Ubicacion::where('departamento', $departamento)
+                ->select('provincia')
+                ->distinct()
+                ->pluck('provincia');
+                
+        } elseif ($departamento && $provincia) {
+            // Show data by municipalities within the selected province
+            $results = Ubicacion::query()
+                ->select('municipio')
+                ->selectRaw('COUNT(DISTINCT schools.id) as cantidad_colegios')
+                ->selectRaw('COALESCE(SUM(estadisticas.total), 0) as total_estudiantes')
+                ->selectRaw('ROUND(COUNT(DISTINCT schools.id) * 100.0 / (SELECT COUNT(*) FROM schools), 2) as densidad')
+                ->join('schools', 'ubicacions.school_id', '=', 'schools.id')
+                ->leftJoin('estadisticas', function($join) use ($latestYear) {
+                    $join->on('estadisticas.school_id', '=', 'schools.id')
+                        ->where('estadisticas.categoria', '=', 'matricula')
+                        ->where('estadisticas.anio', '=', $latestYear);
+                })
+                ->where('departamento', $departamento)
+                ->where('provincia', $provincia)
+                ->groupBy('municipio')
+                ->orderBy('cantidad_colegios', 'desc')
+                ->get();
+            
+            // Calculate totals for the province
+            $total_colegios = $results->sum('cantidad_colegios');
+            $total_estudiantes = $results->sum('total_estudiantes');
+            $densidad_promedio = $results->avg('densidad');
+            $cantidad_provincias = $results->count();
+            
+            // Get all provinces for the filter
+            $provincias = Ubicacion::where('departamento', $departamento)
+                ->select('provincia')
+                ->distinct()
+                ->pluck('provincia');
+                
+        } else {
+            // Show data by departments (default view)
+            $results = Ubicacion::query()
+                ->select('departamento')
+                ->selectRaw('COUNT(DISTINCT schools.id) as cantidad_colegios')
+                ->selectRaw('COALESCE(SUM(estadisticas.total), 0) as total_estudiantes')
+                ->selectRaw('ROUND(COUNT(DISTINCT schools.id) * 100.0 / (SELECT COUNT(*) FROM schools), 2) as densidad')
+                ->join('schools', 'ubicacions.school_id', '=', 'schools.id')
+                ->leftJoin('estadisticas', function($join) use ($latestYear) {
+                    $join->on('estadisticas.school_id', '=', 'schools.id')
+                        ->where('estadisticas.categoria', '=', 'matricula')
+                        ->where('estadisticas.anio', '=', $latestYear);
+                })
+                ->groupBy('departamento')
+                ->orderBy('cantidad_colegios', 'desc')
+                ->get();
+            
+            // Calculate totals
+            $total_colegios = $results->sum('cantidad_colegios');
+            $total_estudiantes = $results->sum('total_estudiantes');
+            $densidad_promedio = $results->avg('densidad');
+            $cantidad_provincias = null;
+            $provincias = collect();
+        }
+        
+        // Get all departments for the filter
+        $departamentos = Ubicacion::select('departamento')
+            ->distinct()
+            ->pluck('departamento');
+        
+        // Debug logging
+        \Log::info('=== DENSIDAD EDUCATIVA DEBUG ===');
+        \Log::info('Latest year:', ['year' => $latestYear]);
+        \Log::info('Departamento filter:', ['departamento' => $departamento]);
+        \Log::info('Provincia filter:', ['provincia' => $provincia]);
+        \Log::info('Results count:', ['count' => $results->count()]);
+        \Log::info('Sample result:', ['sample' => $results->first()]);
+        \Log::info('Total colegios:', ['total' => $total_colegios]);
+        \Log::info('Total estudiantes:', ['total' => $total_estudiantes]);
+        \Log::info('Densidad promedio:', ['promedio' => $densidad_promedio]);
+        
+        return view('schools.densidad', compact(
+            'results', 
+            'total_colegios', 
+            'total_estudiantes', 
+            'densidad_promedio',
+            'cantidad_provincias',
+            'latestYear', 
+            'departamentos',
+            'provincias',
+            'departamento',
+            'provincia'
+        ));
+    }
+
+    /**
+     * Debug method to check available data
+     */
+    public function debugDensityData()
+    {
+        $latestYear = \App\Models\Estadistica::where('categoria', 'matricula')
+            ->max('anio') ?? 2023;
+        
+        // Test the density query
+        $densityTest = \App\Models\Ubicacion::query()
+            ->select('departamento')
+            ->selectRaw('COUNT(DISTINCT schools.id) as cantidad_colegios')
+            ->selectRaw('COALESCE(SUM(estadisticas.total), 0) as total_estudiantes')
+            ->selectRaw('ROUND(COUNT(DISTINCT schools.id) * 100.0 / (SELECT COUNT(*) FROM schools), 2) as densidad')
+            ->join('schools', 'ubicacions.school_id', '=', 'schools.id')
+            ->leftJoin('estadisticas', function($join) use ($latestYear) {
+                $join->on('estadisticas.school_id', '=', 'schools.id')
+                    ->where('estadisticas.categoria', '=', 'matricula')
+                    ->where('estadisticas.anio', '=', $latestYear);
+            })
+            ->groupBy('departamento')
+            ->limit(5)
+            ->get();
+        
+        return response()->json([
+            'latestYear' => $latestYear,
+            'densityTest' => $densityTest,
+            'phpData' => [
+                'results' => $densityTest,
+                'total_colegios' => $densityTest->sum('cantidad_colegios'),
+                'total_estudiantes' => $densityTest->sum('total_estudiantes'),
+                'densidad_promedio' => $densityTest->avg('densidad'),
+                'departamentos' => \App\Models\Ubicacion::select('departamento')->distinct()->pluck('departamento')
+            ]
+        ]);
     }
 }

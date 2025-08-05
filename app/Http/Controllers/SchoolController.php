@@ -449,10 +449,11 @@ public function index(Request $request)
     {
         // Get the most recent year with data
         $latestYear = \App\Models\Estadistica::where('categoria', 'matricula')
-            ->max('anio') ?? 2023;
+        ->max('anio') ?? 2023;
         
         $departamento = $request->get('departamento');
         $provincia = $request->get('provincia');
+        
         
         if ($departamento && !$provincia) {
             // Show data by provinces within the selected department
@@ -471,7 +472,7 @@ public function index(Request $request)
                 ->groupBy('provincia')
                 ->orderBy('cantidad_colegios', 'desc')
                 ->get();
-            
+           
             // Calculate totals for the department
             $total_colegios = $results->sum('cantidad_colegios');
             $total_estudiantes = $results->sum('total_estudiantes');
@@ -546,15 +547,6 @@ public function index(Request $request)
             ->pluck('departamento');
         
         // Debug logging
-        \Log::info('=== DENSIDAD EDUCATIVA DEBUG ===');
-        \Log::info('Latest year:', ['year' => $latestYear]);
-        \Log::info('Departamento filter:', ['departamento' => $departamento]);
-        \Log::info('Provincia filter:', ['provincia' => $provincia]);
-        \Log::info('Results count:', ['count' => $results->count()]);
-        \Log::info('Sample result:', ['sample' => $results->first()]);
-        \Log::info('Total colegios:', ['total' => $total_colegios]);
-        \Log::info('Total estudiantes:', ['total' => $total_estudiantes]);
-        \Log::info('Densidad promedio:', ['promedio' => $densidad_promedio]);
         
         return view('schools.densidad', compact(
             'results', 

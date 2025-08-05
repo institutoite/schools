@@ -96,15 +96,7 @@
 
                  <!-- Heatmap Section -->
          <div class="heatmap-container">
-             <h3><i class="fas fa-fire"></i> Mapa de Calor por 
-                 @if($departamento && $provincia)
-                     Municipios
-                 @elseif($departamento)
-                     Provincias
-                 @else
-                     Departamentos
-                 @endif
-             </h3>
+             <h3><i class="fas fa-fire"></i> Mapa de Calor por {{ $departamento ? 'Provincias' : 'Departamentos' }}</h3>
              <div class="heatmap-grid" id="heatmap-grid">
                  <!-- Heatmap items will be populated by JavaScript -->
              </div>
@@ -114,15 +106,7 @@
          <div class="charts-grid">
              <!-- Bar Chart -->
              <div class="chart-container">
-                 <h3><i class="fas fa-chart-bar"></i> Distribución de Colegios por 
-                     @if($departamento && $provincia)
-                         Municipio
-                     @elseif($departamento)
-                         Provincia
-                     @else
-                         Departamento
-                     @endif
-                 </h3>
+                 <h3><i class="fas fa-chart-bar"></i> Distribución de Colegios por {{ $departamento ? 'Provincia' : 'Departamento' }}</h3>
                  <div class="chart-wrapper">
                      <canvas id="bar-chart"></canvas>
                  </div>
@@ -130,15 +114,7 @@
 
              <!-- Pie Chart -->
              <div class="chart-container">
-                 <h3><i class="fas fa-chart-pie"></i> Proporción de Colegios por 
-                     @if($departamento && $provincia)
-                         Municipio
-                     @elseif($departamento)
-                         Provincia
-                     @else
-                         Departamento
-                     @endif
-                 </h3>
+                 <h3><i class="fas fa-chart-pie"></i> Proporción de Colegios por {{ $departamento ? 'Provincia' : 'Departamento' }}</h3>
                  <div class="chart-wrapper">
                      <canvas id="pie-chart"></canvas>
                  </div>
@@ -160,15 +136,7 @@
                                  <table class="data-table">
                      <thead>
                          <tr>
-                             <th>
-                                 @if($departamento && $provincia)
-                                     Municipio
-                                 @elseif($departamento)
-                                     Provincia
-                                 @else
-                                     Departamento
-                                 @endif
-                             </th>
+                             <th>{{ $departamento ? 'Provincia' : 'Departamento' }}</th>
                              <th>Cantidad de Colegios</th>
                              <th>Total de Estudiantes</th>
                              <th>Densidad</th>
@@ -178,15 +146,7 @@
                      <tbody id="data-table-body">
                          @foreach($results as $item)
                          <tr>
-                             <td>
-                                 @if($departamento && $provincia)
-                                     {{ $item->municipio }}
-                                 @elseif($departamento)
-                                     {{ $item->provincia }}
-                                 @else
-                                     {{ $item->departamento }}
-                                 @endif
-                             </td>
+                             <td>{{ $departamento ? $item->provincia : $item->departamento }}</td>
                              <td>{{ number_format($item->cantidad_colegios) }}</td>
                              <td>{{ number_format($item->total_estudiantes) }}</td>
                              <td>{{ $item->densidad ?? 'N/A' }}</td>

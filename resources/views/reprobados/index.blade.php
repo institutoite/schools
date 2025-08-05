@@ -177,7 +177,7 @@
         <div class="bg-white rounded-xl shadow p-6 mt-8">
             <h2 class="text-xl font-bold text-secondary mb-2 flex items-center gap-2"><i class="fas fa-map"></i> Mapa de calor de reprobación</h2>
             <div id="map" style="height: 500px; width: 100%;" class="rounded-xl mb-4"></div>
-            <div class="text-gray-500">Los puntos muestran todos los colegios del filtro. El color y tamaño indican la cantidad de reprobados.</div>
+            <div class="text-gray-500">Los puntos muestran todos los colegios del filtro. El color y tamaño indican la cantidad de reprobados.x</div>
         </div>
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

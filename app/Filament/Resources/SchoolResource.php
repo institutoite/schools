@@ -13,6 +13,15 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
+use App\Exports\SchoolsByDepartmentExport;
+use Filament\Forms\Components\Select;
+
+use App\Exports\SchoolsExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Filament\Tables\Actions\Action;
+
+use Illuminate\Support\Str;
+
 class SchoolResource extends Resource
 {
     protected static ?string $model = School::class;
@@ -25,7 +34,6 @@ class SchoolResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('codigo_rue')
                     ->required()
-                    ->visible(auth()->user()->can('subir_fotos'))
                     ->maxLength(20),
                 Forms\Components\TextInput::make('nombre')
                     ->required()
@@ -59,6 +67,11 @@ class SchoolResource extends Resource
 
     public static function table(Table $table): Table
     {
+        $departamentos = \App\Models\Ubicacion::select('departamento')
+            ->distinct()
+            ->orderBy('departamento')
+            ->pluck('departamento', 'departamento');
+
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('codigo_rue')
@@ -99,7 +112,45 @@ class SchoolResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                ])
+            ])
+            ->headerActions([
+                Action::make('export')
+                    ->label('Exportar a Excel')
+                    ->icon('heroicon-o-document-arrow-down')
+                    ->action(function () {
+                        return Excel::download(new SchoolsExport, 'colegios.xlsx');
+                    }),
+                Action::make('exportByDepartment')
+                ->label('Exportar por Departamento')
+                ->icon('heroicon-o-document-arrow-down')
+                ->form([
+                    Select::make('departamento')
+                        ->label('Departamento')
+                        ->options($departamentos)
+                        ->required()
+                        ->searchable()
+                        ->placeholder('Seleccione un departamento'),
+                    
+                    Select::make('formato')
+                        ->label('Formato de exportación')
+                        ->options([
+                            'xlsx' => 'Excel (.xlsx)',
+                            'csv' => 'CSV (.csv)',
+                            'pdf' => 'PDF (.pdf)'
+                        ])
+                        ->default('xlsx')
+                ])
+                ->action(function (array $data) {
+                    $export = new SchoolsByDepartmentExport($data['departamento']);
+                    $filename = 'colegios_' . Str::slug($data['departamento']) . '_' . now()->format('Y-m-d');
+                    
+                    return match($data['formato']) {
+                        'csv' => Excel::download($export, "$filename.csv", \Maatwebsite\Excel\Excel::CSV),
+                        'pdf' => Excel::download($export, "$filename.pdf", \Maatwebsite\Excel\Excel::DOMPDF),
+                        default => Excel::download($export, "$filename.xlsx")
+                    };
+                })
             ]);
     }
 

@@ -16,5 +16,5 @@ def validar_json(path_archivo):
         print(ex)
 
 # Ejemplo de uso
-ruta = "colegios_data.json"  # Reemplaza por la ruta real de tu archivo
+ruta = "colegios_data_completo.json"  # Reemplaza por la ruta real de tu archivo
 validar_json(ruta)

@@ -163,6 +163,9 @@
             </div>
         </div>
         
+        
+
+
         @php
             // Calcular probabilidad de reprobar para el colegio actual
             $totalMatricula = collect($estadisticas)->where('categoria', 'matricula')->sum('total');
@@ -352,6 +355,56 @@
                 </div>
             </div>
         </section>
+    {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
+    
+    @php
+        // Obtener el último año de estadística
+        $ultimoAnio = collect($estadisticas)->max('anio');
+        $matricula = collect($estadisticas)->where('categoria', 'matricula')->where('anio', $ultimoAnio)->first();
+        $reprobados = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $ultimoAnio)->first();
+        $abandono = collect($estadisticas)->where('categoria', 'abandono')->where('anio', $ultimoAnio)->first();
+
+        $totalEstudiantes = $matricula ? (int)$matricula->total : 0;
+        $totalReprobados = $reprobados ? (int)$reprobados->total : 0;
+        $totalAbandono = $abandono ? (int)$abandono->total : 0;
+
+        // Calcular porcentajes
+        $porcentajeReprobados = $totalEstudiantes > 0 ? round(($totalReprobados / $totalEstudiantes) * 100, 2) : 0;
+        $porcentajeAbandono = $totalEstudiantes > 0 ? round(($totalAbandono / $totalEstudiantes) * 100, 2) : 0;
+        $porcentajeAprobados = $totalEstudiantes > 0 ? round((($totalEstudiantes - $totalReprobados - $totalAbandono) / $totalEstudiantes) * 100, 2) : 0;
+    @endphp
+
+    <div class="bg-white rounded-xl shadow p-6 mb-8">
+        <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+            <i class="fas fa-chart-pie"></i> Estadística del último año ({{ $ultimoAnio }})
+        </h2>
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full md:w-1/2">
+                <canvas id="pieEstadistica"></canvas>
+            </div>
+            <div class="w-full md:w-1/2">
+                <ul class="space-y-3 text-secondary text-lg">
+                    <li>
+                        <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #38bac5"></span>
+                        <strong>Total estudiantes:</strong> {{ $totalEstudiantes }}
+                    </li>
+                    <li>
+                        <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #ff6384"></span>
+                        <strong>Reprobados:</strong> {{ $totalReprobados }} ({{ $porcentajeReprobados }}%)
+                    </li>
+                    <li>
+                        <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #ffce56"></span>
+                        <strong>Abandono:</strong> {{ $totalAbandono }} ({{ $porcentajeAbandono }}%)
+                    </li>
+                    <li>
+                        <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #4bc0c0"></span>
+                        <strong>Aprobados:</strong> {{ $totalEstudiantes - $totalReprobados - $totalAbandono }} ({{ $porcentajeAprobados }}%)
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
         <!-- Footer -->
         <footer class="main-footer">
@@ -607,12 +660,83 @@
         });
     </script>
 
-</body>
-</html>
+    {{-- ...existing code... --}}
 
 
-
-
-    
-
-    
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+<script>
+    const ctxPie = document.getElementById('pieEstadistica').getContext('2d');
+    new Chart(ctxPie, {
+        type: 'pie', // Cambia de 'doughnut' a 'pie' para círculo completo
+        data: {
+            labels: [
+                'Aprobados',
+                'Reprobados',
+                'Abandono'
+            ],
+            datasets: [{
+                data: [
+                    {{ $totalEstudiantes - $totalReprobados - $totalAbandono }},
+                    {{ $totalReprobados }},
+                    {{ $totalAbandono }}
+                ],
+                backgroundColor: [
+                    '#26baa5', // Aprobados
+                    '#ff6384', // Reprobados
+                    '#ffce56'  // Abandono
+                ],
+                borderColor: [
+                    '#198675FF',
+                    '#F4305BFF',
+                    '#FFCE56FF'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: { size: 16 }
+                    }
+                },
+                datalabels: {
+                    color: '#fff',
+                    font: { weight: 'bold', size: 20 },
+                    align: 'center',
+                    anchor: 'center',
+                    textAlign: 'center',
+                    textStrokeColor: '#222',
+                    textStrokeWidth: 4,
+                    shadowColor: 'rgba(0,0,0,0.02)',
+                    shadowBlur: 8,
+                    shadowOffsetX: 0,
+                    shadowOffsetY: 0,
+                    formatter: function(value, context) {
+                        let label = context.chart.data.labels[context.dataIndex];
+                        let total = context.dataset.data.reduce((a, b) => a + b, 0);
+                        let percent = total > 0 ? ((value / total) * 100).toFixed(2) : 0;
+                        return label + '\n' + percent + '%';
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.label || '';
+                            let value = context.raw || 0;
+                            let total = context.dataset.data.reduce((a, b) => a + b, 0);
+                            let percent = total > 0 ? ((value / total) * 100).toFixed(2) : 0;
+                            return `${label}: ${value} (${percent}%)`;
+                        }
+                    }
+                }
+            }
+        },
+        plugins: [ChartDataLabels]
+    });
+</script>
+{{-- ...existing code... --}}

@@ -167,15 +167,19 @@
 
 
         @php
-            // Calcular probabilidad de reprobar para el colegio actual
-            $totalMatricula = collect($estadisticas)->where('categoria', 'matricula')->sum('total');
-            $totalReprobados = collect($estadisticas)->where('categoria', 'reprobados')->sum('total');
+            // Calcular probabilidad de reprobar para el colegio actual SOLO del último año
+            $ultimoAnio = collect($estadisticas)->max('anio');
+            $matriculaUltimo = collect($estadisticas)->where('categoria', 'matricula')->where('anio', $ultimoAnio)->first();
+            $reprobadosUltimo = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $ultimoAnio)->first();
+        
+            $totalMatricula = $matriculaUltimo ? (int)$matriculaUltimo->total : 0;
+            $totalReprobados = $reprobadosUltimo ? (int)$reprobadosUltimo->total : 0;
             $probabilidadReprobar = $totalMatricula > 0 ? round(($totalReprobados / $totalMatricula) * 100, 2) : 0;
         @endphp
 
         <div class="bg-white rounded-xl shadow p-6 mb-8">
             <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
-                <i class="fas fa-exclamation-triangle"></i> Probabilidad de Reprobar
+                <i class="fas fa-exclamation-triangle"></i> Probabilidad de Reprobar 
             </h2>
             <div class="flex items-center gap-4">
                 <div class="text-4xl font-extrabold text-secondary">{{ $probabilidadReprobar }}%</div>
@@ -200,7 +204,7 @@
             </div>
         @endif
 
-        <div id="map"></div>
+     
 
         
         {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  redes  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
@@ -258,8 +262,172 @@
             </section>
 
 
+        {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  mas estadisticas  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}ç
+            
+        @php
+            // Obtener el último año de estadística
+            $ultimoAnio = collect($estadisticas)->max('anio');
+            $matricula = collect($estadisticas)->where('categoria', 'matricula')->where('anio', $ultimoAnio)->first();
+            $reprobados = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $ultimoAnio)->first();
+            $abandono = collect($estadisticas)->where('categoria', 'abandono')->where('anio', $ultimoAnio)->first();
+
+            $totalEstudiantes = $matricula ? (int)$matricula->total : 0;
+            $totalReprobados = $reprobados ? (int)$reprobados->total : 0;
+            $totalAbandono = $abandono ? (int)$abandono->total : 0;
+
+            // Calcular porcentajes
+            $porcentajeReprobados = $totalEstudiantes > 0 ? round(($totalReprobados / $totalEstudiantes) * 100, 2) : 0;
+            $porcentajeAbandono = $totalEstudiantes > 0 ? round(($totalAbandono / $totalEstudiantes) * 100, 2) : 0;
+            $porcentajeAprobados = $totalEstudiantes > 0 ? round((($totalEstudiantes - $totalReprobados - $totalAbandono) / $totalEstudiantes) * 100, 2) : 0;
+        @endphp
+
+        <div class="bg-white rounded-xl shadow p-6 mb-8">
+            <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+                <i class="fas fa-chart-pie"></i> Estadística del último año ({{ $ultimoAnio }})
+            </h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-full md:w-1/2">
+                    <canvas id="pieEstadistica"></canvas>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <ul class="space-y-3 text-secondary text-lg">
+                        <li>
+                            <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #38bac5"></span>
+                            <strong>Total estudiantes:</strong> {{ $totalEstudiantes }}
+                        </li>
+                        <li>
+                            <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #ff6384"></span>
+                            <strong>Reprobados:</strong> {{ $totalReprobados }} ({{ $porcentajeReprobados }}%)
+                        </li>
+                        <li>
+                            <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #ffce56"></span>
+                            <strong>Abandono:</strong> {{ $totalAbandono }} ({{ $porcentajeAbandono }}%)
+                        </li>
+                        <li>
+                            <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #4bc0c0"></span>
+                            <strong>Aprobados:</strong> {{ $totalEstudiantes - $totalReprobados - $totalAbandono }} ({{ $porcentajeAprobados }}%)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
+        @php
+        // Datos del último año para reprobados por género
+        $ultimoAnio = collect($estadisticas)->max('anio');
+        $reprobados = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $ultimoAnio)->first();
+
+        $reprobadosMujer = $reprobados ? (int)$reprobados->mujer : 0;
+        $reprobadosHombre = $reprobados ? (int)$reprobados->hombre : 0;
+        $totalReprobados = $reprobadosMujer + $reprobadosHombre;
+
+        $porcentajeMujer = $totalReprobados > 0 ? round(($reprobadosMujer / $totalReprobados) * 100, 2) : 0;
+        $porcentajeHombre = $totalReprobados > 0 ? round(($reprobadosHombre / $totalReprobados) * 100, 2) : 0;
+    @endphp
+
+    <div class="bg-white rounded-xl shadow p-6 mb-8">
+        <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+            <i class="fas fa-chart-pie"></i> Reprobados por género ({{ $ultimoAnio }})
+        </h2>
+        <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full md:w-1/2">
+                <canvas id="pieReprobadosGenero"></canvas>
+            </div>
+            <div class="w-full md:w-1/2">
+                <ul class="space-y-3 text-secondary text-lg">
+                    <li>
+                        <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #4bc0c0"></span>
+                        <strong>Mujeres:</strong> {{ $reprobadosMujer }} ({{ $porcentajeMujer }}%)
+                    </li>
+                    <li>
+                        <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #f4305b"></span>
+                        <strong>Hombres:</strong> {{ $reprobadosHombre }} ({{ $porcentajeHombre }}%)
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+        {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
+        @php
+        // Evolución de reprobados por año y estimación
+        $reprobadosPorAnio = collect($estadisticas)
+            ->where('categoria', 'reprobados')
+            ->sortBy('anio')
+            ->groupBy('anio')
+            ->map(function($items) {
+                return (int)$items->first()->total;
+            });
+
+        $aniosReales = $reprobadosPorAnio->keys()->toArray();
+        $valoresReales = $reprobadosPorAnio->values()->toArray();
+
+        // Estimación simple: promedio de los últimos 2 años
+        $ultimoAnio = max($aniosReales);
+        $penultimoAnio = count($aniosReales) > 1 ? $aniosReales[count($aniosReales)-2] : $ultimoAnio;
+        $promedio = count($valoresReales) > 1 ? round((end($valoresReales) + prev($valoresReales))/2) : end($valoresReales);
+
+        $aniosEstimados = [$ultimoAnio+1, $ultimoAnio+2];
+        $valoresEstimados = [$promedio, $promedio];
+
+        $aniosGrafico = array_merge($aniosReales, $aniosEstimados);
+        $valoresGrafico = array_merge($valoresReales, $valoresEstimados);
+
+        // Comparación de aprobados vs promovidos por año
+        $aprobadosPorAnio = [];
+        $promovidosPorAnio = [];
+        foreach($aniosReales as $anio) {
+            $matricula = collect($estadisticas)->where('categoria', 'matricula')->where('anio', $anio)->first();
+            $reprobados = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $anio)->first();
+            $abandono = collect($estadisticas)->where('categoria', 'abandono')->where('anio', $anio)->first();
+            $aprobadosPorAnio[] = $matricula ? ((int)$matricula->total - (int)($reprobados->total ?? 0) - (int)($abandono->total ?? 0)) : 0;
+            $promovidos = collect($estadisticas)->where('categoria', 'promovidos')->where('anio', $anio)->first();
+            $promovidosPorAnio[] = $promovidos ? (int)$promovidos->total : 0;
+        }
+
+        // Aprobados por género (último año)
+        $matriculaUltimo = collect($estadisticas)->where('categoria', 'matricula')->where('anio', $ultimoAnio)->first();
+        $reprobadosUltimo = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $ultimoAnio)->first();
+        $abandonoUltimo = collect($estadisticas)->where('categoria', 'abandono')->where('anio', $ultimoAnio)->first();
+
+        $aprobadosMujer = $matriculaUltimo ? ((int)$matriculaUltimo->mujer - (int)($reprobadosUltimo->mujer ?? 0) - (int)($abandonoUltimo->mujer ?? 0)) : 0;
+        $aprobadosHombre = $matriculaUltimo ? ((int)$matriculaUltimo->hombre - (int)($reprobadosUltimo->hombre ?? 0) - (int)($abandonoUltimo->hombre ?? 0)) : 0;
+    @endphp
+
+    <div class="bg-white rounded-xl shadow p-6 mb-8">
+        <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+            <i class="fas fa-chart-line"></i> Evolución de reprobados por año
+        </h2>
+        <canvas id="evolucionReprobados"></canvas>
+        <div class="text-xs text-secondary mt-2">
+            <span class="inline-block w-3 h-3 rounded-full mr-1 align-middle" style="background:#ff6384"></span> Datos reales
+            <span class="inline-block w-3 h-3 rounded-full mx-2 align-middle" style="background:#ffce56"></span> Estimaciones
+        </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-6 mb-8">
+        <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+            <i class="fas fa-chart-bar"></i> Comparación de aprobados vs promovidos por año
+        </h2>
+        <canvas id="aprobadosPromovidos"></canvas>
+    </div>
+
+    <div class="bg-white rounded-xl shadow p-6 mb-8">
+        <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+            <i class="fas fa-venus-mars"></i> Aprobados por género ({{ $ultimoAnio }})
+        </h2>
+        <canvas id="aprobadosGenero"></canvas>
+        <div class="flex gap-8 mt-4 text-secondary text-lg">
+            <span><span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background:#4bc0c0"></span> Mujeres: {{ $aprobadosMujer }}</span>
+            <span><span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background:#f4305b"></span> Hombres: {{ $aprobadosHombre }}</span>
+        </div>
+    </div>
+        {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  contactar %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
+          
         {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  contactar %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
         
+
         <!-- Contacto Section -->
         <section id="contacto" class="contacto-section">
             <div class="container">
@@ -356,166 +524,30 @@
             </div>
         </section>
     {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
+     <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ubición del colegio</h2>
+                    
+                    
+                    <div id="map"></div>
+                    
+                    <div class="cta-actions">
+                        <a href="https://wa.me/59160902299?text=¡Hola!%20Quiero%20ser%20parte%20de%20este%20proyecto.%20Puedo%20colaborar%20en:" 
+                        class="cta-button whatsapp-btn" 
+                        target="_blank" 
+                        rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> ÚNETE AL EQUIPO
+                        </a>
+                    </div>
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </section>
     
-    @php
-        // Obtener el último año de estadística
-        $ultimoAnio = collect($estadisticas)->max('anio');
-        $matricula = collect($estadisticas)->where('categoria', 'matricula')->where('anio', $ultimoAnio)->first();
-        $reprobados = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $ultimoAnio)->first();
-        $abandono = collect($estadisticas)->where('categoria', 'abandono')->where('anio', $ultimoAnio)->first();
-
-        $totalEstudiantes = $matricula ? (int)$matricula->total : 0;
-        $totalReprobados = $reprobados ? (int)$reprobados->total : 0;
-        $totalAbandono = $abandono ? (int)$abandono->total : 0;
-
-        // Calcular porcentajes
-        $porcentajeReprobados = $totalEstudiantes > 0 ? round(($totalReprobados / $totalEstudiantes) * 100, 2) : 0;
-        $porcentajeAbandono = $totalEstudiantes > 0 ? round(($totalAbandono / $totalEstudiantes) * 100, 2) : 0;
-        $porcentajeAprobados = $totalEstudiantes > 0 ? round((($totalEstudiantes - $totalReprobados - $totalAbandono) / $totalEstudiantes) * 100, 2) : 0;
-    @endphp
-
-    <div class="bg-white rounded-xl shadow p-6 mb-8">
-        <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
-            <i class="fas fa-chart-pie"></i> Estadística del último año ({{ $ultimoAnio }})
-        </h2>
-        <div class="flex flex-col md:flex-row items-center gap-8">
-            <div class="w-full md:w-1/2">
-                <canvas id="pieEstadistica"></canvas>
-            </div>
-            <div class="w-full md:w-1/2">
-                <ul class="space-y-3 text-secondary text-lg">
-                    <li>
-                        <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #38bac5"></span>
-                        <strong>Total estudiantes:</strong> {{ $totalEstudiantes }}
-                    </li>
-                    <li>
-                        <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #ff6384"></span>
-                        <strong>Reprobados:</strong> {{ $totalReprobados }} ({{ $porcentajeReprobados }}%)
-                    </li>
-                    <li>
-                        <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #ffce56"></span>
-                        <strong>Abandono:</strong> {{ $totalAbandono }} ({{ $porcentajeAbandono }}%)
-                    </li>
-                    <li>
-                        <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #4bc0c0"></span>
-                        <strong>Aprobados:</strong> {{ $totalEstudiantes - $totalReprobados - $totalAbandono }} ({{ $porcentajeAprobados }}%)
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
-    @php
-    // Datos del último año para reprobados por género
-    $ultimoAnio = collect($estadisticas)->max('anio');
-    $reprobados = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $ultimoAnio)->first();
-
-    $reprobadosMujer = $reprobados ? (int)$reprobados->mujer : 0;
-    $reprobadosHombre = $reprobados ? (int)$reprobados->hombre : 0;
-    $totalReprobados = $reprobadosMujer + $reprobadosHombre;
-
-    $porcentajeMujer = $totalReprobados > 0 ? round(($reprobadosMujer / $totalReprobados) * 100, 2) : 0;
-    $porcentajeHombre = $totalReprobados > 0 ? round(($reprobadosHombre / $totalReprobados) * 100, 2) : 0;
-@endphp
-
-<div class="bg-white rounded-xl shadow p-6 mb-8">
-    <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
-        <i class="fas fa-chart-pie"></i> Reprobados por género ({{ $ultimoAnio }})
-    </h2>
-    <div class="flex flex-col md:flex-row items-center gap-8">
-        <div class="w-full md:w-1/2">
-            <canvas id="pieReprobadosGenero"></canvas>
-        </div>
-        <div class="w-full md:w-1/2">
-            <ul class="space-y-3 text-secondary text-lg">
-                <li>
-                    <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #4bc0c0"></span>
-                    <strong>Mujeres:</strong> {{ $reprobadosMujer }} ({{ $porcentajeMujer }}%)
-                </li>
-                <li>
-                    <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #f4305b"></span>
-                    <strong>Hombres:</strong> {{ $reprobadosHombre }} ({{ $porcentajeHombre }}%)
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-    {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
-    @php
-    // Evolución de reprobados por año y estimación
-    $reprobadosPorAnio = collect($estadisticas)
-        ->where('categoria', 'reprobados')
-        ->sortBy('anio')
-        ->groupBy('anio')
-        ->map(function($items) {
-            return (int)$items->first()->total;
-        });
-
-    $aniosReales = $reprobadosPorAnio->keys()->toArray();
-    $valoresReales = $reprobadosPorAnio->values()->toArray();
-
-    // Estimación simple: promedio de los últimos 2 años
-    $ultimoAnio = max($aniosReales);
-    $penultimoAnio = count($aniosReales) > 1 ? $aniosReales[count($aniosReales)-2] : $ultimoAnio;
-    $promedio = count($valoresReales) > 1 ? round((end($valoresReales) + prev($valoresReales))/2) : end($valoresReales);
-
-    $aniosEstimados = [$ultimoAnio+1, $ultimoAnio+2];
-    $valoresEstimados = [$promedio, $promedio];
-
-    $aniosGrafico = array_merge($aniosReales, $aniosEstimados);
-    $valoresGrafico = array_merge($valoresReales, $valoresEstimados);
-
-    // Comparación de aprobados vs promovidos por año
-    $aprobadosPorAnio = [];
-    $promovidosPorAnio = [];
-    foreach($aniosReales as $anio) {
-        $matricula = collect($estadisticas)->where('categoria', 'matricula')->where('anio', $anio)->first();
-        $reprobados = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $anio)->first();
-        $abandono = collect($estadisticas)->where('categoria', 'abandono')->where('anio', $anio)->first();
-        $aprobadosPorAnio[] = $matricula ? ((int)$matricula->total - (int)($reprobados->total ?? 0) - (int)($abandono->total ?? 0)) : 0;
-        $promovidos = collect($estadisticas)->where('categoria', 'promovidos')->where('anio', $anio)->first();
-        $promovidosPorAnio[] = $promovidos ? (int)$promovidos->total : 0;
-    }
-
-    // Aprobados por género (último año)
-    $matriculaUltimo = collect($estadisticas)->where('categoria', 'matricula')->where('anio', $ultimoAnio)->first();
-    $reprobadosUltimo = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $ultimoAnio)->first();
-    $abandonoUltimo = collect($estadisticas)->where('categoria', 'abandono')->where('anio', $ultimoAnio)->first();
-
-    $aprobadosMujer = $matriculaUltimo ? ((int)$matriculaUltimo->mujer - (int)($reprobadosUltimo->mujer ?? 0) - (int)($abandonoUltimo->mujer ?? 0)) : 0;
-    $aprobadosHombre = $matriculaUltimo ? ((int)$matriculaUltimo->hombre - (int)($reprobadosUltimo->hombre ?? 0) - (int)($abandonoUltimo->hombre ?? 0)) : 0;
-@endphp
-
-<div class="bg-white rounded-xl shadow p-6 mb-8">
-    <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
-        <i class="fas fa-chart-line"></i> Evolución de reprobados por año
-    </h2>
-    <canvas id="evolucionReprobados"></canvas>
-    <div class="text-xs text-secondary mt-2">
-        <span class="inline-block w-3 h-3 rounded-full mr-1 align-middle" style="background:#ff6384"></span> Datos reales
-        <span class="inline-block w-3 h-3 rounded-full mx-2 align-middle" style="background:#ffce56"></span> Estimaciones
-    </div>
-</div>
-
-<div class="bg-white rounded-xl shadow p-6 mb-8">
-    <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
-        <i class="fas fa-chart-bar"></i> Comparación de aprobados vs promovidos por año
-    </h2>
-    <canvas id="aprobadosPromovidos"></canvas>
-</div>
-
-<div class="bg-white rounded-xl shadow p-6 mb-8">
-    <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
-        <i class="fas fa-venus-mars"></i> Aprobados por género ({{ $ultimoAnio }})
-    </h2>
-    <canvas id="aprobadosGenero"></canvas>
-    <div class="flex gap-8 mt-4 text-secondary text-lg">
-        <span><span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background:#4bc0c0"></span> Mujeres: {{ $aprobadosMujer }}</span>
-        <span><span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background:#f4305b"></span> Hombres: {{ $aprobadosHombre }}</span>
-    </div>
-</div>
 
     {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
         <!-- Footer -->

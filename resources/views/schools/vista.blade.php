@@ -406,6 +406,118 @@
     </div>
 
     {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
+    @php
+    // Datos del último año para reprobados por género
+    $ultimoAnio = collect($estadisticas)->max('anio');
+    $reprobados = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $ultimoAnio)->first();
+
+    $reprobadosMujer = $reprobados ? (int)$reprobados->mujer : 0;
+    $reprobadosHombre = $reprobados ? (int)$reprobados->hombre : 0;
+    $totalReprobados = $reprobadosMujer + $reprobadosHombre;
+
+    $porcentajeMujer = $totalReprobados > 0 ? round(($reprobadosMujer / $totalReprobados) * 100, 2) : 0;
+    $porcentajeHombre = $totalReprobados > 0 ? round(($reprobadosHombre / $totalReprobados) * 100, 2) : 0;
+@endphp
+
+<div class="bg-white rounded-xl shadow p-6 mb-8">
+    <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+        <i class="fas fa-chart-pie"></i> Reprobados por género ({{ $ultimoAnio }})
+    </h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="w-full md:w-1/2">
+            <canvas id="pieReprobadosGenero"></canvas>
+        </div>
+        <div class="w-full md:w-1/2">
+            <ul class="space-y-3 text-secondary text-lg">
+                <li>
+                    <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #4bc0c0"></span>
+                    <strong>Mujeres:</strong> {{ $reprobadosMujer }} ({{ $porcentajeMujer }}%)
+                </li>
+                <li>
+                    <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #f4305b"></span>
+                    <strong>Hombres:</strong> {{ $reprobadosHombre }} ({{ $porcentajeHombre }}%)
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
+    @php
+    // Evolución de reprobados por año y estimación
+    $reprobadosPorAnio = collect($estadisticas)
+        ->where('categoria', 'reprobados')
+        ->sortBy('anio')
+        ->groupBy('anio')
+        ->map(function($items) {
+            return (int)$items->first()->total;
+        });
+
+    $aniosReales = $reprobadosPorAnio->keys()->toArray();
+    $valoresReales = $reprobadosPorAnio->values()->toArray();
+
+    // Estimación simple: promedio de los últimos 2 años
+    $ultimoAnio = max($aniosReales);
+    $penultimoAnio = count($aniosReales) > 1 ? $aniosReales[count($aniosReales)-2] : $ultimoAnio;
+    $promedio = count($valoresReales) > 1 ? round((end($valoresReales) + prev($valoresReales))/2) : end($valoresReales);
+
+    $aniosEstimados = [$ultimoAnio+1, $ultimoAnio+2];
+    $valoresEstimados = [$promedio, $promedio];
+
+    $aniosGrafico = array_merge($aniosReales, $aniosEstimados);
+    $valoresGrafico = array_merge($valoresReales, $valoresEstimados);
+
+    // Comparación de aprobados vs promovidos por año
+    $aprobadosPorAnio = [];
+    $promovidosPorAnio = [];
+    foreach($aniosReales as $anio) {
+        $matricula = collect($estadisticas)->where('categoria', 'matricula')->where('anio', $anio)->first();
+        $reprobados = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $anio)->first();
+        $abandono = collect($estadisticas)->where('categoria', 'abandono')->where('anio', $anio)->first();
+        $aprobadosPorAnio[] = $matricula ? ((int)$matricula->total - (int)($reprobados->total ?? 0) - (int)($abandono->total ?? 0)) : 0;
+        $promovidos = collect($estadisticas)->where('categoria', 'promovidos')->where('anio', $anio)->first();
+        $promovidosPorAnio[] = $promovidos ? (int)$promovidos->total : 0;
+    }
+
+    // Aprobados por género (último año)
+    $matriculaUltimo = collect($estadisticas)->where('categoria', 'matricula')->where('anio', $ultimoAnio)->first();
+    $reprobadosUltimo = collect($estadisticas)->where('categoria', 'reprobados')->where('anio', $ultimoAnio)->first();
+    $abandonoUltimo = collect($estadisticas)->where('categoria', 'abandono')->where('anio', $ultimoAnio)->first();
+
+    $aprobadosMujer = $matriculaUltimo ? ((int)$matriculaUltimo->mujer - (int)($reprobadosUltimo->mujer ?? 0) - (int)($abandonoUltimo->mujer ?? 0)) : 0;
+    $aprobadosHombre = $matriculaUltimo ? ((int)$matriculaUltimo->hombre - (int)($reprobadosUltimo->hombre ?? 0) - (int)($abandonoUltimo->hombre ?? 0)) : 0;
+@endphp
+
+<div class="bg-white rounded-xl shadow p-6 mb-8">
+    <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+        <i class="fas fa-chart-line"></i> Evolución de reprobados por año
+    </h2>
+    <canvas id="evolucionReprobados"></canvas>
+    <div class="text-xs text-secondary mt-2">
+        <span class="inline-block w-3 h-3 rounded-full mr-1 align-middle" style="background:#ff6384"></span> Datos reales
+        <span class="inline-block w-3 h-3 rounded-full mx-2 align-middle" style="background:#ffce56"></span> Estimaciones
+    </div>
+</div>
+
+<div class="bg-white rounded-xl shadow p-6 mb-8">
+    <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+        <i class="fas fa-chart-bar"></i> Comparación de aprobados vs promovidos por año
+    </h2>
+    <canvas id="aprobadosPromovidos"></canvas>
+</div>
+
+<div class="bg-white rounded-xl shadow p-6 mb-8">
+    <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+        <i class="fas fa-venus-mars"></i> Aprobados por género ({{ $ultimoAnio }})
+    </h2>
+    <canvas id="aprobadosGenero"></canvas>
+    <div class="flex gap-8 mt-4 text-secondary text-lg">
+        <span><span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background:#4bc0c0"></span> Mujeres: {{ $aprobadosMujer }}</span>
+        <span><span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background:#f4305b"></span> Hombres: {{ $aprobadosHombre }}</span>
+    </div>
+</div>
+
+    {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
         <!-- Footer -->
         <footer class="main-footer">
             <div class="container">
@@ -687,9 +799,9 @@
                     '#ffce56'  // Abandono
                 ],
                 borderColor: [
-                    '#198675FF',
-                    '#F4305BFF',
-                    '#FFCE56FF'
+                    '#FFFFFFFF',
+                    '#FFFFFFFF',
+                    '#FFFFFFFF',
                 ],
                 borderWidth: 2
             }]
@@ -711,7 +823,7 @@
                     textAlign: 'center',
                     textStrokeColor: '#222',
                     textStrokeWidth: 4,
-                    shadowColor: 'rgba(0,0,0,0.02)',
+                    shadowColor: 'rgba(0,0,0,0.0)',
                     shadowBlur: 8,
                     shadowOffsetX: 0,
                     shadowOffsetY: 0,
@@ -740,3 +852,178 @@
     });
 </script>
 {{-- ...existing code... --}}
+{{-- ...existing code... --}}
+
+
+<script>
+    const ctxPieReprobadosGenero = document.getElementById('pieReprobadosGenero').getContext('2d');
+    new Chart(ctxPieReprobadosGenero, {
+        type: 'pie',
+        data: {
+            labels: [
+                'Mujer',
+                'Hombre'
+            ],
+            datasets: [{
+                data: [
+                    {{ $reprobadosMujer }},
+                    {{ $reprobadosHombre }}
+                ],
+                backgroundColor: [
+                    '#4bc0c0', // Mujer
+                    '#f4305b'  // Hombre
+                ],
+                borderColor: [
+                    '#FFFFFF',
+                    '#FFFFFF'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: { size: 16 }
+                    }
+                },
+                datalabels: {
+                    color: '#fff',
+                    font: { weight: 'bold', size: 20 },
+                    align: 'center',
+                    anchor: 'center',
+                    textAlign: 'center',
+                    textStrokeColor: '#222',
+                    textStrokeWidth: 4,
+                    shadowColor: 'rgba(0,0,0,0.2)',
+                    shadowBlur: 8,
+                    shadowOffsetX: 0,
+                    shadowOffsetY: 0,
+                    formatter: function(value, context) {
+                        let label = context.chart.data.labels[context.dataIndex];
+                        let total = context.dataset.data.reduce((a, b) => a + b, 0);
+                        let percent = total > 0 ? ((value / total) * 100).toFixed(2) : 0;
+                        // Dos líneas: palabra y porcentaje
+                        return label + '\n' + percent + '%';
+                    }
+                },
+                tooltip: {
+                    enabled: true,
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.label || '';
+                            let value = context.raw || 0;
+                            let total = context.dataset.data.reduce((a, b) => a + b, 0);
+                            let percent = total > 0 ? ((value / total) * 100).toFixed(2) : 0;
+                            return `${label}: ${value} (${percent}%)`;
+                        }
+                    }
+                }
+            }
+        },
+        plugins: [ChartDataLabels]
+    });
+</script>
+
+
+<script>
+    // Evolución de reprobados por año
+    const ctxEvolucion = document.getElementById('evolucionReprobados').getContext('2d');
+    new Chart(ctxEvolucion, {
+        type: 'bar',
+        data: {
+            labels: {!! json_encode($aniosGrafico) !!},
+            datasets: [
+                {
+                    label: 'Reprobados (reales)',
+                    data: {!! json_encode(array_merge($valoresReales, array_fill(0, count($aniosEstimados), null))) !!},
+                    backgroundColor: '#ff6384',
+                    borderColor: '#ff6384',
+                    borderWidth: 2
+                },
+                {
+                    label: 'Reprobados (estimado)',
+                    data: {!! json_encode(array_merge(array_fill(0, count($aniosReales), null), $valoresEstimados)) !!},
+                    backgroundColor: '#ffce56',
+                    borderColor: '#ffce56',
+                    borderWidth: 2
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+                            let value = context.raw || 0;
+                            return `${label}: ${value}`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+
+    // Comparación de aprobados vs reprobados por año
+    const ctxAprobadosReprobados = document.getElementById('aprobadosPromovidos').getContext('2d');
+    new Chart(ctxAprobadosReprobados, {
+        type: 'bar',
+        data: {
+            labels: {!! json_encode($aniosReales) !!},
+            datasets: [
+                {
+                    label: 'Aprobados',
+                    data: {!! json_encode($aprobadosPorAnio) !!},
+                    backgroundColor: '#26baa5',
+                    borderColor: '#198675FF',
+                    borderWidth: 2
+                },
+                {
+                    label: 'Reprobados',
+                    data: {!! json_encode($valoresReales) !!},
+                    backgroundColor: '#ff6384',
+                    borderColor: '#F4305BFF',
+                    borderWidth: 2
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' }
+            },
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+
+    // Aprobados por género (último año)
+    const ctxAprobadosGenero = document.getElementById('aprobadosGenero').getContext('2d');
+    new Chart(ctxAprobadosGenero, {
+        type: 'pie',
+        data: {
+            labels: ['Mujer', 'Hombre'],
+            datasets: [{
+                data: [{{ $aprobadosMujer }}, {{ $aprobadosHombre }}],
+                backgroundColor: ['#4bc0c0', '#f4305b'],
+                borderColor: ['#FFFFFF', '#FFFFFF'],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'bottom' }
+            }
+        }
+    });
+</script>

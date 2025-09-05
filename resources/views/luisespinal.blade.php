@@ -157,13 +157,17 @@
                     display: true,
                     color: '#fff', // Color del texto
                     font: {
-                        size: 14, // Tamaño del texto dentro de las barras
                         weight: 'bold'
                     },
                     align: 'center', // Centrar el texto dentro de la barra
+                    anchor: 'center', // Centrar el texto verticalmente
                     formatter: function(value, context) {
-                        // Mostrar el género y la cantidad dentro de la barra
+                        // Mostrar la palabra (Hombres/Mujeres) y la cantidad
                         return `${context.dataset.label}\n${value}`;
+                    },
+                    padding: {
+                        top: 10, // Espaciado entre las líneas
+                        bottom: 10
                     }
                 }
             },

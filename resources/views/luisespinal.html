@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Datos</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h1 style="text-align: center;">Predicción para 2025</h1>
+        <canvas id="graficoDatos"></canvas>
+    </div>
+
+    <script>
+        // Datos para el gráfico
+        const labels = ['2023', '2024', '2025']; // Años
+        const mujeresReprobadas = [45, 38, 42]; // Mujeres reprobadas
+        const hombresReprobados = [57, 50, 60]; // Hombres reprobados
+
+        // Configuración del gráfico
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Mujeres Reprobadas',
+                    data: mujeresReprobadas,
+                    backgroundColor: function(context) {
+                        return context.dataIndex === 2 ? 'rgba(38,186,165,0.9)' : 'rgb(38,186,165)';
+                    },
+                    borderColor: function(context) {
+                        return context.dataIndex === 2 ? 'rgba(38,186,165,1)' : 'rgb(38,186,165)';
+                    },
+                    borderWidth: function(context) {
+                        return context.dataIndex === 2 ? 2 : 1;
+                    }
+                },
+                {
+                    label: 'Hombres Reprobados',
+                    data: hombresReprobados,
+                    backgroundColor: function(context) {
+                        return context.dataIndex === 2 ? 'rgba(55,95,122,0.9)' : 'rgb(55,95,122)';
+                    },
+                    borderColor: function(context) {
+                        return context.dataIndex === 2 ? 'rgba(55,95,122,1)' : 'rgb(55,95,122)';
+                    },
+                    borderWidth: function(context) {
+                        return context.dataIndex === 2 ? 2 : 1;
+                    }
+                }
+            ]
+        };
+
+        // Opciones del gráfico
+        const options = {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top'
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.dataset.label}: ${context.raw}`;
+                        }
+                    }
+                },
+                datalabels: {
+                    display: true,
+                    color: '#fff', // Color del texto
+                    font: {
+                        weight: 'bold'
+                    },
+                    formatter: function(value, context) {
+                        // Mostrar el valor y el género en la barra
+                        return `${context.dataset.label.split(' ')[0]}: ${value}`;
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    stacked: true,
+                    title: {
+                        display: true,
+                        text: 'Años'
+                    }
+                },
+                y: {
+                    stacked: true,
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Cantidad de Reprobados'
+                    }
+                }
+            }
+        };
+
+        // Crear el gráfico
+        const ctx = document.getElementById('graficoDatos').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: options,
+            plugins: [ChartDataLabels] // Activa el plugin de etiquetas
+        });
+    </script>
+</body>
+</html>

@@ -422,6 +422,17 @@ public function index(Request $request)
         ]);
     }
 
+
+    
+    public function rankingAplazados(Request $request)
+    {
+        // Puedes probar con una consulta simple primero
+        $schools = \App\Models\School::with(['ubicacion', 'estadisticas'])->paginate(50);
+
+        // Para evitar error, crea una vista básica temporal
+        return view('schools.ranking_aplazados', compact('schools'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      */

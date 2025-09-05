@@ -69,6 +69,9 @@ Route::get('/test-main', function () {
     return view('schools.test-main');
 });
 
+
+Route::get("ranking-aplazados", [SchoolController::class, "rankingAplazados"])->name('ranking-aplazados');
+
 Route::get('/test-data', function () {
     $latestYear = \App\Models\Estadistica::where('categoria', 'matricula')
         ->max('anio') ?? 2023;
@@ -97,3 +100,10 @@ Route::get('/test-data', function () {
         'count' => $results->count()
     ]);
 });
+
+Route::get('comparar-municipios', [\App\Http\Controllers\MunicipioController::class, 'comparar'])->name('comparar-municipios');
+Route::get('listar-colegios-municipio', [\App\Http\Controllers\MunicipioController::class, 'listarColegios'])->name('listar-colegios-municipio');
+Route::get('colegios-por-municipio', [\App\Http\Controllers\MunicipioController::class, 'getColegiosPorMunicipio'])->name('colegios-por-municipio');
+Route::get('luisespinal', function () {
+    return view('luisespinal');
+})->name('grafico.luisespinal');

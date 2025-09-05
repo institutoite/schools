@@ -86,10 +86,12 @@
         <div class="header">
             <img src="{{ asset('images/logo.png') }}" alt="Logotipo">
             <h1>Predicción para 2025</h1>
+           
         </div>
 
         <!-- Contenedor del gráfico -->
         <div class="chart-container">
+            <h3>Colegio Luis Espinal</h3>
             <canvas id="graficoDatos"></canvas>
         </div>
 

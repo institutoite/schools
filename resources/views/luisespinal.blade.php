@@ -163,7 +163,7 @@
                     anchor: 'center', // Centrar el texto verticalmente
                     formatter: function(value, context) {
                         // Mostrar la palabra (Hombres/Mujeres) y la cantidad
-                        return `${context.dataset.label}\n${value}`;
+                        return `      ${value}\n${context.dataset.label}`;
                     },
                     padding: {
                         top: 10, // Espaciado entre las líneas

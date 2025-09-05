@@ -44,6 +44,7 @@
 
         .chart-container {
             padding: 20px;
+            height: 500px; /* Aumentar la altura del gráfico */
         }
 
         footer {
@@ -61,13 +62,28 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        /* Media query para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.4rem; /* Reducir el tamaño del título */
+            }
+
+            .chart-container {
+                padding: 10px; /* Reducir el padding del gráfico */
+                height: 400px; /* Ajustar la altura del gráfico */
+            }
+
+            footer {
+                font-size: 0.8rem; /* Reducir el tamaño del texto del pie de página */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Encabezado con logotipo -->
         <div class="header">
-            
             <img src="{{ asset('images/logo.png') }}" alt="Logotipo">
             <h1>Predicción para 2025</h1>
         </div>
@@ -94,7 +110,7 @@
             labels: labels,
             datasets: [
                 {
-                    label: 'MUJRES',
+                    label: 'Mujeres',
                     data: mujeresReprobadas,
                     backgroundColor: function(context) {
                         return context.dataIndex === 2 ? 'rgba(38,186,165,0.9)' : 'rgb(38,186,165)';
@@ -107,7 +123,7 @@
                     }
                 },
                 {
-                    label: 'HOMBRES',
+                    label: 'Hombres',
                     data: hombresReprobados,
                     backgroundColor: function(context) {
                         return context.dataIndex === 2 ? 'rgba(55,95,122,0.9)' : 'rgb(55,95,122)';
@@ -125,6 +141,7 @@
         // Opciones del gráfico
         const options = {
             responsive: true,
+            maintainAspectRatio: false, // Permitir que el gráfico se ajuste al contenedor
             plugins: {
                 legend: {
                     position: 'top'
@@ -140,12 +157,13 @@
                     display: true,
                     color: '#fff', // Color del texto
                     font: {
-                        size: 16, // Tamaño de la fuente más grande
+                        size: 14, // Tamaño del texto dentro de las barras
                         weight: 'bold'
                     },
+                    align: 'center', // Centrar el texto dentro de la barra
                     formatter: function(value, context) {
-                        // Mostrar el valor y el género abreviado en la barra
-                        return `${context.dataset.label}: ${value}`;
+                        // Mostrar el género y la cantidad dentro de la barra
+                        return `${context.dataset.label}\n${value}`;
                     }
                 }
             },

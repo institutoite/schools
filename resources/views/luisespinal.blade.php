@@ -93,7 +93,7 @@
         <div class="chart-container">
             <h3>Colegio Luis Espinal</h3>
             <canvas id="graficoDatos"></canvas>
-        </div>
+        </div>z
 
         <!-- Pie de página -->
         <footer>

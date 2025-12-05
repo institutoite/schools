@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SchoolController;
+use App\Http\Controllers\RankingsController;
 use App\Models\School;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +30,8 @@ Route::get('/schools/{school}', [SchoolController::class, 'show'])->name('school
 Route::get('/schools/{id}', [\App\Http\Controllers\SchoolController::class, 'showDetails'])->name('school.details');
 
 Route::get('/reprobados', [SchoolController::class, 'reprobados'])->name('reprobados.index');
+Route::get('/rankings', [RankingsController::class, 'index'])->name('rankings.index');
+Route::get('/api/schools/search', [RankingsController::class, 'searchSchools'])->name('schools.search');
 
 Route::get('/colegios/fix-matriculas', [SchoolController::class, 'fixMatriculasFromJson']);
 

@@ -408,13 +408,36 @@ def guardar_json_incremental(nuevos_datos, output_file):
 
     print(f"✅ Se agregaron {len(nuevos_datos)} datos al archivo {output_file} (total: {len(datos_existentes)}).")
 
-if __name__ == "__main__":
-    print("=== EXTRACTOR DE DATOS DE COLEGIOS ===")
+import sys
+import argparse
 
-    output_file = 'colegios_data_completo.json'  # Un solo archivo
+def parse_args():
+    parser = argparse.ArgumentParser(description="Extractor de datos de colegios por intervalos.")
+    parser.add_argument('--start', type=int, default=0, help='Índice de intervalo inicial (0 por defecto)')
+    parser.add_argument('--end', type=int, default=None, help='Índice de intervalo final (no inclusivo, por defecto hasta el final)')
+    parser.add_argument('--output', type=str, default='colegios_data_completo.json', help='Archivo de salida JSON')
+    parser.add_argument('--max-retries', type=int, default=3, help='Reintentos por URL fallida')
+    parser.add_argument('--sleep', type=float, default=3.0, help='Segundos de espera entre intervalos')
+    return parser.parse_args()
+
+def extract_school_data_with_retry(url, max_retries=3):
+    for attempt in range(max_retries):
+        try:
+            return extract_school_data(url)
+        except Exception as e:
+            print(f"Reintento {attempt+1}/{max_retries} para {url} por error: {e}")
+            time.sleep(2 + attempt)
+    print(f"❌ Fallo definitivo al procesar {url}")
+    return None
+
+if __name__ == "__main__":
+    print("=== EXTRACTOR DE DATOS DE COLEGIOS (MEJORADO) ===")
+
+    args = parse_args()
+    output_file = args.output
 
     intervalos = [
-"""(72220001,72220095),
+(72220001,72220095),
 (82220056,82220145),
 (82220158,82220212),
 (62160002,62160002),
@@ -428,6 +451,7 @@ if __name__ == "__main__":
 (82220001,82220101),
 (82220103,82220203),
 (82220204,82220227),
+
 (52210001,52210046),
 (72180001,72180071),
 (82180003,82180054),
@@ -688,7 +712,7 @@ if __name__ == "__main__":
 (80730102,80730151),
 (80730251,80730348),
 (80730362,80730462),
-(80730463,80730560),"""
+(80730463,80730560),
 (80730564,80730661),
 (80730671,80730767),
 (80730778,80730835),
@@ -1067,24 +1091,52 @@ if __name__ == "__main__":
 (81710001,81710101),
 (81710102,81710134),
 (71700001,71700044),
+]
 
 
-    ]
+    # Selección de subconjunto de intervalos
+    start_idx = args.start
+    end_idx = args.end if args.end is not None else len(intervalos)
+    intervalos_a_procesar = intervalos[start_idx:end_idx]
 
+    print(f"Procesando intervalos del {start_idx} al {end_idx-1 if args.end else len(intervalos)-1} (total: {len(intervalos_a_procesar)})")
 
-    for idx, (start_code, end_code) in enumerate(intervalos, start=1):
+    for idx, (start_code, end_code) in enumerate(intervalos_a_procesar, start=start_idx+1):
         print(f"\n[{idx}] Procesando códigos desde {start_code} hasta {end_code}...")
 
         if start_code > end_code:
             print(f"⚠️  Error: Código inicial {start_code} > final {end_code}, se omite.")
             continue
 
-        nuevos_datos = process_range(start_code, end_code)
-        guardar_json_incremental(nuevos_datos, output_file)
+        # Usar función de reintentos para cada URL
 
-        """ espera = random.uniform(2, 6)
-            print(f"⏳ Esperando {espera:.2f} segundos antes de continuar...")
-            time.sleep(espera)
-        """
-    print("\n🎉 Todos los intervalos han sido procesados y agregados al JSON.")
+        def process_range_retry(start_code, end_code):
+            base_url = "https://seie.minedu.gob.bo/reportes/mapas_unidades_educativas/ficha/ver/"
+            colegios_data = []
+            for code in range(start_code, end_code + 1):
+                url = f"{base_url}{code}"
+                print(f"\nProcesando código RUE: {code}")
+                data = extract_school_data_with_retry(url, max_retries=args.max_retries)
+                if data and data['general']['nombre']:
+                    colegios_data.append(data)
+                    print(f"✓ Datos encontrados: {data['general']['nombre']}")
+                    coords = data['ubicacion']['coordenadas']
+                    if coords['latitud']:
+                        print(f"   Coordenadas: Lat {coords['latitud']}, Long {coords['longitud']}")
+                    else:
+                        print("   No se encontraron coordenadas")
+                else:
+                    print(f"✗ No se encontraron datos para código {code}")
+            print(f"\nIntervalo completado. Total de colegios procesados en este intervalo: {len(colegios_data)}")
+            return colegios_data
+
+        nuevos_datos = process_range_retry(start_code, end_code)
+        if nuevos_datos:
+            guardar_json_incremental(nuevos_datos, output_file)
+
+        espera = random.uniform(args.sleep, args.sleep + 3)
+        print(f"⏳ Esperando {espera:.2f} segundos antes de continuar...")
+        time.sleep(espera)
+
+    print("\n🎉 Todos los intervalos seleccionados han sido procesados y agregados al JSON.")
 

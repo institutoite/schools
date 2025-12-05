@@ -9,6 +9,7 @@ use App\Models\Estadistica;
 use App\Models\Ubicacion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use App\Http\Controllers\RankingsController;
 
 class SchoolController extends Controller
 {
@@ -37,8 +38,12 @@ public function index(Request $request)
         }
         
         $schools = $query->paginate(10)->appends($request->query());
+
+        // KPIs y destacados para la portada
+        $kpis = RankingsController::buildKpis();
+        $highlights = RankingsController::buildHighlights();
         
-        return view('welcome', compact('schools', 'search', 'filter'));
+        return view('welcome', compact('schools', 'search', 'filter', 'kpis', 'highlights'));
 }
 
     public function welcomeSearch(Request $request)

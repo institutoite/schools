@@ -36,7 +36,7 @@ class ImportSchoolsCommand extends Command
 
     $this->info('Iniciando la importación de colegios...');
 
-    $jsonPath = base_path('colegios_data.json');
+    $jsonPath = base_path('salida8_600a_700.json');
 
     if (!File::exists($jsonPath)) {
         $this->error('El archivo colegios_data.json no se encuentra en la raíz del proyecto.');

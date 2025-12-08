@@ -283,6 +283,7 @@ class RankingsController extends Controller
 
         // Calcular posición de un colegio buscado si se proporciona 'q'
         $pos = null; $posTotal = null; $posLabel = null; $targetName = $q ?: null; $posValue = null; $posMetric = null;
+        $selectedSchool = null; $selectedRep = null; $selectedMat = null; $selectedRatio = null;
         if ($q || $schoolIdParam) {
             if ($tipo === 'reprobacion') {
             $modo = $request->query('modo', 'cantidad');
@@ -314,6 +315,10 @@ class RankingsController extends Controller
                         $pos = $idx + 1; $targetName = $school->nombre;
                         if ($modo === 'cantidad') { $posValue = (int)($r->rep ?? 0); $posMetric = 'cantidad'; }
                         else { $posValue = round((float)($r->ratio ?? 0), 2); $posMetric = 'porcentaje'; }
+                        $selectedSchool = $school;
+                        $selectedRep = (int)($r->rep ?? 0);
+                        $selectedMat = (int)($r->mat ?? 0);
+                        $selectedRatio = ($selectedMat > 0) ? round($selectedRep * 100.0 / $selectedMat, 2) : null;
                         break;
                     }
                 }
@@ -337,6 +342,50 @@ class RankingsController extends Controller
             );
         }
 
+        // Respuesta AJAX parcial usando sub-vistas si disponibles
+        if ($request->ajax() || $request->query('ajax')) {
+            try {
+                $contextHtml = view('rankings._context', [
+                    'itemsCount' => $itemsCount ?? null,
+                    'autoUbic' => $autoUbic,
+                    'nivel' => $nivel,
+                    'targetName' => $targetName,
+                    'pos' => $pos,
+                    'posValue' => $posValue,
+                    'posTotal' => $posTotal,
+                    'selectedSchool' => $selectedSchool,
+                    'selectedRep' => $selectedRep,
+                    'selectedMat' => $selectedMat,
+                    'selectedRatio' => $selectedRatio,
+                    'anio' => $anio,
+                ])->render();
+                $tableHtml = view('rankings._table', [
+                    'itemsCount' => $itemsCount ?? null,
+                    'anio' => $anio,
+                    'selectedId' => $schoolIdParam,
+                ])->render();
+            } catch (\Throwable $e) {
+                // Fallback: renderizar secciones directamente desde la vista principal
+                $full = view('rankings.index', [
+                    'tipo' => $tipo,
+                    'anio' => $anio,
+                    'itemsCount' => $itemsCount ?? null,
+                    'autoUbic' => $autoUbic,
+                    'nivel' => $nivel,
+                    'targetName' => $targetName,
+                    'pos' => $pos,
+                    'posValue' => $posValue,
+                    'posTotal' => $posTotal,
+                    'selectedSchool' => $selectedSchool,
+                    'selectedRep' => $selectedRep,
+                    'selectedMat' => $selectedMat,
+                    'selectedRatio' => $selectedRatio,
+                ])->render();
+                $contextHtml = $full; // como mínimo devolver algo
+                $tableHtml = $full;
+            }
+            return response()->json(['contextHtml' => $contextHtml, 'tableHtml' => $tableHtml]);
+        }
         return view('rankings.index', [
             'tipo' => $tipo,
             'anio' => $anio,
@@ -354,6 +403,10 @@ class RankingsController extends Controller
             'targetName' => $targetName,
             'posValue' => $posValue,
             'posMetric' => $posMetric,
+            'selectedSchool' => $selectedSchool,
+            'selectedRep' => $selectedRep,
+            'selectedMat' => $selectedMat,
+            'selectedRatio' => $selectedRatio,
         ]);
     }
 

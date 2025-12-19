@@ -125,4 +125,45 @@ class MunicipioController extends Controller
 
         return response()->json($colegios);
     }
+    public function masAplazadosPorMunicipio(Request $request)
+    {
+        // Mostrar todos los municipios con su colegio más aplazado (limitado a 30 para evitar error de memoria)
+        $ultimoAnio = Estadistica::where('categoria', 'reprobados')->max('anio');
+        $municipios = Ubicacion::select('municipio')->distinct()->orderBy('municipio')->pluck('municipio');
+        $colegiosConReprobados = School::select('schools.id', 'schools.nombre', 'ubicacions.municipio')
+            ->leftJoin('ubicacions', function($join) {
+                $join->on('schools.id', '=', 'ubicacions.school_id');
+            })
+            ->join('estadisticas', function($join) use ($ultimoAnio) {
+                $join->on('estadisticas.school_id', '=', 'schools.id')
+                    ->where('estadisticas.categoria', 'reprobados')
+                    ->where('estadisticas.anio', $ultimoAnio);
+            })
+            ->addSelect(['reprobados' => Estadistica::select('total')
+                ->whereColumn('school_id', 'schools.id')
+                ->where('categoria', 'reprobados')
+                ->where('anio', $ultimoAnio)
+                ->limit(1)
+            ])
+            ->get();
+        $porMunicipio = $colegiosConReprobados->groupBy('municipio')->map(function($items) {
+            return $items->sortByDesc('reprobados')->first();
+        });
+        $resultados = collect();
+        foreach ($municipios as $municipio) {
+            $colegio = $porMunicipio->get($municipio);
+            $resultados->push((object)[
+                'municipio' => $municipio,
+                'colegio' => $colegio ? $colegio->nombre : null,
+                'reprobados' => $colegio ? (int)$colegio->reprobados : 0,
+                'id' => $colegio ? $colegio->id : null,
+            ]);
+        }
+        // Ordenar por reprobados descendente
+        $resultados = $resultados->sortByDesc('reprobados')->values();
+        return view('schools.municipios_aplazados', [
+            'resultados' => $resultados,
+            'ultimoAnio' => $ultimoAnio
+        ]);
+    }
 }

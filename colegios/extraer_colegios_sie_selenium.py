@@ -35,12 +35,13 @@ except Exception:
 
 # Lista fija de departamentos (value, nombre)
 departamentos = [
-    ("4", "Oruro"),
+    ("3", "Cochabamba"),
+    """("5", "Potosi"),
     ("5", "Potosi"),
     ("6", "Tarija"),
     ("7", "Santa Cruz"),
     ("8", "Beni"),
-    ("9", "Pando")
+    ("9", "Pando")"""
 ]
 
 # Esperar el select de departamento por id correcto

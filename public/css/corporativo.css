@@ -1,0 +1,427 @@
+/* ====== COLORES CORPORATIVOS ====== */
+:root {
+    --primary-color: #00897b;
+    --primary-light: #e0f7fa;
+    --primary-dark: #004d40;
+    --accent: #ffb300;
+    --text-main: #2d3748;
+    --text-light: #4a5568;
+    --bg-main: #fafdff;
+    --border-main: #e0f3f1;
+    --white: #fff;
+}
+
+/* ====== GENERAL ====== */
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+/* ====== FILTROS Y FORMULARIO ====== */
+.filters-container {
+    background: var(--white);
+    border-radius: 12px;
+    border: 1px solid var(--border-main);
+    padding: 1.1rem 1rem 0.7rem 1rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 8px rgba(38,186,165,0.04);
+}
+.filtros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.7rem;
+    align-items: end;
+}
+.filtro-item label {
+    font-weight: 500;
+    color: var(--primary-dark);
+    font-size: 0.98rem;
+    margin-bottom: 0.2rem;
+}
+.filtro-item input,
+.filtro-item select {
+    margin-top: 0.1rem;
+    border-radius: 7px;
+    border: 1.2px solid var(--border-main);
+    font-size: 1.04rem;
+    background: var(--bg-main);
+    padding: 0.45rem 0.7rem;
+    transition: border 0.18s, box-shadow 0.18s;
+}
+.filtro-item input:focus,
+.filtro-item select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-light);
+    background: #f3fdfc;
+}
+
+/* ====== AUTOCOMPLETADO ====== */
+.autocomplete-items {
+    position: absolute;
+    z-index: 1000;
+    background: var(--white);
+    border: 1px solid var(--border-main);
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px rgba(38,186,165,0.08);
+}
+.autocomplete-item {
+    padding: 10px 14px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f0f0;
+    background: var(--white);
+    transition: background 0.15s;
+}
+.autocomplete-item:last-child {
+    border-bottom: none;
+}
+.autocomplete-item:hover {
+    background: var(--primary-light);
+}
+.autocomplete-item .nombre-colegio {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 2px;
+}
+.autocomplete-item .info-colegio {
+    font-size: 0.92rem;
+    color: #888;
+    line-height: 1.3;
+}
+
+/* ====== TABLA ====== */
+.table {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(38,186,165,0.04);
+    border: none;
+}
+.table thead {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+.table thead th {
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.97rem;
+    letter-spacing: 0.5px;
+    padding: 0.8rem 0.9rem;
+}
+.table tbody tr {
+    transition: background 0.18s, box-shadow 0.18s;
+}
+.table tbody tr:hover {
+    background: var(--primary-light);
+}
+.table td {
+    vertical-align: middle;
+    padding: 0.7rem 0.9rem;
+    color: var(--text-light);
+    border-top: 1px solid var(--primary-light);
+    font-size: 1.01rem;
+}
+.table tbody td:first-child {
+    font-weight: bold;
+    color: var(--primary-dark);
+    width: 80px;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.row-selected {
+    background: linear-gradient(90deg, rgba(38,186,165,0.13) 60%, rgba(38,186,165,0.25) 100%) !important;
+    font-weight: bold;
+    color: #222 !important;
+    box-shadow: 0 2px 12px 0 rgba(38,186,165,0.18);
+    border-left: 5px solid rgb(38,186,165);
+    border-radius: 8px;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+
+/* ====== PAGINACIÓN ====== */
+.pagination {
+    margin-top: 1.2rem;
+    justify-content: center;
+    gap: 0.1rem;
+}
+.page-link {
+    color: var(--primary-color);
+    border-color: var(--border-main);
+    border-radius: 6px;
+    padding: 0.38rem 0.8rem;
+    font-weight: 500;
+    background: var(--white);
+    transition: background 0.18s, color 0.18s;
+}
+.page-item.active .page-link {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 700;
+}
+.page-link:hover {
+    background: var(--primary-light);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* ====== CARD DE DATOS ====== */
+.card.p-4.mb-4 {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(38,186,165,0.04);
+    border: 1px solid var(--border-main);
+    margin-bottom: 1rem;
+    padding: 0.8rem 0.7rem;
+}
+.card .heading {
+    font-size: 1.08rem;
+    color: var(--primary-dark);
+    font-weight: 500;
+    margin-bottom: 0.12rem;
+}
+.card .subtle {
+    color: #7b8a9a;
+    font-size: 0.91rem;
+}
+.card .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    margin-top: 0.2rem;
+}
+.chip {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    border-radius: 8px;
+    padding: 0.13rem 0.5rem;
+    font-size: 0.91rem;
+    font-weight: 500;
+    box-shadow: none;
+}
+.tag {
+    background: var(--bg-main);
+    color: var(--primary-color);
+    border-radius: 6px;
+    padding: 0.09rem 0.38rem;
+    font-size: 0.89rem;
+    font-weight: 600;
+    margin-right: 0.13rem;
+}
+.pos-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 40px;
+}
+.pos-hero .pos {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.07rem;
+    letter-spacing: 0.3px;
+}
+.pos-hero .label {
+    color: #7b8a9a;
+    font-size: 0.89rem;
+    font-weight: 500;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+    .filtros-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .filters-container {
+        padding: 0.7rem 0.4rem 0.4rem 0.4rem;
+    }
+    .card.p-4.mb-4 {
+        padding: 0.5rem 0.3rem;
+    }
+    .card .heading {
+        font-size: 1rem;
+    }
+    .card .chips, .card .flex {
+        gap: 0.2rem;
+    }
+    .pos-hero .pos {
+        font-size: 1rem;
+    }
+    .table thead th, .table td {
+        font-size: 0.93rem;
+        padding: 0.38rem 0.38rem;
+    }
+    .pagination {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .filters-container {
+        padding: 0.4rem 0.1rem 0.1rem 0.1rem;
+    }
+    .card.p-4.mb-4 {
+        padding: 0.3rem 0.1rem;
+    }
+    .card .heading {
+        font-size: 0.95rem;
+    }
+    .table thead th, .table td {
+        font-size: 0.89rem;
+        padding: 0.22rem 0.18rem;
+    }
+    .pagination {
+        font-size: 0.9rem;
+    }
+}
+
+/* Scroll horizontal para tablas en móvil */
+.card.overflow-x-auto {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.min-w-full {
+    min-width: 600px;
+}
+
+.table thead {
+    background: var(--primary-color);
+    .page-item.active .page-link {
+        background: linear-gradient(90deg, var(--primary-color) 80%, #5eead4 100%);
+        border-color: var(--primary-color);
+        color: white;
+        font-weight: 700;
+    }
+    color: white;
+}
+
+.table thead th {
+    border: none;
+    .page-link:hover {
+        background: #e6fcf7;
+        color: var(--primary-dark);
+        border-color: var(--primary-color);
+    }
+    /* Card de datos del colegio */
+    .card.p-4.mb-4 {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 4px 24px rgba(38,186,165,0.10);
+        border: 1.5px solid #e0f3f1;
+        margin-bottom: 2.2rem;
+        padding: 2.2rem 2rem;
+    }
+    .card .heading {
+        font-size: 1.45rem;
+        color: var(--primary-dark);
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+    }
+    .card .subtle {
+        color: #7b8a9a;
+        font-size: 0.98rem;
+    }
+    .card .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    .chip {
+        background: #e6fcf7;
+        color: var(--primary-dark);
+        border-radius: 16px;
+        padding: 0.3rem 0.9rem;
+        font-size: 0.98rem;
+        font-weight: 500;
+        box-shadow: 0 1px 4px rgba(38,186,165,0.04);
+    }
+    .tag {
+        background: #fafdff;
+        color: #26baa5;
+        border-radius: 8px;
+        padding: 0.2rem 0.7rem;
+        font-size: 0.93rem;
+        font-weight: 600;
+        margin-right: 0.3rem;
+    }
+    .pos-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        min-height: 90px;
+    }
+    .pos-hero .pos {
+        font-size: 2.7rem;
+        font-weight: 800;
+        color: #ffb300;
+        margin-bottom: 0.2rem;
+        letter-spacing: 1px;
+    }
+    .pos-hero .label {
+        color: #7b8a9a;
+        font-size: 1.05rem;
+        font-weight: 500;
+    }
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    padding: 1rem 1.25rem;
+}
+
+.table tbody tr {
+    transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+    background-color: var(--primary-light);
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 1rem 1.25rem;
+    color: var(--text-light);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Posiciones (ranking) */
+.table tbody td:first-child {
+    font-weight: bold;
+    color: var(--secondary-color);
+    width: 80px;
+}
+
+/* Paginación */
+.pagination {
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.page-link {
+    color: var(--primary-color);
+    border-color: var(--border-color);
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.page-link:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    border-color: var(--primary-color);
+}

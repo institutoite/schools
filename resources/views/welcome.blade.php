@@ -129,9 +129,115 @@
             <h1 class="text-4xl sm:text-5xl font-bold text-secondary-800 mb-6">
                 Directorio Nacional de Colegios de Bolivia
             </h1>
-            <p class="text-xl text-secondary-600 max-w-4xl mx-auto">
-                Accede a datos actualizados sobre matrícula, reprobación, abandono, infraestructura y conectividad de todas las instituciones educativas del país.
-            </p>
+            <div class="text-xl text-secondary-600 max-w-4xl mx-auto mb-8 min-h-[3.5rem]">
+                <span id="typewriter"></span>
+                <div id="service-info" class="mt-2 flex flex-col sm:flex-row items-center justify-center gap-2"></div>
+            </div>
+            <script>
+                @php
+                    $messagesArray = ($serviceMessages->count() > 0)
+                        ? $serviceMessages->map(function($m) {
+                            return [
+                                'message' => $m->message,
+                                'service' => $m->service,
+                                'boton' => $m->boton,
+                                'whatsapp' => $m->whatsapp
+                            ];
+                        })->values()->all()
+                        : [[
+                            'message' => 'Accede a datos actualizados sobre matrícula, reprobación, abandono, infraestructura y conectividad de todas las instituciones educativas del país.',
+                            'service' => '',
+                            'boton' => '',
+                            'whatsapp' => ''
+                        ]];
+                @endphp
+                const messages = @json($messagesArray);
+                let msgIndex = 0;
+                let charIndex = 0;
+                const typewriter = document.getElementById('typewriter');
+                const serviceInfo = document.getElementById('service-info');
+
+                function typeMessage() {
+                    if (!typewriter) return;
+                    const msg = messages[msgIndex].message;
+                    if (charIndex < msg.length) {
+                        typewriter.textContent += msg[charIndex];
+                        charIndex++;
+                        setTimeout(typeMessage, 40);
+                    } else {
+                        showServiceInfo();
+                        setTimeout(eraseMessage, 1800);
+                    }
+                }
+                function eraseMessage() {
+                    if (!typewriter) return;
+                    if (charIndex > 0) {
+                        typewriter.textContent = messages[msgIndex].message.substring(0, charIndex - 1);
+                        charIndex--;
+                        setTimeout(eraseMessage, 18);
+                    } else {
+                        hideServiceInfo();
+                        msgIndex = (msgIndex + 1) % messages.length;
+                        setTimeout(typeMessage, 400);
+                    }
+                }
+                function showServiceInfo() {
+                    if (!serviceInfo) return;
+                    const { service, boton, whatsapp } = messages[msgIndex];
+                    let html = '';
+                    if (service) {
+                        html += `<span class='font-semibold text-primary-700'>${service}</span>`;
+                    }
+                    if (boton && whatsapp) {
+                        const url = `https://wa.me/59171039910?text=${encodeURIComponent(whatsapp)}`;
+                        html += ` <a href='${url}' target='_blank' class='ml-2 px-4 py-2 rounded-lg bg-green-500 text-white font-semibold hover:bg-green-600 transition'>${boton}</a>`;
+                    }
+                    serviceInfo.innerHTML = html;
+                }
+                function hideServiceInfo() {
+                    if (serviceInfo) serviceInfo.innerHTML = '';
+                }
+                document.addEventListener('DOMContentLoaded', () => {
+                    typewriter.textContent = '';
+                    typeMessage();
+                });
+            </script>
+            <!-- Buscador de colegios responsivo con radio buttons -->
+            <form method="GET" action="{{ route('home') }}" class="max-w-2xl mx-auto w-full flex flex-col sm:flex-row gap-4 items-center justify-center mt-6">
+                <input type="text" name="search" value="{{ request('search') }}" placeholder="Buscar por nombre o código RUE" class="w-full sm:flex-1 px-4 py-3 rounded-lg border border-primary-200 focus:ring-2 focus:ring-primary-400 outline-none" required>
+                <div class="flex flex-row gap-4 items-center w-full sm:w-auto justify-center">
+                    <label class="inline-flex items-center cursor-pointer">
+                        <input type="radio" name="filter" value="nombre" class="form-radio text-primary-500" {{ request('filter', 'nombre') == 'nombre' ? 'checked' : '' }}>
+                        <span class="ml-2 text-secondary-700 text-sm">Nombre</span>
+                    </label>
+                    <label class="inline-flex items-center cursor-pointer">
+                        <input type="radio" name="filter" value="codigo" class="form-radio text-primary-500" {{ request('filter') == 'codigo' ? 'checked' : '' }}>
+                        <span class="ml-2 text-secondary-700 text-sm">Código RUE</span>
+                    </label>
+                </div>
+                <button type="submit" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-primary-500 text-white font-semibold hover:bg-primary-600 transition flex items-center gap-2 justify-center">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </form>
+            @if(isset($schools) && $schools->count())
+                <div class="mt-8 max-w-3xl mx-auto text-left">
+                    <h2 class="text-lg font-semibold mb-2">Resultados de búsqueda:</h2>
+                    <ul class="divide-y divide-primary-100">
+                        @foreach($schools as $school)
+                            <li class="py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                                <div>
+                                    <span class="font-bold text-primary-700">{{ $school->nombre }}</span>
+                                    <span class="ml-2 text-secondary-500 text-sm">(RUE: {{ $school->codigo_rue }})</span>
+                                </div>
+                                <a href="{{ route('schools.show', $school->id) }}" class="text-primary-600 hover:underline text-sm mt-2 sm:mt-0">Ver detalle</a>
+                            </li>
+                        @endforeach
+                    </ul>
+                    <div class="mt-4">{{ $schools->links() }}</div>
+                </div>
+            @elseif(request('search'))
+                <div class="mt-8 max-w-2xl mx-auto text-center text-red-600 font-semibold">No se encontraron colegios con ese criterio.</div>
+            @endif
         </div>
 
         <!-- KPIs principales -->

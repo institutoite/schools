@@ -72,7 +72,13 @@
       <i class="fas fa-trophy" style="color:var(--brand-primary)"></i>
       Ranking: {{ ucfirst($tipo) }} {{ isset($anio) ? '(' . $anio . ')' : '' }}
     </h1>
-    <span class="tag">Cantidad de reprobados</span>
+    <span class="tag">
+      @if($tipo === 'matricula')
+        Cantidad de matriculados
+      @else
+        Cantidad de reprobados
+      @endif
+    </span>
   </div>
   <div class="mb-4 flex justify-end">
     <a href="{{ route('home') }}" class="btn btn-outline"><i class="fas fa-home"></i> Inicio</a>
@@ -367,7 +373,25 @@
     @include('rankings._context')
   </div>
   <div>
-    <h2 class="text-lg font-semibold mb-2">Cantidad de reprobados {{ isset($anio) ? '(' . $anio . ')' : '' }}</h2>
+    <h2 class="text-lg font-semibold mb-2">Ranking de colegios {{ isset($anio) ? '(' . $anio . ')' : '' }}</h2>
+    <div class="mb-4 flex gap-2">
+      <form method="GET" action="" class="flex gap-2">
+        <input type="hidden" name="anio" value="{{ request('anio', $anio) }}">
+        <input type="hidden" name="nivel" value="{{ request('nivel', $nivel) }}">
+        <input type="hidden" name="q" value="{{ request('q') }}">
+        <input type="hidden" name="school_id" value="{{ request('school_id') }}">
+        <label class="text-sm font-semibold text-secondary">Ordenar por:</label>
+        <select name="orderBy" class="border rounded px-2 py-1">
+          <option value="matriculados" {{ request('orderBy', 'matriculados') == 'matriculados' ? 'selected' : '' }}>Matriculados</option>
+          <option value="reprobados" {{ request('orderBy') == 'reprobados' ? 'selected' : '' }}>Reprobados</option>
+        </select>
+        <select name="orderDir" class="border rounded px-2 py-1">
+          <option value="desc" {{ request('orderDir', 'desc') == 'desc' ? 'selected' : '' }}>Descendente</option>
+          <option value="asc" {{ request('orderDir') == 'asc' ? 'selected' : '' }}>Ascendente</option>
+        </select>
+        <button type="submit" class="btn btn-outline"><i class="fas fa-sort"></i> Ordenar</button>
+      </form>
+    </div>
     <div id="rankings-table">
       @if(isset($itemsCount))
         <div class="card overflow-x-auto">
@@ -376,8 +400,8 @@
               <tr class="table-head sticky-head">
                 <th class="py-2 px-3 text-left">#</th>
                 <th class="py-2 px-3 text-left">Nombre del colegio</th>
-                <th class="py-2 px-3 text-left">Reprobados {{ isset($anio) ? '(' . $anio . ')' : '' }}</th>
-                <th class="py-2 px-3 text-left">Matrícula</th>
+                <th class="py-2 px-3 text-left">Matriculados</th>
+                <th class="py-2 px-3 text-left">Reprobados</th>
                 <th class="py-2 px-3 text-left">Acciones</th>
               </tr>
             </thead>
@@ -387,8 +411,8 @@
               <tr data-school-id="{{ $row->school_id ?? '' }}" class="border-b table-row {{ (request('school_id') && (string)request('school_id') === (string)($row->school_id ?? '')) ? 'row-selected' : '' }}">
                 <td class="py-2 px-3">{{ (($itemsCount->currentPage() - 1) * $itemsCount->perPage()) + ($i + 1) }}</td>
                 <td class="py-2 px-3">{{ $school->nombre ?? 'Desconocido' }}</td>
+                <td class="py-2 px-3">{{ number_format($row->mat ?? $row->total ?? 0) }}</td>
                 <td class="py-2 px-3">{{ number_format($row->rep ?? 0) }}</td>
-                <td class="py-2 px-3">{{ number_format($row->mat ?? 0) }}</td>
                 <td class="py-2 px-3">
                   @if(isset($row->school_id))
                     <a href="{{ url('/schools/'.$row->school_id) }}" class="btn btn-outline"><i class="fas fa-eye"></i> Ver</a>

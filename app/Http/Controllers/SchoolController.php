@@ -42,8 +42,11 @@ public function index(Request $request)
         // KPIs y destacados para la portada
         $kpis = RankingsController::buildKpis();
         $highlights = RankingsController::buildHighlights();
-        
-        return view('welcome', compact('schools', 'search', 'filter', 'kpis', 'highlights'));
+
+        // Mensajes de servicios para animación (todos los campos)
+        $serviceMessages = \App\Models\ServiceMessage::all();
+
+        return view('welcome', compact('schools', 'search', 'filter', 'kpis', 'highlights', 'serviceMessages'));
 }
 
     public function welcomeSearch(Request $request)

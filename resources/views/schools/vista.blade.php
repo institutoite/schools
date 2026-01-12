@@ -31,27 +31,34 @@
 <body class="bg-accent min-h-screen font-sans">
     <div class="max-w-5xl mx-auto py-10 px-4">
         <!-- Encabezado -->
-        <div class="text-center mb-10">
-            <h1 class="text-4xl font-extrabold text-primary flex items-center justify-center gap-3">
-                <i class="fas fa-school"></i> {{ $school->nombre }}
-            </h1>
-            <p class="text-secondary text-lg mt-2 flex items-center justify-center gap-2">
-                <i class="fas fa-map-marker-alt"></i> {{ $ubicaciones->departamento ?? 'N/A' }}, {{ $ubicaciones->provincia ?? '' }}
-            </p>
-            <span class="inline-block mt-3 px-4 py-2 rounded-full font-semibold text-white
-                @if(strtolower($school->dependencia) == 'fiscal') bg-primary
-                @elseif(strtolower($school->dependencia) == 'privado') bg-secondary
-                @else bg-gray-500 @endif">
-                <i class="fas fa-shield-alt"></i> {{ $school->dependencia }}
-            </span>
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-10 border border-primary-100">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div class="flex-1 text-center md:text-left">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-primary flex items-center gap-3 justify-center md:justify-start">
+                        <i class="fas fa-school"></i> {{ $school->nombre }}
+                    </h1>
+                    <p class="text-secondary text-lg mt-2 flex items-center gap-2 justify-center md:justify-start">
+                        <i class="fas fa-map-marker-alt"></i> {{ $ubicaciones->departamento ?? 'N/A' }}, {{ $ubicaciones->provincia ?? '' }}
+                    </p>
+                    <span class="inline-block mt-3 px-4 py-2 rounded-full font-semibold text-white
+                        @if(strtolower($school->dependencia) == 'fiscal') bg-primary
+                        @elseif(strtolower($school->dependencia) == 'privado') bg-secondary
+                        @else bg-gray-500 @endif">
+                        <i class="fas fa-shield-alt"></i> {{ $school->dependencia }}
+                    </span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <span class="text-xs uppercase tracking-wider text-secondary-500">Código RUE</span>
+                    <span class="text-2xl font-bold text-primary">{{ $school->codigo_rue }}</span>
+                </div>
+            </div>
         </div>
 
         <!-- Información General -->
         <div class="grid md:grid-cols-2 gap-6 mb-8">
-            <div class="bg-white rounded-xl shadow p-6">
-                <h2 class="text-xl font-bold text-primary mb-4"><i class="fas fa-info-circle"></i> Información</h2>
-                <ul class="space-y-2 text-secondary">
-                    <li><i class="fas fa-barcode"></i> <strong>Código RUE:</strong> {{ $school->codigo_rue }}</li>
+            <div class="bg-white rounded-2xl shadow p-6 border border-primary-50">
+                <h2 class="text-lg font-bold text-primary mb-4 flex items-center gap-2"><i class="fas fa-info-circle"></i> Información</h2>
+                <ul class="space-y-2 text-secondary text-base">
                     <li><i class="fas fa-user-tie"></i> <strong>Director:</strong> {{ $school->director ?? 'N/A' }}</li>
                     <li><i class="fas fa-location-arrow"></i> <strong>Dirección:</strong> {{ $school->direccion ?? 'N/A' }}</li>
                     <li><i class="fas fa-phone"></i> <strong>Teléfonos:</strong> {{ $school->telefonos ?? 'N/A' }}</li>
@@ -59,9 +66,9 @@
                     <li><i class="fas fa-clock"></i> <strong>Turnos:</strong> {{ $school->turnos ?? 'N/A' }}</li>
                 </ul>
             </div>
-            <div class="bg-white rounded-xl shadow p-6">
-                <h2 class="text-xl font-bold text-primary mb-4"><i class="fas fa-globe-americas"></i> Ubicación</h2>
-                <ul class="space-y-2 text-secondary">
+            <div class="bg-white rounded-2xl shadow p-6 border border-primary-50">
+                <h2 class="text-lg font-bold text-primary mb-4 flex items-center gap-2"><i class="fas fa-globe-americas"></i> Ubicación</h2>
+                <ul class="space-y-2 text-secondary text-base">
                     <li><i class="fas fa-map"></i> <strong>Municipio:</strong> {{ $ubicaciones->municipio ?? 'N/A' }}</li>
                     <li><i class="fas fa-map-pin"></i> <strong>Distrito:</strong> {{ $ubicaciones->distrito ?? 'N/A' }}</li>
                     <li><i class="fas fa-tree"></i> <strong>Área:</strong> {{ $ubicaciones->area ?? 'N/A' }}</li>
@@ -74,9 +81,9 @@
 
         <!-- Servicios y Ambientes -->
         <div class="grid md:grid-cols-2 gap-6 mb-8">
-            <div class="bg-white rounded-xl shadow p-6">
-                <h2 class="text-xl font-bold text-primary mb-4"><i class="fas fa-concierge-bell"></i> Servicios</h2>
-                <div class="flex flex-wrap gap-4">
+            <div class="bg-white rounded-2xl shadow p-6 border border-primary-50">
+                <h2 class="text-lg font-bold text-primary mb-4 flex items-center gap-2"><i class="fas fa-concierge-bell"></i> Servicios</h2>
+                <div class="flex flex-wrap gap-3">
                     <span class="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/10 text-primary font-semibold">
                         <i class="fas fa-tint"></i> Agua: <span>{{ $servicios->agua ? 'Sí' : 'No' }}</span>
                     </span>
@@ -91,8 +98,8 @@
                     </span>
                 </div>
             </div>
-            <div class="bg-white rounded-xl shadow p-6">
-                <h2 class="text-xl font-bold text-primary mb-4"><i class="fas fa-building"></i> Ambientes</h2>
+            <div class="bg-white rounded-2xl shadow p-6 border border-primary-50">
+                <h2 class="text-lg font-bold text-primary mb-4 flex items-center gap-2"><i class="fas fa-building"></i> Ambientes</h2>
                 <div class="grid grid-cols-2 gap-3 text-secondary">
                     <div><i class="fas fa-chalkboard"></i> <strong>Aulas:</strong> {{ $ambientes->aulas ?? 0 }}</div>
                     <div><i class="fas fa-flask"></i> <strong>Laboratorios:</strong> {{ $ambientes->laboratorios ?? 0 }}</div>
@@ -110,58 +117,162 @@
         </div>
 
         
-         <div class="bg-white rounded-xl shadow p-6 mb-8">
-            <h2 class="text-xl font-bold text-primary mb-4"><i class="fas fa-chart-bar"></i> Estadísticas</h2>
-            @php
-                // Agrupar por categoría y luego por año
-                $categorias = collect($estadisticas)->groupBy('categoria');
-                $anios = collect($estadisticas)->pluck('anio')->unique()->sort()->values();
-            @endphp
-            <div class="grid md:grid-cols-2 gap-8">
-                @foreach($categorias as $categoria => $stats)
-                <div>
-                    <h3 class="text-lg font-semibold text-secondary mb-2 capitalize">
-                        <i class="fas fa-tag"></i> {{ $categoria }}
-                    </h3>
-                    <div class="overflow-x-auto">
-                        <table class="min-w-full text-sm rounded-lg mb-6">
-                            <thead>
-                                <tr class="bg-primary text-white">
-                                    <th class="py-2 px-3">Dato</th>
-                                    @foreach($anios as $anio)
-                                        <th class="py-2 px-3">{{ $anio }}</th>
-                                    @endforeach
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach(['total', 'mujer', 'hombre'] as $dato)
-                                <tr>
-                                    <td class="py-2 px-3 font-bold capitalize">
-                                        @if($dato == 'total') <i class="fas fa-users"></i> Total
-                                        @elseif($dato == 'mujer') <i class="fas fa-female"></i> Mujeres
-                                        @else <i class="fas fa-male"></i> Hombres
-                                        @endif
-                                    </td>
-                                    @foreach($anios as $anio)
-                                        @php
-                                            $registro = $stats->firstWhere('anio', $anio);
-                                        @endphp
-                                        <td class="py-2 px-3 text-center
-                                            @if($dato == 'mujer') text-primary
-                                            @elseif($dato == 'hombre') text-secondary
-                                            @endif">
-                                            {{ $registro ? $registro[$dato] : '-' }}
-                                        </td>
-                                    @endforeach
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                @endforeach
+
+<div class="bg-white rounded-xl shadow p-6 mb-8">
+    <h2 class="text-xl font-bold text-primary mb-4"><i class="fas fa-chart-bar"></i> Estadísticas</h2>
+    @php
+        $categorias = collect($estadisticas)->groupBy('categoria');
+        $anios = collect($estadisticas)->pluck('anio')->unique()->sort()->values();
+        $iconos = [
+            'matricula' => 'fa-users',
+            'promovidos' => 'fa-arrow-up',
+            'reprobados' => 'fa-arrow-down',
+            'abandono' => 'fa-person-walking-arrow-right',
+        ];
+    @endphp
+    <div class="flex flex-col gap-10">
+        @foreach($categorias as $categoria => $stats)
+        <div>
+            <h3 class="text-lg font-semibold text-secondary mb-2 capitalize flex items-center gap-2">
+                <i class="fas {{ $iconos[$categoria] ?? 'fa-tag' }}"></i> {{ $categoria }}
+            </h3>
+            <div class="w-full overflow-x-auto rounded-lg border border-primary-50">
+                <table class="min-w-full mb-4">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <th class="py-3 px-4 text-base sm:text-lg font-bold whitespace-nowrap">Dato</th>
+                            @foreach($anios as $anio)
+                                <th class="py-3 px-4 text-base sm:text-lg font-bold whitespace-nowrap">{{ $anio }}</th>
+                            @endforeach
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(['total', 'mujer', 'hombre'] as $dato)
+                        <tr class="@if($dato == 'total') bg-primary/10 @elseif($dato == 'mujer') bg-primary/5 @elseif($dato == 'hombre') bg-secondary/5 @endif">
+                            <td class="py-2 px-4 font-bold capitalize whitespace-nowrap text-base sm:text-lg @if($dato == 'total') text-primary-700 @elseif($dato == 'mujer') text-primary-600 @else text-secondary-700 @endif">
+                                @if($dato == 'total') <i class="fas fa-users"></i> Total
+                                @elseif($dato == 'mujer') <i class="fas fa-female"></i> Mujeres
+                                @else <i class="fas fa-male"></i> Hombres
+                                @endif
+                            </td>
+                            @foreach($anios as $anio)
+                                @php
+                                    $registro = $stats->firstWhere('anio', $anio);
+                                @endphp
+                                <td class="py-2 px-4 text-center whitespace-nowrap text-base sm:text-lg font-semibold
+                                    @if($dato == 'total') text-primary-700
+                                    @elseif($dato == 'mujer') text-primary-600
+                                    @elseif($dato == 'hombre') text-secondary-700
+                                    @endif">
+                                    {{ $registro ? $registro[$dato] : '-' }}
+                                </td>
+                            @endforeach
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+            <!-- Selector de tipo de gráfico -->
+            <div class="flex flex-wrap gap-4 items-center justify-center mb-2 mt-4">
+                <label class="inline-flex items-center">
+                    <input type="radio" name="tipo-grafico-{{ $categoria }}" value="line" class="form-radio accent-primary" checked onchange="mostrarGrafico('{{ $categoria }}', 'line')">
+                    <span class="ml-2">Lineal</span>
+                </label>
+                <label class="inline-flex items-center">
+                    <input type="radio" name="tipo-grafico-{{ $categoria }}" value="bar" class="form-radio accent-primary" onchange="mostrarGrafico('{{ $categoria }}', 'bar')">
+                    <span class="ml-2">Barras</span>
+                </label>
+            </div>
+            <!-- Gráficos -->
+            <div class="w-full flex flex-col items-center">
+                <canvas id="chart-line-{{ $categoria }}" class="w-full max-h-[280px] md:max-h-[350px]" style="max-width:700px"></canvas>
+                <canvas id="chart-bar-{{ $categoria }}" class="w-full max-h-[280px] md:max-h-[350px]" style="max-width:400px;display:none;"></canvas>
             </div>
         </div>
+        @endforeach
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+function mostrarGrafico(categoria, tipo) {
+    document.getElementById('chart-line-' + categoria).style.display = tipo === 'line' ? '' : 'none';
+    document.getElementById('chart-bar-' + categoria).style.display = tipo === 'bar' ? '' : 'none';
+}
+@foreach($categorias as $categoria => $stats)
+    const labels_{{ $categoria }} = @json($anios);
+    const total_{{ $categoria }} = @json($stats->pluck('total', 'anio')->toArray());
+    const mujer_{{ $categoria }} = @json($stats->pluck('mujer', 'anio')->toArray());
+    const hombre_{{ $categoria }} = @json($stats->pluck('hombre', 'anio')->toArray());
+    // Gráfico lineal
+    new Chart(document.getElementById('chart-line-{{ $categoria }}'), {
+        type: 'line',
+        data: {
+            labels: labels_{{ $categoria }},
+            datasets: [
+                {
+                    label: 'Total',
+                    data: labels_{{ $categoria }}.map(a => total_{{ $categoria }}[a] ?? 0),
+                    borderColor: '#888888',
+                    backgroundColor: 'rgba(136,136,136,0.1)',
+                    fill: false
+                },
+                {
+                    label: 'Mujer',
+                    data: labels_{{ $categoria }}.map(a => mujer_{{ $categoria }}[a] ?? 0),
+                    borderColor: 'rgb(38,186,165)',
+                    backgroundColor: 'rgba(38,186,165,0.1)',
+                    fill: false
+                },
+                {
+                    label: 'Hombre',
+                    data: labels_{{ $categoria }}.map(a => hombre_{{ $categoria }}[a] ?? 0),
+                    borderColor: 'rgb(55,95,122)',
+                    backgroundColor: 'rgba(55,95,122,0.1)',
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' },
+                title: { display: false }
+            }
+        }
+    });
+    // Gráfico de barras: dos barras por año (mujer y hombre)
+    new Chart(document.getElementById('chart-bar-{{ $categoria }}'), {
+        type: 'bar',
+        data: {
+            labels: labels_{{ $categoria }},
+            datasets: [
+                {
+                    label: 'Mujer',
+                    data: labels_{{ $categoria }}.map(a => mujer_{{ $categoria }}[a] ?? 0),
+                    backgroundColor: 'rgb(38,186,165)',
+                    borderColor: 'rgb(38,186,165)',
+                    borderWidth: 2
+                },
+                {
+                    label: 'Hombre',
+                    data: labels_{{ $categoria }}.map(a => hombre_{{ $categoria }}[a] ?? 0),
+                    backgroundColor: 'rgb(55,95,122)',
+                    borderColor: 'rgb(55,95,122)',
+                    borderWidth: 2
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'top' },
+                title: { display: true, text: 'Comparativa Hombres vs Mujeres (Histórico)'}
+            }
+        }
+    });
+@endforeach
+</script>
         
         
 
@@ -262,7 +373,7 @@
             </section>
 
 
-        {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  mas estadisticas  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}ç
+        {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  mas estadisticas  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
             
         @php
             // Obtener el último año de estadística
@@ -281,31 +392,29 @@
             $porcentajeAprobados = $totalEstudiantes > 0 ? round((($totalEstudiantes - $totalReprobados - $totalAbandono) / $totalEstudiantes) * 100, 2) : 0;
         @endphp
 
-        <div class="bg-white rounded-xl shadow p-6 mb-8">
+        <div class="bg-white rounded-xl shadow p-6 mb-8 flex flex-col items-center max-w-2xl mx-auto">
             <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
                 <i class="fas fa-chart-pie"></i> Estadística del último año ({{ $ultimoAnio }})
             </h2>
-            <div class="flex flex-col md:flex-row items-center gap-8">
-                <div class="w-full md:w-1/2">
-                    <canvas id="pieEstadistica"></canvas>
+            <div class="flex flex-col md:flex-row items-center gap-8 w-full justify-center">
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <div class="w-full" style="max-width:320px;min-width:160px;">
+                        <canvas id="pieEstadistica" class="aspect-square !h-auto" style="width:100%;aspect-ratio:1/1;min-height:160px;max-height:220px;@media(min-width:768px){max-height:350px;}"></canvas>
+                    </div>
                 </div>
-                <div class="w-full md:w-1/2">
-                    <ul class="space-y-3 text-secondary text-lg">
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <ul class="space-y-1 text-secondary text-xs md:text-base">
                         <li>
-                            <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #38bac5"></span>
-                            <strong>Total estudiantes:</strong> {{ $totalEstudiantes }}
+                            <span class="inline-block w-2 h-2 md:w-3 md:h-3 rounded-full mr-1 md:mr-2 align-middle" style="background: #26baa5"></span>
+                            <strong class="font-normal md:font-semibold">Aprobados:</strong> {{ $totalEstudiantes - $totalReprobados - $totalAbandono }} ({{ $porcentajeAprobados }}%)
                         </li>
                         <li>
-                            <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #ff6384"></span>
-                            <strong>Reprobados:</strong> {{ $totalReprobados }} ({{ $porcentajeReprobados }}%)
+                            <span class="inline-block w-2 h-2 md:w-3 md:h-3 rounded-full mr-1 md:mr-2 align-middle" style="background: rgb(55,95,122)"></span>
+                            <strong class="font-normal md:font-semibold">Reprobados:</strong> {{ $totalReprobados }} ({{ $porcentajeReprobados }}%)
                         </li>
                         <li>
-                            <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #ffce56"></span>
-                            <strong>Abandono:</strong> {{ $totalAbandono }} ({{ $porcentajeAbandono }}%)
-                        </li>
-                        <li>
-                            <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #4bc0c0"></span>
-                            <strong>Aprobados:</strong> {{ $totalEstudiantes - $totalReprobados - $totalAbandono }} ({{ $porcentajeAprobados }}%)
+                            <span class="inline-block w-2 h-2 md:w-3 md:h-3 rounded-full mr-1 md:mr-2 align-middle" style="background: #cccccc"></span>
+                            <strong class="font-normal md:font-semibold">Abandono:</strong> {{ $totalAbandono }} ({{ $porcentajeAbandono }}%)
                         </li>
                     </ul>
                 </div>
@@ -326,23 +435,25 @@
         $porcentajeHombre = $totalReprobados > 0 ? round(($reprobadosHombre / $totalReprobados) * 100, 2) : 0;
     @endphp
 
-    <div class="bg-white rounded-xl shadow p-6 mb-8">
+    <div class="bg-white rounded-xl shadow p-6 mb-8 flex flex-col items-center max-w-2xl mx-auto">
         <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
             <i class="fas fa-chart-pie"></i> Reprobados por género ({{ $ultimoAnio }})
         </h2>
-        <div class="flex flex-col md:flex-row items-center gap-8">
-            <div class="w-full md:w-1/2">
-                <canvas id="pieReprobadosGenero"></canvas>
+        <div class="flex flex-col md:flex-row items-center gap-8 w-full justify-center">
+            <div class="w-full md:w-1/2 flex justify-center">
+                <div class="w-full" style="max-width:320px;min-width:160px;">
+                    <canvas id="pieReprobadosGenero" class="aspect-square !h-auto" style="width:100%;aspect-ratio:1/1;min-height:160px;max-height:220px;@media(min-width:768px){max-height:350px;}"></canvas>
+                </div>
             </div>
-            <div class="w-full md:w-1/2">
-                <ul class="space-y-3 text-secondary text-lg">
+            <div class="w-full md:w-1/2 flex justify-center">
+                <ul class="space-y-1 text-secondary text-xs md:text-base">
                     <li>
-                        <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #4bc0c0"></span>
-                        <strong>Mujeres:</strong> {{ $reprobadosMujer }} ({{ $porcentajeMujer }}%)
+                        <span class="inline-block w-2 h-2 md:w-3 md:h-3 rounded-full mr-1 md:mr-2 align-middle" style="background: rgb(38,186,165)"></span>
+                        <strong class="font-normal md:font-semibold">Mujeres:</strong> {{ $reprobadosMujer }} ({{ $porcentajeMujer }}%)
                     </li>
                     <li>
-                        <span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background: #f4305b"></span>
-                        <strong>Hombres:</strong> {{ $reprobadosHombre }} ({{ $porcentajeHombre }}%)
+                        <span class="inline-block w-2 h-2 md:w-3 md:h-3 rounded-full mr-1 md:mr-2 align-middle" style="background: rgb(55,95,122)"></span>
+                        <strong class="font-normal md:font-semibold">Hombres:</strong> {{ $reprobadosHombre }} ({{ $porcentajeHombre }}%)
                     </li>
                 </ul>
             </div>
@@ -395,32 +506,39 @@
         $aprobadosHombre = $matriculaUltimo ? ((int)$matriculaUltimo->hombre - (int)($reprobadosUltimo->hombre ?? 0) - (int)($abandonoUltimo->hombre ?? 0)) : 0;
     @endphp
 
-    <div class="bg-white rounded-xl shadow p-6 mb-8">
+    <div class="bg-white rounded-xl shadow p-6 mb-8 flex flex-col items-center max-w-2xl mx-auto">
         <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
             <i class="fas fa-chart-line"></i> Evolución de reprobados por año
         </h2>
-        <canvas id="evolucionReprobados"></canvas>
-        <div class="text-xs text-secondary mt-2">
-            <span class="inline-block w-3 h-3 rounded-full mr-1 align-middle" style="background:#ff6384"></span> Datos reales
-            <span class="inline-block w-3 h-3 rounded-full mx-2 align-middle" style="background:#ffce56"></span> Estimaciones
+        <div style="max-width:480px;width:100%">
+            <canvas id="evolucionReprobados" class="aspect-square !h-auto" style="width:100%;aspect-ratio:1.5/1;min-height:160px;max-height:220px;@media(min-width:768px){max-height:350px;}"></canvas>
+        </div>
+        <div class="text-xs text-secondary mt-2 flex gap-4 justify-center">
+            <span class="inline-block w-3 h-3 rounded-full mr-1 align-middle" style="background:rgb(55,95,122)"></span> Datos reales
+            <span class="inline-block w-3 h-3 rounded-full mx-2 align-middle" style="background:#cccccc"></span> Estimaciones
         </div>
     </div>
 
-    <div class="bg-white rounded-xl shadow p-6 mb-8">
+    <div class="bg-white rounded-xl shadow p-6 mb-8 flex flex-col items-center max-w-2xl mx-auto">
         <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
             <i class="fas fa-chart-bar"></i> Comparación de aprobados vs promovidos por año
         </h2>
-        <canvas id="aprobadosPromovidos"></canvas>
+        <div style="max-width:480px;width:100%">
+            <canvas id="aprobadosPromovidos" class="aspect-square !h-auto" style="width:100%;aspect-ratio:1.5/1;min-height:160px;max-height:220px;@media(min-width:768px){max-height:350px;}"></canvas>
+        </div>
     </div>
 
-    <div class="bg-white rounded-xl shadow p-6 mb-8">
+    <div class="bg-white rounded-xl shadow p-6 mb-8 flex flex-col items-center max-w-2xl mx-auto">
         <h2 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
             <i class="fas fa-venus-mars"></i> Aprobados por género ({{ $ultimoAnio }})
         </h2>
-        <canvas id="aprobadosGenero"></canvas>
-        <div class="flex gap-8 mt-4 text-secondary text-lg">
-            <span><span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background:#4bc0c0"></span> Mujeres: {{ $aprobadosMujer }}</span>
-            <span><span class="inline-block w-4 h-4 rounded-full mr-2 align-middle" style="background:#f4305b"></span> Hombres: {{ $aprobadosHombre }}</span>
+        </h2>
+        <div class="w-full" style="max-width:320px;min-width:160px;">
+            <canvas id="aprobadosGenero" class="aspect-square !h-auto" style="width:100%;aspect-ratio:1/1;min-height:160px;max-height:220px;@media(min-width:768px){max-height:350px;}"></canvas>
+        </div>
+        <div class="flex gap-2 md:gap-8 mt-4 text-secondary text-xs md:text-lg justify-center">
+            <span><span class="inline-block w-2 h-2 md:w-3 md:h-3 rounded-full mr-1 md:mr-2 align-middle" style="background: rgb(38,186,165)"></span> Mujeres: {{ $aprobadosMujer }}</span>
+            <span><span class="inline-block w-2 h-2 md:w-3 md:h-3 rounded-full mr-1 md:mr-2 align-middle" style="background: rgb(55,95,122)"></span> Hombres: {{ $aprobadosHombre }}</span>
         </div>
     </div>
         {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  contactar %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
@@ -625,29 +743,46 @@
            document.addEventListener('DOMContentLoaded', function() {
             // 1. COORDENADAS DEL COLEGIO (las que proporcionaste)
             var colegioCoords = [latitudx, longitudx];
-            
-            
-            // 2. CONFIGURACIÓN DEL MAPA
-            // Creamos el mapa centrado en una posición que muestre bien Bolivia
-            var map = L.map('map').setView([latitudx, longitudx], 6);  // Zoom 14 para ver bien la ubicación
-            
-            // Añadimos la capa base de OpenStreetMap
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
+            // 2. CAPAS BASE
+            var capaOSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 18,
-                attribution: 'ite.com.bo'
-            }).addTo(map);
+                attribution: 'OpenStreetMap | ite.com.bo'
+            });
+            var capaSat = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                maxZoom: 18,
+                attribution: 'Esri World Imagery'
+            });
+            var capaTopo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+                maxZoom: 17,
+                attribution: 'OpenTopoMap'
+            });
 
-            // 3. MARCADOR DEL COLEGIO
-            // Creamos un marcador circular en la ubicación del colegio
+            // 3. CONFIGURACIÓN DEL MAPA
+            var map = L.map('map', {
+                center: [latitudx, longitudx],
+                zoom: 14,
+                layers: [capaOSM]
+            });
+
+            // 4. CONTROL DE CAPAS
+            var baseMaps = {
+                "Callejero": capaOSM,
+                "Satélite": capaSat,
+                "Topográfico": capaTopo
+            };
+            L.control.layers(baseMaps).addTo(map);
+
+            // 5. MARCADOR DEL COLEGIO
             var colegioMarker = L.circleMarker(colegioCoords, {
-                radius: 12,                   // Tamaño del círculo
-                color: '#e74c3c',             // Color del borde (rojo)
-                fillColor: '#e74c3c',         // Color de relleno (rojo)
-                fillOpacity: 0.4,             // 50% de opacidad
-                weight: 2                     // Grosor del borde
+                radius: 12,
+                color: '#e74c3c',
+                fillColor: '#e74c3c',
+                fillOpacity: 0.4,
+                weight: 2
             }).addTo(map);
 
-            // 4. VENTANA EMERGENTE (POPUP) TRANSPARENTE
+            // 6. VENTANA EMERGENTE (POPUP) TRANSPARENTE
             colegioMarker.bindPopup(`
                 <div class="transparent-popup">
                     <h4><b>Colegio:</b>${schoolData.nombre}</h4>
@@ -662,21 +797,20 @@
                     <b>Nivel:</b> ${schoolData.niveles}<br>
                 </div>
             `, {
-                className: 'transparent-popup'  // Aplicamos nuestra clase CSS personalizada
-            }).openPopup();  // Abrimos el popup automáticamente
+                className: 'transparent-popup'
+            }).openPopup();
 
-            // 5. ELEMENTOS ADICIONALES (opcionales)
-            // Añadimos control de escala para referencia
+            // 7. CONTROL DE ESCALA
             L.control.scale({
                 position: 'bottomleft',
                 metric: true,
                 imperial: false
             }).addTo(map);
-            
-            // Podemos añadir un pequeño círculo para mayor visibilidad
+
+            // 8. CÍRCULO DE VISIBILIDAD
             L.circle(colegioCoords, {
-                radius: 100,      // 100 metros de radio
-                color: '#3498db', // Azul
+                radius: 100,
+                color: '#3498db',
                 fillColor: '#3498db',
                 fillOpacity: 0.2
             }).addTo(map);
@@ -807,12 +941,13 @@
     {{-- ...existing code... --}}
 
 
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 <script>
     const ctxPie = document.getElementById('pieEstadistica').getContext('2d');
     new Chart(ctxPie, {
-        type: 'pie', // Cambia de 'doughnut' a 'pie' para círculo completo
+        type: 'pie',
         data: {
             labels: [
                 'Aprobados',
@@ -826,9 +961,9 @@
                     {{ $totalAbandono }}
                 ],
                 backgroundColor: [
-                    '#26baa5', // Aprobados
-                    '#ff6384', // Reprobados
-                    '#ffce56'  // Abandono
+                    '#26baa5', // Aprobados (igual que mujeres)
+                    'rgb(55,95,122)', // Reprobados (igual que varones)
+                    '#cccccc'  // Abandono (gris claro)
                 ],
                 borderColor: [
                     '#FFFFFFFF',
@@ -902,8 +1037,8 @@
                     {{ $reprobadosHombre }}
                 ],
                 backgroundColor: [
-                    '#4bc0c0', // Mujer
-                    '#f4305b'  // Hombre
+                    'rgb(38,186,165)', // Mujer
+                    'rgb(55,95,122)'  // Hombre
                 ],
                 borderColor: [
                     '#FFFFFF',
@@ -971,15 +1106,15 @@
                 {
                     label: 'Reprobados (reales)',
                     data: {!! json_encode(array_merge($valoresReales, array_fill(0, count($aniosEstimados), null))) !!},
-                    backgroundColor: '#ff6384',
-                    borderColor: '#ff6384',
+                    backgroundColor: 'rgb(55,95,122)',
+                    borderColor: 'rgb(55,95,122)',
                     borderWidth: 2
                 },
                 {
                     label: 'Reprobados (estimado)',
                     data: {!! json_encode(array_merge(array_fill(0, count($aniosReales), null), $valoresEstimados)) !!},
-                    backgroundColor: '#ffce56',
-                    borderColor: '#ffce56',
+                    backgroundColor: '#cccccc',
+                    borderColor: '#cccccc',
                     borderWidth: 2
                 }
             ]
@@ -1015,14 +1150,14 @@
                     label: 'Aprobados',
                     data: {!! json_encode($aprobadosPorAnio) !!},
                     backgroundColor: '#26baa5',
-                    borderColor: '#198675FF',
+                    borderColor: '#26baa5',
                     borderWidth: 2
                 },
                 {
                     label: 'Reprobados',
                     data: {!! json_encode($valoresReales) !!},
-                    backgroundColor: '#ff6384',
-                    borderColor: '#F4305BFF',
+                    backgroundColor: 'rgb(55,95,122)',
+                    borderColor: 'rgb(55,95,122)',
                     borderWidth: 2
                 }
             ]
@@ -1046,7 +1181,7 @@
             labels: ['Mujer', 'Hombre'],
             datasets: [{
                 data: [{{ $aprobadosMujer }}, {{ $aprobadosHombre }}],
-                backgroundColor: ['#4bc0c0', '#f4305b'],
+                backgroundColor: ['rgb(38,186,165)', 'rgb(55,95,122)'],
                 borderColor: ['#FFFFFF', '#FFFFFF'],
                 borderWidth: 2
             }]

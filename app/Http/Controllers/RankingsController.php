@@ -181,8 +181,8 @@ class RankingsController extends Controller
 
     public function index(Request $request)
     {
-        // Vista enfocada solo en reprobación
-        $tipo = 'reprobacion';
+        // Detectar tipo de ranking
+        $tipo = $request->query('tipo', 'reprobacion');
         $anio = $request->query('anio');
         $departamento = $request->query('departamento');
         $nivel = $request->query('nivel'); // distrital, municipal, provincial, departamental, nacional
@@ -231,54 +231,52 @@ class RankingsController extends Controller
             }
         }
 
-        // Resultados por tipo
+        // Lógica separada para cada tipo
+        $orderDir = strtolower($request->get('orderDir', 'desc')) === 'asc' ? 'asc' : 'desc';
+        $page = max(1, (int)$request->query('page', 1));
+        $perPage = 50;
         if ($tipo === 'matricula') {
-            $items = Estadistica::select('school_id', DB::raw('SUM(total) as total'))
-                ->where('categoria', 'matricula')
-                ->when($anio, fn($q) => $q->where('anio', $anio))
-                ->when($schoolIds, fn($q) => $q->whereIn('school_id', $schoolIds))
-                ->groupBy('school_id')
-                ->orderByDesc('total')
-                ->paginate(50);
-        } elseif ($tipo === 'reprobacion') {
-            $modo = $request->query('modo', 'cantidad'); // forzamos cantidad por defecto en esta vista
+            // Ranking por matrícula
             $rows = Estadistica::select('school_id')
-                ->selectRaw("SUM(CASE WHEN categoria='reprobados' AND anio=? THEN total ELSE 0 END) as rep", [$anio])
                 ->selectRaw("SUM(CASE WHEN categoria='matricula' AND anio=? THEN total ELSE 0 END) as mat", [$anio])
                 ->when($schoolIds, fn($q) => $q->whereIn('school_id', $schoolIds))
                 ->groupBy('school_id')->get();
-
-            if ($modo === 'cantidad') {
-                $itemsCol = $rows->sortByDesc(fn($r) => (int)($r->rep ?? 0))
-                    ->values()
-                    ->map(fn($r) => (object)['school_id' => $r->school_id, 'rep' => (int)($r->rep ?? 0), 'mat' => (int)($r->mat ?? 0)]);
-                $page = max(1, (int)$request->query('page', 1));
-                $perPage = 50;
-                $items = new \Illuminate\Pagination\LengthAwarePaginator(
-                    $itemsCol->slice(($page-1)*$perPage, $perPage)->values(),
-                    $itemsCol->count(),
-                    $perPage,
-                    $page,
-                    ['path' => $request->url(), 'query' => $request->query()]
-                );
-                // Alias para la vista enfocada en cantidad
-                $itemsCount = $items;
-            } elseif ($modo === 'porcentaje') {
-                $items = $rows->map(function ($r) {
-                    $ratio = ($r->mat ?? 0) > 0 ? round($r->rep * 100.0 / $r->mat, 2) : 0;
-                    return (object)['school_id' => $r->school_id, 'ratio' => $ratio, 'rep' => (int)($r->rep ?? 0), 'mat' => (int)($r->mat ?? 0)];
-                })->sortByDesc('ratio')->values();
-                // paginación manual simple
-                $page = max(1, (int)$request->query('page', 1));
-                $perPage = 50;
-                $items = new \Illuminate\Pagination\LengthAwarePaginator(
-                    $items->slice(($page-1)*$perPage, $perPage)->values(),
-                    $items->count(),
-                    $perPage,
-                    $page,
-                    ['path' => $request->url(), 'query' => $request->query()]
-                );
-            }
+            $itemsCol = $orderDir === 'asc'
+                ? $rows->sortBy(fn($r) => (int)($r->mat ?? 0))
+                : $rows->sortByDesc(fn($r) => (int)($r->mat ?? 0));
+            $itemsCol = $itemsCol->values()->map(fn($r) => (object)[
+                'school_id' => $r->school_id,
+                'mat' => (int)($r->mat ?? 0),
+            ]);
+            $items = new \Illuminate\Pagination\LengthAwarePaginator(
+                $itemsCol->slice(($page-1)*$perPage, $perPage)->values(),
+                $itemsCol->count(),
+                $perPage,
+                $page,
+                ['path' => $request->url(), 'query' => $request->query()]
+            );
+            $itemsCount = $items;
+        } else {
+            // Ranking por reprobados
+            $rows = Estadistica::select('school_id')
+                ->selectRaw("SUM(CASE WHEN categoria='reprobados' AND anio=? THEN total ELSE 0 END) as rep", [$anio])
+                ->when($schoolIds, fn($q) => $q->whereIn('school_id', $schoolIds))
+                ->groupBy('school_id')->get();
+            $itemsCol = $orderDir === 'asc'
+                ? $rows->sortBy(fn($r) => (int)($r->rep ?? 0))
+                : $rows->sortByDesc(fn($r) => (int)($r->rep ?? 0));
+            $itemsCol = $itemsCol->values()->map(fn($r) => (object)[
+                'school_id' => $r->school_id,
+                'rep' => (int)($r->rep ?? 0),
+            ]);
+            $items = new \Illuminate\Pagination\LengthAwarePaginator(
+                $itemsCol->slice(($page-1)*$perPage, $perPage)->values(),
+                $itemsCol->count(),
+                $perPage,
+                $page,
+                ['path' => $request->url(), 'query' => $request->query()]
+            );
+            $itemsCount = $items;
         }
 
         // Calcular posición de un colegio buscado si se proporciona 'q'
@@ -386,28 +384,30 @@ class RankingsController extends Controller
             }
             return response()->json(['contextHtml' => $contextHtml, 'tableHtml' => $tableHtml]);
         }
-        return view('rankings.index', [
-            'tipo' => $tipo,
-            'anio' => $anio,
-            // Para la vista actual nos enfocamos en itemsCount (cantidad)
-            'itemsCount' => $itemsCount ?? null,
-            'departamento' => $departamento,
-            'years' => $years,
-            'autoUbic' => $autoUbic,
-            'nivel' => $nivel,
-            'q' => $q,
-            'school_id' => $schoolIdParam,
-            'pos' => $pos,
-            'posTotal' => $posTotal,
-            'posLabel' => $posLabel,
-            'targetName' => $targetName,
-            'posValue' => $posValue,
-            'posMetric' => $posMetric,
-            'selectedSchool' => $selectedSchool,
-            'selectedRep' => $selectedRep,
-            'selectedMat' => $selectedMat,
-            'selectedRatio' => $selectedRatio,
-        ]);
+        // Renderizar la vista correspondiente
+        if ($tipo === 'matricula') {
+            return view('rankings.index_matricula', [
+                'anio' => $anio,
+                'itemsCount' => $itemsCount ?? null,
+                'departamento' => $departamento,
+                'years' => $years,
+                'autoUbic' => $autoUbic,
+                'nivel' => $nivel,
+                'q' => $q,
+                'school_id' => $schoolIdParam,
+            ]);
+        } else {
+            return view('rankings.index_reprobacion', [
+                'anio' => $anio,
+                'itemsCount' => $itemsCount ?? null,
+                'departamento' => $departamento,
+                'years' => $years,
+                'autoUbic' => $autoUbic,
+                'nivel' => $nivel,
+                'q' => $q,
+                'school_id' => $schoolIdParam,
+            ]);
+        }
     }
 
     // Endpoint para autocompletar colegios

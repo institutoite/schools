@@ -30,8 +30,29 @@ Route::get('/schools/{school}', [SchoolController::class, 'show'])->name('school
 Route::get('/schools/{id}', [\App\Http\Controllers\SchoolController::class, 'showDetails'])->name('school.details');
 
 Route::get('/reprobados', [SchoolController::class, 'reprobados'])->name('reprobados.index');
-Route::get('/rankings', [RankingsController::class, 'index'])->name('rankings.index');
-Route::get('/api/schools/search', [RankingsController::class, 'searchSchools'])->name('schools.search');
+Route::middleware(['auth'])->group(function () {
+    // Las rutas dentro de este grupo requieren autenticación
+    Route::get('/rankings', [RankingsController::class, 'index'])->name('rankings.index');
+    Route::get('/api/schools/search', [RankingsController::class, 'searchSchools'])->name('schools.search');
+    Route::get('/reprobados', [SchoolController::class, 'reprobados'])->name('reprobados.index');
+    Route::get('/schools/{id}', [SchoolController::class, 'showDetails'])->name('school.details');
+    Route::get('/probabilidad', [SchoolController::class, 'probabilidad'])->name('probabilidad');
+    Route::get('/colegios/fix-matriculas', [SchoolController::class, 'fixMatriculasFromJson']);
+    Route::get('/densidad-educativa', [SchoolController::class, 'densidadEducativa'])->name('densidad.educativa');
+    Route::get('/debug-density-data', [SchoolController::class, 'debugDensityData'])->name('debug.density.data');
+    Route::get('/test-densidad', function () { return view('schools.test-densidad'); });
+    Route::get('/debug-densidad', function () { return view('schools.debug-densidad'); });
+    Route::get('/test-main', function () { return view('schools.test-main'); });
+    Route::get('ranking-aplazados', [SchoolController::class, 'rankingAplazados'])->name('ranking-aplazados');
+    Route::get('comparar-municipios', [\App\Http\Controllers\MunicipioController::class, 'comparar'])->name('comparar-municipios');
+    Route::get('listar-colegios-municipio', [\App\Http\Controllers\MunicipioController::class, 'listarColegios'])->name('listar-colegios-municipio');
+    Route::get('colegios-por-municipio', [\App\Http\Controllers\MunicipioController::class, 'getColegiosPorMunicipio'])->name('colegios-por-municipio');
+    Route::get('luisespinal', function () { return view('luisespinal'); })->name('grafico.luisespinal');
+    Route::get('/municipios-aplazados', [\App\Http\Controllers\MunicipioController::class, 'masAplazadosPorMunicipio'])->name('municipios-aplazados');
+});
+
+// Detalle del colegio debe ser público
+Route::get('/schools/{school}', [SchoolController::class, 'show'])->name('schools.show');
 
 Route::get('/colegios/fix-matriculas', [SchoolController::class, 'fixMatriculasFromJson']);
 

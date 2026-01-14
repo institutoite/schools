@@ -51,7 +51,7 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2025 ITE Fórmulas. Todos los derechos reservados.</p>
+            <p>&copy; 2026 ITE. Todos los derechos reservados.</p>
             <div class="footer-legal">
                 <a href="https://www.tiktok.com/@davidflores.ite" target="_blank">David Flores</a>
                 <a href="https://www.ite.com.bo" target="_blank">ite educabol</a>

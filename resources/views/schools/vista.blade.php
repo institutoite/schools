@@ -29,36 +29,40 @@
     <link rel="stylesheet" href="{{ asset('css/vistas/welcome/style.css') }}">
 </head>
 <body class="bg-accent min-h-screen font-sans">
-    <div class="max-w-5xl mx-auto py-10 px-4">
+    <div class="max-w-5xl mx-auto py-6 px-2 sm:px-4">
+        <!-- Botón de regreso -->
+        <div class="mb-4">
+            <a href="{{ url()->previous() }}" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:bg-primary-600 transition">
+                <i class="fas fa-arrow-left"></i> Volver
+            </a>
+        </div>
         <!-- Encabezado -->
-        <div class="bg-white rounded-2xl shadow-lg p-8 mb-10 border border-primary-100">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                <div class="flex-1 text-center md:text-left">
-                    <h1 class="text-3xl sm:text-4xl font-extrabold text-primary flex items-center gap-3 justify-center md:justify-start">
-                        <i class="fas fa-school"></i> {{ $school->nombre }}
-                    </h1>
-                    <p class="text-secondary text-lg mt-2 flex items-center gap-2 justify-center md:justify-start">
-                        <i class="fas fa-map-marker-alt"></i> {{ $ubicaciones->departamento ?? 'N/A' }}, {{ $ubicaciones->provincia ?? '' }}
-                    </p>
-                    <span class="inline-block mt-3 px-4 py-2 rounded-full font-semibold text-white
-                        @if(strtolower($school->dependencia) == 'fiscal') bg-primary
-                        @elseif(strtolower($school->dependencia) == 'privado') bg-secondary
-                        @else bg-gray-500 @endif">
-                        <i class="fas fa-shield-alt"></i> {{ $school->dependencia }}
-                    </span>
-                </div>
-                <div class="flex flex-col items-center gap-2">
-                    <span class="text-xs uppercase tracking-wider text-secondary-500">Código RUE</span>
-                    <span class="text-2xl font-bold text-primary">{{ $school->codigo_rue }}</span>
-                </div>
+        <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 mb-8 border border-primary-100 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div class="flex-1 text-center md:text-left">
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-primary flex items-center gap-3 justify-center md:justify-start">
+                    <i class="fas fa-school"></i> {{ $school->nombre }}
+                </h1>
+                <p class="text-secondary text-base sm:text-lg mt-2 flex items-center gap-2 justify-center md:justify-start">
+                    <i class="fas fa-map-marker-alt"></i> {{ $ubicaciones->departamento ?? 'N/A' }}, {{ $ubicaciones->provincia ?? '' }}
+                </p>
+                <span class="inline-block mt-3 px-4 py-1 rounded-full font-semibold text-white text-sm
+                    @if(strtolower($school->dependencia) == 'fiscal') bg-primary
+                    @elseif(strtolower($school->dependencia) == 'privado') bg-secondary
+                    @else bg-gray-500 @endif">
+                    <i class="fas fa-shield-alt"></i> {{ $school->dependencia }}
+                </span>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+                <span class="text-xs uppercase tracking-wider text-secondary-500">Código RUE</span>
+                <span class="text-xl sm:text-2xl font-bold text-primary">{{ $school->codigo_rue }}</span>
             </div>
         </div>
 
         <!-- Información General -->
         <div class="grid md:grid-cols-2 gap-6 mb-8">
-            <div class="bg-white rounded-2xl shadow p-6 border border-primary-50">
-                <h2 class="text-lg font-bold text-primary mb-4 flex items-center gap-2"><i class="fas fa-info-circle"></i> Información</h2>
-                <ul class="space-y-2 text-secondary text-base">
+            <div class="bg-white rounded-2xl shadow p-5 border border-primary-50">
+                <h2 class="text-base sm:text-lg font-bold text-primary mb-3 flex items-center gap-2"><i class="fas fa-info-circle"></i> Información</h2>
+                <ul class="space-y-1 text-secondary text-sm sm:text-base">
                     <li><i class="fas fa-user-tie"></i> <strong>Director:</strong> {{ $school->director ?? 'N/A' }}</li>
                     <li><i class="fas fa-location-arrow"></i> <strong>Dirección:</strong> {{ $school->direccion ?? 'N/A' }}</li>
                     <li><i class="fas fa-phone"></i> <strong>Teléfonos:</strong> {{ $school->telefonos ?? 'N/A' }}</li>
@@ -66,9 +70,9 @@
                     <li><i class="fas fa-clock"></i> <strong>Turnos:</strong> {{ $school->turnos ?? 'N/A' }}</li>
                 </ul>
             </div>
-            <div class="bg-white rounded-2xl shadow p-6 border border-primary-50">
-                <h2 class="text-lg font-bold text-primary mb-4 flex items-center gap-2"><i class="fas fa-globe-americas"></i> Ubicación</h2>
-                <ul class="space-y-2 text-secondary text-base">
+            <div class="bg-white rounded-2xl shadow p-5 border border-primary-50">
+                <h2 class="text-base sm:text-lg font-bold text-primary mb-3 flex items-center gap-2"><i class="fas fa-globe-americas"></i> Ubicación</h2>
+                <ul class="space-y-1 text-secondary text-sm sm:text-base">
                     <li><i class="fas fa-map"></i> <strong>Municipio:</strong> {{ $ubicaciones->municipio ?? 'N/A' }}</li>
                     <li><i class="fas fa-map-pin"></i> <strong>Distrito:</strong> {{ $ubicaciones->distrito ?? 'N/A' }}</li>
                     <li><i class="fas fa-tree"></i> <strong>Área:</strong> {{ $ubicaciones->area ?? 'N/A' }}</li>
@@ -315,63 +319,17 @@ function mostrarGrafico(categoria, tipo) {
             </div>
         @endif
 
-     
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ubición del colegio</h2>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
 
         
-        {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  redes  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
-            <section class="social-banner">
-                <div class="container">
-                    <div class="social-content">
-                        <h2>¡Conéctate con nuestra comunidad educativa!</h2>
-                        <p class="subtitle">Contenido exclusivo, tips de estudio y novedades tecnológicas</p>
-                        
-                        <div class="social-links">
-                            <a href="https://www.tiktok.com/@ite_educabol" target="_blank" class="social-link tiktok">
-                                <div class="social-icon">
-                                    <i class="fab fa-tiktok"></i>
-                                </div>
-                                <span>TikTok</span>
-                            </a>
-                            
-                            <a href="https://www.facebook.com/ite.educabol" target="_blank" class="social-link facebook">
-                                <div class="social-icon">
-                                    <i class="fab fa-facebook-f"></i>
-                                </div>
-                                <span>Facebook</span>
-                            </a>
-                            
-                            <a href="https://www.youtube.com/@ite_educabol" target="_blank" class="social-link youtube">
-                                <div class="social-icon">
-                                    <i class="fab fa-youtube"></i>
-                                </div>
-                                <span>YouTube</span>
-                            </a>
-                            
-                            <a href="https://whatsapp.com/channel/0029VaAu3lwJJhzX5iSJBg44" target="_blank" class="social-link whatsapp">
-                                <div class="social-icon">
-                                    <i class="fab fa-whatsapp"></i>
-                                </div>
-                                <span>WhatsApp</span>
-                            </a>
-                            
-                            <a href="#" target="_blank" class="social-link instagram">
-                                <div class="social-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                                <span>Instagram</span>
-                            </a>
-                            <a href="https://ite.com.bo" target="_blank" class="social-link website">
-                                <div class="social-icon">
-                                    <i class="fas fa-globe"></i>
-                                </div>
-                                <span>Sitio Web</span>
-                            </a>
-                            
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+        
 
         {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  mas estadisticas  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
             
@@ -642,29 +600,62 @@ function mostrarGrafico(categoria, tipo) {
             </div>
         </section>
     {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
-     <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ubición del colegio</h2>
-                    
-                    
-                    <div id="map"></div>
-                    
-                    <div class="cta-actions">
-                        <a href="https://wa.me/59160902299?text=¡Hola!%20Quiero%20ser%20parte%20de%20este%20proyecto.%20Puedo%20colaborar%20en:" 
-                        class="cta-button whatsapp-btn" 
-                        target="_blank" 
-                        rel="noopener noreferrer">
-                            <i class="fab fa-whatsapp"></i> ÚNETE AL EQUIPO
-                        </a>
+  
+
+        {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  redes  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
+            <section class="social-banner">
+                <div class="container">
+                    <div class="social-content">
+                        <h2>¡Conéctate con nuestra comunidad educativa!</h2>
+                        <p class="subtitle">Contenido exclusivo, tips de estudio y novedades tecnológicas</p>
+                        
+                        <div class="social-links">
+                            <a href="https://www.tiktok.com/@ite_educabol" target="_blank" class="social-link tiktok">
+                                <div class="social-icon">
+                                    <i class="fab fa-tiktok"></i>
+                                </div>
+                                <span>TikTok</span>
+                            </a>
+                            
+                            <a href="https://www.facebook.com/ite.educabol" target="_blank" class="social-link facebook">
+                                <div class="social-icon">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                                <span>Facebook</span>
+                            </a>
+                            
+                            <a href="https://www.youtube.com/@ite_educabol" target="_blank" class="social-link youtube">
+                                <div class="social-icon">
+                                    <i class="fab fa-youtube"></i>
+                                </div>
+                                <span>YouTube</span>
+                            </a>
+                            
+                            <a href="https://whatsapp.com/channel/0029VaAu3lwJJhzX5iSJBg44" target="_blank" class="social-link whatsapp">
+                                <div class="social-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <span>WhatsApp</span>
+                            </a>
+                            
+                            <a href="#" target="_blank" class="social-link instagram">
+                                <div class="social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://ite.com.bo" target="_blank" class="social-link website">
+                                <div class="social-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <span>Sitio Web</span>
+                            </a>
+                            
+                        </div>
                     </div>
-                    
-                    
-                    
-                    
                 </div>
-            </div>
-        </section>
+            </section>
+
     
 
     {{-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  footer %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% --}}
@@ -719,7 +710,7 @@ function mostrarGrafico(categoria, tipo) {
                 </div>
                 
                 <div class="footer-bottom">
-                    <p>&copy; 2025 ITE Fórmulas. Todos los derechos reservados.</p>
+                    <p>&copy; 2026 ITE. Todos los derechos reservados.</p>
                     <div class="footer-legal">
                         <a href="https://www.tiktok.com/@davidflores.ite" target="_blank">David Flores</a>
                         <a href="https://www.ite.com.bo" target="_blank">ite educabol</a>
@@ -1037,14 +1028,14 @@ function mostrarGrafico(categoria, tipo) {
                     {{ $reprobadosHombre }}
                 ],
                 backgroundColor: [
-                    'rgb(38,186,165)', // Mujer
-                    'rgb(55,95,122)'  // Hombre
+                    '#26baa5', // Mujer (verde corporativo)
+                    '#375f7a'  // Hombre (azul corporativo)
                 ],
                 borderColor: [
-                    '#FFFFFF',
-                    '#FFFFFF'
+                    '#e8eef2',
+                    '#e8eef2'
                 ],
-                borderWidth: 2
+                borderWidth: 3
             }]
         },
         options: {

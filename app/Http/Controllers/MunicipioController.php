@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Estadistica;
 use App\Models\School;
 use App\Models\Ubicacion;
+use App\Services\DistritoMunicipalGeoService;
 use Illuminate\Http\Request;
 
 class MunicipioController extends Controller
@@ -165,5 +166,229 @@ class MunicipioController extends Controller
             'resultados' => $resultados,
             'ultimoAnio' => $ultimoAnio
         ]);
+    }
+
+    public function aplazadosPorDistritoMunicipal(Request $request)
+    {
+        $aniosDisponibles = Estadistica::select('anio')->distinct()->orderBy('anio', 'desc')->pluck('anio');
+        $anio = (int)($request->get('gestion') ?? $aniosDisponibles->first() ?? now()->year);
+        $distritoSeleccionado = $request->get('distrito_municipal');
+        $orderBy = $request->get('orderBy', 'reprobados');
+        $orderDir = $request->get('orderDir', 'desc');
+        $orderByDetalle = $request->get('orderByDetalle', 'reprobados');
+        $orderDirDetalle = $request->get('orderDirDetalle', 'desc');
+
+        $geoService = app(DistritoMunicipalGeoService::class);
+        $districts = $geoService->getDistricts();
+        $districtLabels = collect($districts)->pluck('label')->sort()->values();
+
+        $schools = School::query()
+            ->select('schools.id', 'schools.nombre', 'ubicacions.latitud', 'ubicacions.longitud')
+            ->join('ubicacions', 'ubicacions.school_id', '=', 'schools.id')
+            ->leftJoin('estadisticas as rep', function ($join) use ($anio) {
+                $join->on('rep.school_id', '=', 'schools.id')
+                    ->where('rep.categoria', 'reprobados')
+                    ->where('rep.anio', $anio);
+            })
+            ->leftJoin('estadisticas as mat', function ($join) use ($anio) {
+                $join->on('mat.school_id', '=', 'schools.id')
+                    ->where('mat.categoria', 'matricula')
+                    ->where('mat.anio', $anio);
+            })
+            ->selectRaw('COALESCE(rep.total, 0) as reprobados')
+            ->selectRaw('COALESCE(mat.total, 0) as matricula')
+            ->whereNotNull('ubicacions.latitud')
+            ->whereNotNull('ubicacions.longitud')
+            ->get();
+
+        $schoolsWithDistrict = $schools->map(function ($school) use ($geoService) {
+            $lat = (float)($school->latitud ?? 0);
+            $lng = (float)($school->longitud ?? 0);
+            $district = $geoService->findDistrict($lng, $lat);
+            if ($district) {
+                $school->distrito_municipal = $district['label'];
+            }
+
+            return $school;
+        })->filter(fn ($school) => !empty($school->distrito_municipal))->values();
+
+        $rankingPorDistrito = $schoolsWithDistrict
+            ->groupBy('distrito_municipal')
+            ->map(function ($items) {
+                $top = $items->sortByDesc('reprobados')->first();
+                $matricula = (int)($top->matricula ?? 0);
+                $reprobados = (int)($top->reprobados ?? 0);
+                $porcentaje = $matricula > 0 ? round(($reprobados / $matricula) * 100, 2) : 0;
+
+                return (object) [
+                    'distrito' => $top->distrito_municipal,
+                    'colegio' => $top->nombre,
+                    'reprobados' => $reprobados,
+                    'matricula' => $matricula,
+                    'porcentaje' => $porcentaje,
+                    'id' => $top->id,
+                ];
+            })
+            ->values()
+            ->pipe(function ($items) use ($orderBy, $orderDir) {
+                return $this->sortCollection($items, $orderBy, $orderDir)->values();
+            });
+
+        $colegiosDistrito = collect();
+        if ($distritoSeleccionado) {
+            $colegiosDistrito = $schoolsWithDistrict
+                ->where('distrito_municipal', $distritoSeleccionado)
+                ->map(function ($school) {
+                    $matricula = (int)($school->matricula ?? 0);
+                    $reprobados = (int)($school->reprobados ?? 0);
+                    $porcentaje = $matricula > 0 ? round(($reprobados / $matricula) * 100, 2) : 0;
+
+                    return [
+                        'id' => $school->id,
+                        'nombre' => $school->nombre,
+                        'reprobados' => $reprobados,
+                        'matricula' => $matricula,
+                        'porcentaje' => $porcentaje,
+                    ];
+                })
+                ->pipe(function ($items) use ($orderByDetalle, $orderDirDetalle) {
+                    return $this->sortCollection($items, $orderByDetalle, $orderDirDetalle)->values();
+                });
+        }
+
+        return view('schools.distritos_municipales_aplazados', [
+            'anio' => $anio,
+            'aniosDisponibles' => $aniosDisponibles,
+            'districtLabels' => $districtLabels,
+            'distritoSeleccionado' => $distritoSeleccionado,
+            'rankingPorDistrito' => $rankingPorDistrito,
+            'colegiosDistrito' => $colegiosDistrito,
+            'orderBy' => $orderBy,
+            'orderDir' => $orderDir,
+            'orderByDetalle' => $orderByDetalle,
+            'orderDirDetalle' => $orderDirDetalle,
+        ]);
+    }
+
+    public function aplazadosPorDistrito(Request $request)
+    {
+        $municipio = $request->get('municipio');
+        $distrito = $request->get('distrito');
+        $orderBy = $request->get('orderBy', 'reprobados');
+        $orderDir = $request->get('orderDir', 'desc');
+        $orderByDetalle = $request->get('orderByDetalle', 'reprobados');
+        $orderDirDetalle = $request->get('orderDirDetalle', 'desc');
+
+        $aniosDisponibles = Estadistica::select('anio')->distinct()->orderBy('anio', 'desc')->pluck('anio');
+        $anio = (int)($request->get('gestion') ?? $aniosDisponibles->first() ?? now()->year);
+
+        $municipios = Ubicacion::whereNotNull('municipio')
+            ->distinct()
+            ->orderBy('municipio')
+            ->pluck('municipio');
+
+        $distritos = collect();
+        $rankingPorDistrito = collect();
+        $colegiosDistrito = collect();
+
+        if ($municipio) {
+            $distritos = Ubicacion::where('municipio', $municipio)
+                ->whereNotNull('distrito')
+                ->distinct()
+                ->orderBy('distrito')
+                ->pluck('distrito');
+
+            $schools = School::query()
+                ->select('schools.id', 'schools.nombre', 'ubicacions.distrito')
+                ->join('ubicacions', 'ubicacions.school_id', '=', 'schools.id')
+                ->leftJoin('estadisticas as rep', function ($join) use ($anio) {
+                    $join->on('rep.school_id', '=', 'schools.id')
+                        ->where('rep.categoria', 'reprobados')
+                        ->where('rep.anio', $anio);
+                })
+                ->leftJoin('estadisticas as mat', function ($join) use ($anio) {
+                    $join->on('mat.school_id', '=', 'schools.id')
+                        ->where('mat.categoria', 'matricula')
+                        ->where('mat.anio', $anio);
+                })
+                ->where('ubicacions.municipio', $municipio)
+                ->whereNotNull('ubicacions.distrito')
+                ->selectRaw('COALESCE(rep.total, 0) as reprobados')
+                ->selectRaw('COALESCE(mat.total, 0) as matricula')
+                ->get();
+
+            $rankingPorDistrito = $schools->groupBy('distrito')->map(function ($items) {
+                $top = $items->sortByDesc('reprobados')->first();
+                $matricula = (int)($top->matricula ?? 0);
+                $reprobados = (int)($top->reprobados ?? 0);
+                $porcentaje = $matricula > 0 ? round(($reprobados / $matricula) * 100, 2) : 0;
+
+                return (object) [
+                    'distrito' => $top->distrito,
+                    'colegio' => $top->nombre,
+                    'reprobados' => $reprobados,
+                    'matricula' => $matricula,
+                    'porcentaje' => $porcentaje,
+                    'id' => $top->id,
+                ];
+            })->values()
+              ->pipe(function ($items) use ($orderBy, $orderDir) {
+                  return $this->sortCollection($items, $orderBy, $orderDir)->values();
+              });
+
+            if ($distrito) {
+                $colegiosDistrito = $schools->where('distrito', $distrito)
+                    ->map(function ($school) {
+                        $matricula = (int)($school->matricula ?? 0);
+                        $reprobados = (int)($school->reprobados ?? 0);
+                        $porcentaje = $matricula > 0 ? round(($reprobados / $matricula) * 100, 2) : 0;
+
+                        return [
+                            'id' => $school->id,
+                            'nombre' => $school->nombre,
+                            'reprobados' => $reprobados,
+                            'matricula' => $matricula,
+                            'porcentaje' => $porcentaje,
+                        ];
+                    })
+                    ->pipe(function ($items) use ($orderByDetalle, $orderDirDetalle) {
+                        return $this->sortCollection($items, $orderByDetalle, $orderDirDetalle)->values();
+                    });
+            }
+        }
+
+        return view('schools.distritos_aplazados', [
+            'municipios' => $municipios,
+            'municipio' => $municipio,
+            'distritos' => $distritos,
+            'distrito' => $distrito,
+            'anio' => $anio,
+            'aniosDisponibles' => $aniosDisponibles,
+            'rankingPorDistrito' => $rankingPorDistrito,
+            'colegiosDistrito' => $colegiosDistrito,
+            'orderBy' => $orderBy,
+            'orderDir' => $orderDir,
+            'orderByDetalle' => $orderByDetalle,
+            'orderDirDetalle' => $orderDirDetalle,
+        ]);
+    }
+
+    private function sortCollection($items, string $field, string $dir)
+    {
+        $allowed = ['reprobados', 'porcentaje'];
+        $field = in_array($field, $allowed, true) ? $field : 'reprobados';
+        $dir = $dir === 'asc' ? 'asc' : 'desc';
+
+        $callback = function ($item) use ($field) {
+            if (is_array($item)) {
+                return $item[$field] ?? 0;
+            }
+            if (is_object($item)) {
+                return $item->{$field} ?? 0;
+            }
+            return 0;
+        };
+
+        return $dir === 'asc' ? $items->sortBy($callback) : $items->sortByDesc($callback);
     }
 }

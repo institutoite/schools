@@ -555,13 +555,21 @@
                 <p class="text-secondary-600 mb-6">El colegio con mayor reprobación en cada municipio</p>
                 <span class="inline-flex items-center gap-2 text-primary-600 font-semibold group-hover:gap-4 transition">Ver colegios →</span>
             </a>
-            <a href="#" class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-primary-100 p-8 transition-all duration-300 text-center card-protegida">
+            <a href="{{ url('/distritos-aplazados') }}" class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-primary-100 p-8 transition-all duration-300 text-center card-protegida">
                 <div class="p-5 bg-red-100 rounded-2xl w-20 h-20 mx-auto mb-6 group-hover:bg-red-500 group-hover:text-white transition">
                     <i class="fas fa-trophy text-3xl text-red-600 group-hover:text-white"></i>
                 </div>
                 <h3 class="text-2xl font-bold text-secondary-800 mb-3">Colegio con más aplazados por distrito</h3>
                 <p class="text-secondary-600 mb-6">El colegio con mayor reprobación en cada distrito</p>
                 <span class="inline-flex items-center gap-2 text-primary-600 font-semibold group-hover:gap-4 transition">Ver colegios →</span>
+            </a>
+            <a href="{{ url('/distritos-municipales-aplazados') }}" class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-primary-100 p-8 transition-all duration-300 text-center card-protegida">
+                <div class="p-5 bg-red-100 rounded-2xl w-20 h-20 mx-auto mb-6 group-hover:bg-red-500 group-hover:text-white transition">
+                    <i class="fas fa-map-marked-alt text-3xl text-red-600 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-secondary-800 mb-3">Colegios más aplazados por distrito municipal (SCZ)</h3>
+                <p class="text-secondary-600 mb-6">Ranking por distrito municipal usando el GeoJSON</p>
+                <span class="inline-flex items-center gap-2 text-primary-600 font-semibold group-hover:gap-4 transition">Ver distritos →</span>
             </a>
             @if($isGuest)
             <script>

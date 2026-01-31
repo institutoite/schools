@@ -49,6 +49,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('colegios-por-municipio', [\App\Http\Controllers\MunicipioController::class, 'getColegiosPorMunicipio'])->name('colegios-por-municipio');
     Route::get('luisespinal', function () { return view('luisespinal'); })->name('grafico.luisespinal');
     Route::get('/municipios-aplazados', [\App\Http\Controllers\MunicipioController::class, 'masAplazadosPorMunicipio'])->name('municipios-aplazados');
+    Route::get('/distritos-aplazados', [\App\Http\Controllers\MunicipioController::class, 'aplazadosPorDistrito'])->name('distritos-aplazados');
+    Route::get('/distritos-municipales-aplazados', [\App\Http\Controllers\MunicipioController::class, 'aplazadosPorDistritoMunicipal'])->name('distritos-municipales-aplazados');
 });
 
 // Detalle del colegio debe ser público

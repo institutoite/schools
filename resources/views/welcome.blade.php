@@ -115,12 +115,18 @@
                                     <a href="{{ url('/mapa') }}" class="block px-5 py-3 hover:bg-primary-50 transition flex items-center gap-2">
                                         <i class="fas fa-map-marked-alt text-primary-600"></i> Mapa interactivo
                                     </a>
+                                    <a href="{{ url('/panel-aplazados-calor') }}" class="block px-5 py-3 hover:bg-primary-50 transition flex items-center gap-2">
+                                        <i class="fas fa-fire text-orange-600"></i> Mapa de calor de aplazados
+                                    </a>
                                     <a href="{{ url('/municipios-aplazados') }}" class="block px-5 py-3 hover:bg-primary-50 transition flex items-center gap-2">
                                         <i class="fas fa-city text-red-600"></i> Más aplazados por municipio
                                     </a>
                                 @else
                                     <a href="/admin/login" class="block px-5 py-3 hover:bg-primary-50 transition flex items-center gap-2 opacity-60 cursor-not-allowed">
                                         <i class="fas fa-map-marked-alt text-primary-600"></i> Mapa interactivo <i class="fas fa-lock text-primary-500 ml-1"></i>
+                                    </a>
+                                    <a href="/admin/login" class="block px-5 py-3 hover:bg-primary-50 transition flex items-center gap-2 opacity-60 cursor-not-allowed">
+                                        <i class="fas fa-fire text-orange-600"></i> Mapa de calor de aplazados <i class="fas fa-lock text-primary-500 ml-1"></i>
                                     </a>
                                     <a href="/admin/login" class="block px-5 py-3 hover:bg-primary-50 transition flex items-center gap-2 opacity-60 cursor-not-allowed">
                                         <i class="fas fa-city text-red-600"></i> Más aplazados por municipio <i class="fas fa-lock text-primary-500 ml-1"></i>
@@ -182,12 +188,18 @@
                         <a href="{{ url('/mapa') }}" class="block py-2 px-2 rounded-lg hover:bg-primary-50 flex items-center gap-2">
                             <i class="fas fa-map-marked-alt text-primary-600"></i> Mapa interactivo
                         </a>
+                        <a href="{{ url('/panel-aplazados-calor') }}" class="block py-2 px-2 rounded-lg hover:bg-primary-50 flex items-center gap-2">
+                            <i class="fas fa-fire text-orange-600"></i> Mapa de calor de aplazados
+                        </a>
                         <a href="{{ url('/municipios-aplazados') }}" class="block py-2 px-2 rounded-lg hover:bg-primary-50 flex items-center gap-2">
                             <i class="fas fa-city text-red-600"></i> Más aplazados por municipio
                         </a>
                     @else
                         <a href="/admin/login" class="block py-2 px-2 rounded-lg hover:bg-primary-50 flex items-center gap-2 opacity-60 cursor-not-allowed">
                             <i class="fas fa-map-marked-alt text-primary-600"></i> Mapa interactivo <i class="fas fa-lock text-primary-500 ml-1"></i>
+                        </a>
+                        <a href="/admin/login" class="block py-2 px-2 rounded-lg hover:bg-primary-50 flex items-center gap-2 opacity-60 cursor-not-allowed">
+                            <i class="fas fa-fire text-orange-600"></i> Mapa de calor de aplazados <i class="fas fa-lock text-primary-500 ml-1"></i>
                         </a>
                         <a href="/admin/login" class="block py-2 px-2 rounded-lg hover:bg-primary-50 flex items-center gap-2 opacity-60 cursor-not-allowed">
                             <i class="fas fa-city text-red-600"></i> Más aplazados por municipio <i class="fas fa-lock text-primary-500 ml-1"></i>
@@ -466,6 +478,17 @@
                 <p class="text-secondary-600 mb-6">Consulta el colegio con mayor reprobación en cada municipio y explora el detalle de cualquier municipio.</p>
                 <span class="inline-flex items-center gap-2 text-primary-600 font-semibold group-hover:gap-4 transition">
                     Ver municipios →
+                </span>
+            </a>
+
+            <a href="{{ url('/panel-aplazados-calor') }}" class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-primary-100 p-8 transition-all duration-300 text-center card-protegida">
+                <div class="p-5 bg-orange-100 rounded-2xl w-20 h-20 mx-auto mb-6 group-hover:bg-orange-500 group-hover:text-white transition">
+                    <i class="fas fa-fire text-3xl text-orange-600 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-secondary-800 mb-3">Mapa de calor de aplazados</h3>
+                <p class="text-secondary-600 mb-6">Visualiza los colegios de Bolivia por intensidad de aplazados, con filtros por año y ubicación.</p>
+                <span class="inline-flex items-center gap-2 text-primary-600 font-semibold group-hover:gap-4 transition">
+                    Ver mapa de calor â†’
                 </span>
             </a>
 

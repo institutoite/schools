@@ -397,14 +397,25 @@
                     Ir al buscador → 
                 </span>
             </a>
-            <a href="{{ url('/rankings?tipo=reprobacion') }}" class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-primary-100 p-8 transition-all duration-300 text-center card-protegida">
+            <a href="{{ url('/colegios-mas-reprobados') }}" class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-primary-100 p-8 transition-all duration-300 text-center card-protegida">
                 <div class="p-5 bg-red-100 rounded-2xl w-20 h-20 mx-auto mb-6 group-hover:bg-red-500 group-hover:text-white transition">
                     <i class="fas fa-chart-line text-3xl text-red-600 group-hover:text-white"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-secondary-800 mb-3">Rankings de reprobados</h3>
-                <p class="text-secondary-600 mb-6">Colegios con mayor/menor tasa de reprobación, por departamento, urbana vs rural, etc.</p>
+                <h3 class="text-2xl font-bold text-secondary-800 mb-3">Colegios con más reprobados</h3>
+                <p class="text-secondary-600 mb-6">Lista de colegios con mayor cantidad de estudiantes reprobados, por año.</p>
                 <span class="inline-flex items-center gap-2 text-primary-600 font-semibold group-hover:gap-4 transition">
-                    Ver rankings → 
+                    Ver colegios → 
+                </span>
+            </a>
+
+            <a href="{{ url('/ranking-mi-colegio') }}" class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-primary-100 p-8 transition-all duration-300 text-center card-protegida">
+                <div class="p-5 bg-primary-100 rounded-2xl w-20 h-20 mx-auto mb-6 group-hover:bg-primary-500 group-hover:text-white transition">
+                    <i class="fas fa-school text-3xl text-primary-600 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-secondary-800 mb-3">Ranking tu colegio</h3>
+                <p class="text-secondary-600 mb-6">Consulta el ranking de tu colegio a nivel Nacional, Departamental, Provincial, Municipal y Distrital.</p>
+                <span class="inline-flex items-center gap-2 text-primary-600 font-semibold group-hover:gap-4 transition">
+                    Ver ranking →
                 </span>
             </a>
             <a href="{{ url('/rankings?tipo=matricula') }}" class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-primary-100 p-8 transition-all duration-300 text-center card-protegida">
@@ -547,7 +558,7 @@
                 <p class="text-secondary-600 mb-6">El colegio con mayor reprobación en cada provincia</p>
                 <span class="inline-flex items-center gap-2 text-primary-600 font-semibold group-hover:gap-4 transition">Ver colegios →</span>
             </a>
-            <a href="#" class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-primary-100 p-8 transition-all duration-300 text-center card-protegida">
+            <a href="{{ url('/rankings?tipo=reprobacion&nivel=municipio') }}" class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-primary-100 p-8 transition-all duration-300 text-center card-protegida">
                 <div class="p-5 bg-red-100 rounded-2xl w-20 h-20 mx-auto mb-6 group-hover:bg-red-500 group-hover:text-white transition">
                     <i class="fas fa-trophy text-3xl text-red-600 group-hover:text-white"></i>
                 </div>

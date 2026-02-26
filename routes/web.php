@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\RankingsController;
+use App\Http\Controllers\PanelAplazadosController;
 use App\Models\School;
 use Illuminate\Support\Facades\Route;
 
@@ -54,6 +55,10 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // Detalle del colegio debe ser público
+// Nueva ruta: colegios con más reprobados
+Route::get('/colegios-mas-reprobados', [RankingsController::class, 'colegiosMasReprobados'])->name('colegios.masreprobados');
+// Nueva ruta: ranking personalizado de tu colegio
+Route::get('/ranking-mi-colegio', [RankingsController::class, 'rankingMiColegio'])->name('ranking.micolegio');
 Route::get('/schools/{school}', [SchoolController::class, 'show'])->name('schools.show');
 
 Route::get('/colegios/fix-matriculas', [SchoolController::class, 'fixMatriculasFromJson']);
@@ -130,7 +135,12 @@ Route::get('/test-data', function () {
 Route::get('comparar-municipios', [\App\Http\Controllers\MunicipioController::class, 'comparar'])->name('comparar-municipios');
 Route::get('listar-colegios-municipio', [\App\Http\Controllers\MunicipioController::class, 'listarColegios'])->name('listar-colegios-municipio');
 Route::get('colegios-por-municipio', [\App\Http\Controllers\MunicipioController::class, 'getColegiosPorMunicipio'])->name('colegios-por-municipio');
+Route::get('/municipios-aplazados', [\App\Http\Controllers\MunicipioController::class, 'masAplazadosPorMunicipio'])->name('municipios-aplazados');
+
 Route::get('luisespinal', function () {
     return view('luisespinal');
 })->name('grafico.luisespinal');
-Route::get('/municipios-aplazados', [\App\Http\Controllers\MunicipioController::class, 'masAplazadosPorMunicipio'])->name('municipios-aplazados');
+
+Route::get('/panel-aplazados-calor', [PanelAplazadosController::class, 'index'])->name('panel.aplazados');
+
+Route::get('/panel-aplazados-calor/opciones-ubicacion', [PanelAplazadosController::class, 'opcionesUbicacion'])->name('panel.aplazados.opciones');

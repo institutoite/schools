@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @push('styles')
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -37,6 +37,43 @@
     #mapa-wrapper:fullscreen #mapa-fullscreen-title {
         display: block;
     }
+    #mapa-fs-controls {
+        display: none;
+        position: absolute;
+        right: 14px;
+        bottom: 16px;
+        z-index: 1001;
+        background: rgba(15, 23, 42, 0.78);
+        border: 1px solid rgba(148, 163, 184, 0.45);
+        border-radius: 10px;
+        padding: 8px;
+        color: #f8fafc;
+        backdrop-filter: blur(2px);
+    }
+    #mapa-wrapper:fullscreen #mapa-fs-controls {
+        display: block;
+    }
+    .mapa-fs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 42px);
+        gap: 6px;
+        align-items: center;
+        justify-items: center;
+    }
+    .mapa-fs-btn {
+        width: 42px;
+        height: 38px;
+        border: 1px solid rgba(148, 163, 184, 0.65);
+        border-radius: 8px;
+        background: rgba(30, 41, 59, 0.9);
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 1;
+        cursor: pointer;
+    }
+    .mapa-fs-btn:hover {
+        background: rgba(51, 65, 85, 1);
+    }
     .legend-gradient {
         background: linear-gradient(90deg, #16a34a 0%, #16a34a 8%, #fb923c 20%, #ef4444 65%, #7f1d1d 100%);
         height: 12px;
@@ -49,12 +86,12 @@
 <div class="max-w-7xl mx-auto px-4 py-6">
     <div class="bg-white rounded-xl shadow p-5 mb-6">
         <h1 class="text-2xl font-bold text-gray-800">Panel de Calor de Aplazados por Colegio</h1>
-        <p class="text-sm text-gray-600 mt-1">Solo 0 aplazados es verde. Desde 1 aplazado el color va de naranja a rojo oscuro según el máximo del filtro aplicado.</p>
+        <p class="text-sm text-gray-600 mt-1">Solo 0 aplazados es verde. Desde 1 aplazado el color va de naranja a rojo oscuro seg�n el m�ximo del filtro aplicado.</p>
     </div>
 
     <form id="filtros-form" method="GET" action="{{ route('panel.aplazados') }}" data-opciones-url="{{ route('panel.aplazados.opciones') }}" class="bg-white rounded-xl shadow p-5 mb-6 grid grid-cols-1 md:grid-cols-7 gap-4">
         <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-1">Año</label>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">A�o</label>
             <select name="anio" class="w-full border rounded-lg px-3 py-2">
                 @foreach($aniosDisponibles as $a)
                     <option value="{{ $a }}" {{ (int)$anio === (int)$a ? 'selected' : '' }}>{{ $a }}</option>
@@ -106,18 +143,22 @@
     <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
         <div class="bg-white rounded-xl shadow p-4"><div class="text-xs text-gray-500">Colegios visibles</div><div class="text-2xl font-bold">{{ number_format($resumen['total_colegios']) }}</div></div>
         <div class="bg-white rounded-xl shadow p-4"><div class="text-xs text-gray-500">Total aplazados</div><div class="text-2xl font-bold">{{ number_format($resumen['total_aplazados']) }}</div></div>
-        <div class="bg-white rounded-xl shadow p-4"><div class="text-xs text-gray-500">Máximo (filtro actual)</div><div class="text-2xl font-bold text-red-700">{{ number_format($resumen['max_aplazados']) }}</div></div>
+        <div class="bg-white rounded-xl shadow p-4"><div class="text-xs text-gray-500">M�ximo (filtro actual)</div><div class="text-2xl font-bold text-red-700">{{ number_format($resumen['max_aplazados']) }}</div></div>
         <div class="bg-white rounded-xl shadow p-4"><div class="text-xs text-gray-500">Promedio</div><div class="text-2xl font-bold text-orange-500">{{ number_format($resumen['promedio_aplazados'], 2) }}</div></div>
-        <div class="bg-white rounded-xl shadow p-4"><div class="text-xs text-gray-500">Mínimo</div><div class="text-2xl font-bold text-green-600">{{ number_format($resumen['min_aplazados']) }}</div></div>
+        <div class="bg-white rounded-xl shadow p-4"><div class="text-xs text-gray-500">M�nimo</div><div class="text-2xl font-bold text-green-600">{{ number_format($resumen['min_aplazados']) }}</div></div>
     </div>
 
     <div class="bg-white rounded-xl shadow p-5 mb-6">
         <div class="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between mb-3">
-            <h2 id="mapa-titulo-modo" class="text-lg font-semibold">Mapa de calor de colegios de Bolivia por cantidad de aplazados (año {{ $anio }})</h2>
-            <div class="flex flex-wrap items-center gap-3">
+            <h2 id="mapa-titulo-modo" class="text-lg font-semibold">Mapa de calor de colegios de Bolivia por cantidad de aplazados (a�o {{ $anio }})</h2>
+                        <div class="flex flex-wrap items-center gap-3">
                 <label class="inline-flex items-center gap-2 text-sm text-gray-700 select-none">
                     <input id="check-mapa-calor" type="checkbox" class="rounded border-gray-300" checked>
                     <span>Mostrar mapa de calor</span>
+                </label>
+                <label class="inline-flex items-center gap-2 text-sm text-gray-700 select-none">
+                    <input id="check-centros-poblados" type="checkbox" class="rounded border-gray-300">
+                    <span>Mostrar centros poblados (por departamento)</span>
                 </label>
                 <button id="btn-fullscreen-mapa" type="button" class="text-sm bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-lg px-3 py-2">
                     Pantalla completa
@@ -129,17 +170,30 @@
             <div class="flex justify-between text-xs text-gray-600 mb-4">
                 <span>0 aplazados (verde)</span>
                 <span>Desde 1 (naranja)</span>
-                <span>Máximo del filtro (rojo oscuro)</span>
+                <span>M�ximo del filtro (rojo oscuro)</span>
             </div>
         </div>
         <div id="mapa-wrapper">
             <div id="mapa-fullscreen-title">MAPA DE CALOR DE COLEGIOS DE BOLIVIA POR CANTIDAD DE APLAZADOS</div>
             <div id="mapa-aplazados"></div>
+            <div id="mapa-fs-controls" aria-label="Controles en pantalla completa">
+                <div class="mapa-fs-grid">
+                    <button id="btn-zoom-in" type="button" class="mapa-fs-btn" title="Acercar">+</button>
+                    <button id="btn-pan-up" type="button" class="mapa-fs-btn" title="Mover arriba">U</button>
+                    <button id="btn-zoom-out" type="button" class="mapa-fs-btn" title="Alejar">-</button>
+                    <button id="btn-pan-left" type="button" class="mapa-fs-btn" title="Mover izquierda">L</button>
+                    <button type="button" class="mapa-fs-btn" disabled style="opacity:.55;cursor:default">�</button>
+                    <button id="btn-pan-right" type="button" class="mapa-fs-btn" title="Mover derecha">R</button>
+                    <span></span>
+                    <button id="btn-pan-down" type="button" class="mapa-fs-btn" title="Mover abajo">D</button>
+                    <span></span>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="bg-white rounded-xl shadow p-5 overflow-x-auto">
-        <h2 class="text-lg font-semibold mb-3">Top colegios con más aplazados</h2>
+        <h2 class="text-lg font-semibold mb-3">Top colegios con m�s aplazados</h2>
         <table class="min-w-full text-sm">
             <thead>
                 <tr class="bg-gray-100 text-gray-700">
@@ -176,37 +230,63 @@
 
 @push('scripts')
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
 <script>
     (function () {
         const schools = @json($schools);
         const maxAplazados = {{ (int) ($resumen['max_aplazados'] ?? 0) }};
-        const yearLabel = @json((string)$anio);
-        const boliviaFillGeoJsonUrl = @json(asset('storage/geo/distritos_municipales.geojson'));
-        const boliviaBorderGeoJsonUrl = @json(asset('geo/bol_limite_nacional_b.geojson'));
+        const selectedDepartamento = @json($departamento ?? '');
+        const selectedProvincia = @json($provincia ?? '');
+        const departamentosCatalogo = @json($departamentos ?? []);
+        const centrosEndpoint = @json(route('panel.aplazados.centros')); 
+        const hasGeoFilter = Boolean(selectedDepartamento || selectedProvincia);
 
-        const plainSchoolColor = 'rgb(38,186,165)';
-        const boliviaColor = 'rgb(55,95,122)';
-        const HEATMAP_TITLE = 'MAPA DE CALOR DE COLEGIOS DE BOLIVIA POR CANTIDAD DE APLAZADOS';
-        const SCHOOLS_TITLE = 'COLEGIOS DE BOLIVIA';
+        // Ajusta estos dos valores manualmente para cambiar sensibilidad en fullscreen.
+        const FS_ZOOM_STEP = 0.25; // zoom por click
+        const FS_PAN_STEP_PX = 120; // pixeles por click
 
-        const heatmapCheckbox = document.getElementById('check-mapa-calor');
-        const legendContainer = document.getElementById('mapa-leyenda');
-        const fullscreenButton = document.getElementById('btn-fullscreen-mapa');
-        const mapTitle = document.getElementById('mapa-titulo-modo');
-        const fullscreenTitle = document.getElementById('mapa-fullscreen-title');
-        const mapWrapper = document.getElementById('mapa-wrapper');
+        const BOLIVIA_BOUNDS = L.latLngBounds([[-22.95, -69.75], [-9.55, -57.35]]);
 
-        const map = L.map('mapa-aplazados').setView([-16.5, -64.8], 5.4);
+        const map = L.map('mapa-aplazados', { zoomControl: false, zoomSnap: 0.1, zoomDelta: 0.1 });
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 18,
             attribution: '&copy; OpenStreetMap'
         }).addTo(map);
 
-        const markersLayer = L.layerGroup().addTo(map);
+        // Vista inicial: Bolivia completa, evita que se vea el mapamundi al cargar.
+        map.fitBounds(BOLIVIA_BOUNDS, { padding: [12, 12] });
+        map.setMaxBounds(BOLIVIA_BOUNDS.pad(0.35));
 
         function toNumber(value) {
             const n = Number(value);
             return Number.isFinite(n) ? n : 0;
+        }
+
+        function normalizeText(value) {
+            return String(value || '')
+                .toUpperCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/[^A-Z]/g, '');
+        }
+
+        function sameDepartamento(a, b) {
+            const na = normalizeText(a);
+            const nb = normalizeText(b);
+            if (!na || !nb) return false;
+            return na === nb || na.startsWith(nb) || nb.startsWith(na);
+        }
+
+        const deptNormSet = new Set((departamentosCatalogo || []).map(normalizeText).filter(Boolean));
+
+        function isDepartamentoValido(name) {
+            const norm = normalizeText(name);
+            if (!norm) return false;
+            if (deptNormSet.has(norm)) return true;
+            for (const d of deptNormSet) {
+                if (d.startsWith(norm) || norm.startsWith(d)) return true;
+            }
+            return false;
         }
 
         function getColor(aplazados) {
@@ -237,32 +317,14 @@
             return 5 + (ratio * 8);
         }
 
-        function getMarkerStyle(aplazados, useHeatmap) {
-            if (!useHeatmap) {
-                return {
-                    radius: 7,
-                    fill: true,
-                    stroke: true,
-                    color: plainSchoolColor,
-                    fillColor: plainSchoolColor,
-                    opacity: 1,
-                    fillOpacity: 1,
-                    weight: 2
-                };
-            }
+        const schoolsLayer = L.layerGroup().addTo(map);
+        const centrosLayer = L.layerGroup().addTo(map);
+        let centrosLoaded = false;
+        let centrosLoadedDept = '';
+        const currentDepartamento = { value: selectedDepartamento || '' };
 
-            const color = getColor(aplazados);
-            return {
-                radius: getRadius(aplazados),
-                color,
-                fillColor: color,
-                fillOpacity: 0.62,
-                weight: 1
-            };
-        }
-
-        function renderSchoolMarkers(useHeatmap) {
-            markersLayer.clearLayers();
+        function drawSchools() {
+            const bounds = [];
 
             schools.forEach((school) => {
                 const lat = toNumber(school.latitud);
@@ -272,8 +334,16 @@
                     return;
                 }
 
-                const markerStyle = getMarkerStyle(school.aplazados, useHeatmap);
-                L.circleMarker([lat, lng], markerStyle)
+                bounds.push([lat, lng]);
+
+                const color = getColor(school.aplazados);
+                L.circleMarker([lat, lng], {
+                    radius: getRadius(school.aplazados),
+                    color,
+                    fillColor: color,
+                    fillOpacity: 0.62,
+                    weight: 1
+                })
                     .bindPopup(
                         `<strong>${school.nombre}</strong><br>` +
                         `RUE: ${school.codigo_rue ?? '-'}<br>` +
@@ -283,125 +353,166 @@
                         `Distrito: ${school.distrito ?? '-'}<br>` +
                         `Aplazados: ${toNumber(school.aplazados).toLocaleString()}`
                     )
-                    .addTo(markersLayer);
+                    .addTo(schoolsLayer);
             });
 
-            // Los puntos siempre arriba del relleno de Bolivia.
-            markersLayer.eachLayer((layer) => {
-                if (layer && typeof layer.bringToFront === 'function') {
-                    layer.bringToFront();
-                }
-            });
+            return bounds;
         }
 
-        function updateMapMode() {
-            const useHeatmap = Boolean(heatmapCheckbox?.checked);
-            renderSchoolMarkers(useHeatmap);
-
-            if (legendContainer) {
-                legendContainer.style.display = useHeatmap ? '' : 'none';
-            }
-
-            if (mapTitle) {
-                mapTitle.textContent = useHeatmap
-                    ? `Mapa de calor de colegios de Bolivia por cantidad de aplazados (año ${yearLabel})`
-                    : `Colegios de Bolivia (año ${yearLabel})`;
-            }
-
-            if (fullscreenTitle) {
-                fullscreenTitle.textContent = useHeatmap ? HEATMAP_TITLE : SCHOOLS_TITLE;
-            }
-        }
-
-        async function paintBoliviaOverlay() {
+        async function drawGeoLayers() {
             try {
-                const [fillResponse, borderResponse] = await Promise.all([
-                    fetch(boliviaFillGeoJsonUrl, {
-                        headers: { 'X-Requested-With': 'XMLHttpRequest' }
-                    }),
-                    fetch(boliviaBorderGeoJsonUrl, {
-                        headers: { 'X-Requested-With': 'XMLHttpRequest' }
-                    })
-                ]);
-
-                if (fillResponse.ok) {
-                    const fillGeoJson = await fillResponse.json();
-                    L.geoJSON(fillGeoJson, {
-                        style: {
-                            stroke: false,
-                            fillColor: boliviaColor,
-                            fillOpacity: 0.18
-                        },
-                        interactive: false
-                    }).addTo(map);
-                }
-
-                if (borderResponse.ok) {
-                    const borderGeoJson = await borderResponse.json();
-                    L.geoJSON(borderGeoJson, {
-                        style: {
-                            color: boliviaColor,
-                            opacity: 1,
-                            weight: 7,
-                            fillOpacity: 0
-                        },
-                        interactive: false
-                    }).addTo(map);
-                }
-
-                if (!fillResponse.ok && !borderResponse.ok) {
-                    return;
-                }
-
-                markersLayer.eachLayer((layer) => {
-                    if (layer && typeof layer.bringToFront === 'function') {
-                        layer.bringToFront();
-                    }
+                const response = await fetch('{{ asset('geo/bol_lim_dpto.json') }}', {
+                    headers: { 'X-Requested-With': 'XMLHttpRequest' }
                 });
+
+                if (!response.ok) {
+                    return null;
+                }
+
+                const geo = await response.json();
+                const features = (geo.features || []).filter((feature) => {
+                    const name = feature?.properties?.name || feature?.properties?.nom_dep || feature?.properties?.NOM_DEP || '';
+                    return isDepartamentoValido(name);
+                });
+
+                if (!features.length) {
+                    return null;
+                }
+
+                const fc = {
+                    type: 'FeatureCollection',
+                    features
+                };
+
+                const fillLayer = L.geoJSON(fc, {
+                    style: (feature) => {
+                        const name = feature?.properties?.name || feature?.properties?.nom_dep || feature?.properties?.NOM_DEP || '';
+                        const selected = selectedDepartamento && sameDepartamento(name, selectedDepartamento);
+                        const fillOpacity = selectedDepartamento ? (selected ? 0.30 : 0.03) : 0.30;
+
+                        return {
+                            color: 'rgb(55,95,122)',
+                            weight: 1,
+                            fillColor: 'rgb(55,95,122)',
+                            fillOpacity
+                        };
+                    }
+                }).addTo(map);
+
+                const departamentalBorders = L.geoJSON(fc, {
+                    style: {
+                        color: 'rgb(55,95,122)',
+                        weight: hasGeoFilter ? 2.6 : 1.9,
+                        fillOpacity: 0
+                    }
+                }).addTo(map);
+
+                try {
+                    if (window.turf && typeof turf.dissolve === 'function') {
+                        const dissolved = turf.dissolve(fc);
+                        if (dissolved) {
+                            L.geoJSON(dissolved, {
+                                style: {
+                                    color: 'rgb(55,95,122)',
+                                    weight: hasGeoFilter ? 3.4 : 2.8,
+                                    fillOpacity: 0
+                                }
+                            }).addTo(map);
+                        }
+                    }
+                } catch (e) {
+                    L.geoJSON(fc, {
+                        style: {
+                            color: 'rgb(55,95,122)',
+                            weight: hasGeoFilter ? 2.8 : 2.2,
+                            fillOpacity: 0
+                        }
+                    }).addTo(map);
+                }
+
+                departamentalBorders.bringToFront();
+
+                return fillLayer.getBounds();
             } catch (e) {
-                // noop
+                return null;
             }
         }
 
-        const bounds = [];
-        schools.forEach((school) => {
-            const lat = toNumber(school.latitud);
-            const lng = toNumber(school.longitud);
-            if (!lat || !lng) {
-                return;
-            }
-            bounds.push([lat, lng]);
-        });
 
-        if (bounds.length > 0) {
-            map.fitBounds(bounds, { padding: [30, 30] });
-        }
-
-        heatmapCheckbox?.addEventListener('change', updateMapMode);
-
-        fullscreenButton?.addEventListener('click', async () => {
-            if (!mapWrapper) {
-                return;
+        async function drawCentrosPoblados(departamento) {
+            if (!departamento) {
+                return null;
             }
 
             try {
-                if (document.fullscreenElement) {
-                    await document.exitFullscreen();
-                } else {
-                    await mapWrapper.requestFullscreen();
+                const params = new URLSearchParams({ departamento });
+                const response = await fetch(`${centrosEndpoint}?${params.toString()}`, {
+                    headers: { 'X-Requested-With': 'XMLHttpRequest' }
+                });
+
+                if (!response.ok) {
+                    return null;
                 }
-                setTimeout(() => map.invalidateSize(), 120);
+
+                const fc = await response.json();
+                const features = fc?.features || [];
+
+                if (!features.length) {
+                    return null;
+                }
+
+                const centrosGeoLayer = L.geoJSON({ type: 'FeatureCollection', features }, {
+                    pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+                        radius: 2.2,
+                        color: '#1d4ed8',
+                        weight: 0.6,
+                        fillColor: '#38bdf8',
+                        fillOpacity: 0.72,
+                        renderer: L.canvas()
+                    }),
+                    onEachFeature: (feature, layer) => {
+                        const props = feature?.properties || {};
+                        const nombre = props.etiqueta || 'Centro poblado';
+                        const dep = props.nom_dep || '-';
+                        layer.bindPopup(`<strong>${nombre}</strong><br>Departamento: ${dep}`);
+                    }
+                }).addTo(centrosLayer);
+
+                return centrosGeoLayer.getBounds();
             } catch (e) {
-                // noop
+                return null;
             }
-        });
+        }
+        async function initMap() {
+            const schoolBounds = drawSchools();
+            const geoBounds = await drawGeoLayers();
+            const centrosBounds = null;
 
-        document.addEventListener('fullscreenchange', () => {
-            setTimeout(() => map.invalidateSize(), 120);
-        });
+            const hasSchoolBounds = schoolBounds.length > 0;
+            const schoolLatLngBounds = hasSchoolBounds ? L.latLngBounds(schoolBounds) : null;
 
-        updateMapMode();
-        paintBoliviaOverlay();
+            let finalBounds = null;
+
+            if (geoBounds && geoBounds.isValid()) {
+                finalBounds = geoBounds;
+            }
+
+            if (centrosBounds && centrosBounds.isValid()) {
+                finalBounds = finalBounds ? finalBounds.extend(centrosBounds) : centrosBounds;
+            }
+
+            if (schoolLatLngBounds && schoolLatLngBounds.isValid()) {
+                finalBounds = finalBounds ? finalBounds.extend(schoolLatLngBounds) : schoolLatLngBounds;
+            }
+
+            if (finalBounds && finalBounds.isValid()) {
+                map.fitBounds(finalBounds, { padding: [24, 24] });
+            } else {
+                map.fitBounds(BOLIVIA_BOUNDS, { padding: [12, 12] });
+            }
+        }
+
+        initMap();
 
         const form = document.getElementById('filtros-form');
         const endpoint = form?.dataset?.opcionesUrl;
@@ -460,6 +571,7 @@
 
         async function refreshCascade(level = 'init') {
             const departamento = departamentoSelect?.value || '';
+            currentDepartamento.value = departamento;
             let provincia = provinciaSelect?.value || '';
             let municipio = municipioSelect?.value || '';
             let distrito = distritoSelect?.value || '';
@@ -468,6 +580,9 @@
                 provincia = '';
                 municipio = '';
                 distrito = '';
+                centrosLoaded = false;
+                centrosLoadedDept = '';
+                centrosLayer.clearLayers();
             }
 
             if (level === 'provincia') {
@@ -513,6 +628,9 @@
 
         departamentoSelect?.addEventListener('change', async () => {
             await refreshCascade('departamento');
+            if (checkCentrosPoblados?.checked) {
+                await setCentrosVisible(true);
+            }
         });
 
         provinciaSelect?.addEventListener('change', async () => {
@@ -522,6 +640,104 @@
         municipioSelect?.addEventListener('change', async () => {
             await refreshCascade('municipio');
         });
+
+        const wrapper = document.getElementById('mapa-wrapper');
+        const btnFullscreen = document.getElementById('btn-fullscreen-mapa');
+        const checkMapaCalor = document.getElementById('check-mapa-calor');
+        const checkCentrosPoblados = document.getElementById('check-centros-poblados');
+
+        const btnZoomIn = document.getElementById('btn-zoom-in');
+        const btnZoomOut = document.getElementById('btn-zoom-out');
+        const btnPanUp = document.getElementById('btn-pan-up');
+        const btnPanDown = document.getElementById('btn-pan-down');
+        const btnPanLeft = document.getElementById('btn-pan-left');
+        const btnPanRight = document.getElementById('btn-pan-right');
+
+        function setHeatmapVisible(visible) {
+            if (visible) {
+                if (!map.hasLayer(schoolsLayer)) {
+                    map.addLayer(schoolsLayer);
+                }
+            } else {
+                if (map.hasLayer(schoolsLayer)) {
+                    map.removeLayer(schoolsLayer);
+                }
+            }
+        }
+
+
+        async function setCentrosVisible(visible) {
+            if (!visible) {
+                if (map.hasLayer(centrosLayer)) {
+                    map.removeLayer(centrosLayer);
+                }
+                return;
+            }
+
+            const departamento = currentDepartamento.value || '';
+            if (!departamento) {
+                return;
+            }
+
+            if (!centrosLoaded || centrosLoadedDept !== departamento) {
+                centrosLayer.clearLayers();
+                await drawCentrosPoblados(departamento);
+                centrosLoaded = true;
+                centrosLoadedDept = departamento;
+            }
+
+            if (!map.hasLayer(centrosLayer)) {
+                map.addLayer(centrosLayer);
+            }
+        }
+        checkMapaCalor?.addEventListener('change', () => {
+            setHeatmapVisible(checkMapaCalor.checked);
+        });
+        setHeatmapVisible(checkMapaCalor?.checked !== false);
+
+        checkCentrosPoblados?.addEventListener('change', async () => {
+            await setCentrosVisible(checkCentrosPoblados.checked);
+        });
+        setCentrosVisible(checkCentrosPoblados?.checked === true);
+
+        async function toggleFullscreen() {
+            if (!wrapper) return;
+
+            if (document.fullscreenElement === wrapper) {
+                await document.exitFullscreen();
+            } else {
+                await wrapper.requestFullscreen();
+            }
+        }
+
+        btnFullscreen?.addEventListener('click', async () => {
+            try {
+                await toggleFullscreen();
+            } catch (e) {
+                // noop
+            }
+        });
+
+        document.addEventListener('fullscreenchange', () => {
+            const isFs = document.fullscreenElement === wrapper;
+            if (btnFullscreen) {
+                btnFullscreen.textContent = isFs ? 'Salir pantalla completa' : 'Pantalla completa';
+            }
+            map.invalidateSize();
+        });
+
+        btnZoomIn?.addEventListener('click', () => {
+            map.setZoom(map.getZoom() + FS_ZOOM_STEP);
+        });
+
+        btnZoomOut?.addEventListener('click', () => {
+            map.setZoom(map.getZoom() - FS_ZOOM_STEP);
+        });
+
+        btnPanUp?.addEventListener('click', () => map.panBy([0, -FS_PAN_STEP_PX], { animate: true, duration: 0.25 }));
+        btnPanDown?.addEventListener('click', () => map.panBy([0, FS_PAN_STEP_PX], { animate: true, duration: 0.25 }));
+        btnPanLeft?.addEventListener('click', () => map.panBy([-FS_PAN_STEP_PX, 0], { animate: true, duration: 0.25 }));
+        btnPanRight?.addEventListener('click', () => map.panBy([FS_PAN_STEP_PX, 0], { animate: true, duration: 0.25 }));
 
         refreshCascade('init');
     })();

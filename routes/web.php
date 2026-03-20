@@ -144,3 +144,5 @@ Route::get('luisespinal', function () {
 Route::get('/panel-aplazados-calor', [PanelAplazadosController::class, 'index'])->name('panel.aplazados');
 
 Route::get('/panel-aplazados-calor/opciones-ubicacion', [PanelAplazadosController::class, 'opcionesUbicacion'])->name('panel.aplazados.opciones');
+
+Route::get('/panel-aplazados-calor/centros-poblados', [PanelAplazadosController::class, 'centrosPoblados'])->name('panel.aplazados.centros');

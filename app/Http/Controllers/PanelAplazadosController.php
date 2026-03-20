@@ -6,6 +6,8 @@ use App\Models\Estadistica;
 use App\Models\School;
 use App\Models\Ubicacion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
 
 class PanelAplazadosController extends Controller
 {
@@ -112,6 +114,74 @@ class PanelAplazadosController extends Controller
         );
     }
 
+    public function centrosPoblados(Request $request)
+    {
+        $departamento = $this->normalizeFilter($request->get('departamento'));
+
+        if ($departamento === '') {
+            return response()->json([
+                'type' => 'FeatureCollection',
+                'features' => [],
+            ]);
+        }
+
+        $normalizedDept = $this->normalizeGeoText($departamento);
+        $cacheKey = 'panel_aplazados_centros_' . $normalizedDept;
+
+        $featureCollection = Cache::remember($cacheKey, now()->addHours(12), function () use ($normalizedDept) {
+            $geoPath = public_path('geo/bol_centros_poblados_2025.geojson');
+
+            if (!is_file($geoPath)) {
+                return ['type' => 'FeatureCollection', 'features' => []];
+            }
+
+            $raw = file_get_contents($geoPath);
+            if ($raw === false) {
+                return ['type' => 'FeatureCollection', 'features' => []];
+            }
+
+            $geo = json_decode($raw, true);
+            if (!is_array($geo) || !isset($geo['features']) || !is_array($geo['features'])) {
+                return ['type' => 'FeatureCollection', 'features' => []];
+            }
+
+            $features = [];
+            foreach ($geo['features'] as $feature) {
+                if (!is_array($feature)) {
+                    continue;
+                }
+
+                $geometry = $feature['geometry'] ?? null;
+                if (!is_array($geometry) || ($geometry['type'] ?? '') !== 'Point') {
+                    continue;
+                }
+
+                $props = $feature['properties'] ?? [];
+                $dep = $props['nom_dep'] ?? ($props['NOM_DEP'] ?? ($props['departamento'] ?? ''));
+
+                if (!$this->sameNormalizedDepartment($this->normalizeGeoText($dep), $normalizedDept)) {
+                    continue;
+                }
+
+                $features[] = [
+                    'type' => 'Feature',
+                    'properties' => [
+                        'etiqueta' => $props['etiqueta'] ?? 'Centro poblado',
+                        'nom_dep' => $dep,
+                    ],
+                    'geometry' => $geometry,
+                ];
+            }
+
+            return [
+                'type' => 'FeatureCollection',
+                'features' => $features,
+            ];
+        });
+
+        return response()->json($featureCollection);
+    }
+
     private function buildUbicacionOptions(string $departamento = '', string $provincia = '', string $municipio = ''): array
     {
         $departamentos = Ubicacion::query()
@@ -185,5 +255,21 @@ class PanelAplazadosController extends Controller
         }
 
         return $clean;
+    }
+
+    private function normalizeGeoText(?string $value): string
+    {
+        $ascii = Str::ascii((string) $value);
+        $upper = mb_strtoupper($ascii, 'UTF-8');
+        return (string) preg_replace('/[^A-Z]/', '', $upper);
+    }
+
+    private function sameNormalizedDepartment(string $a, string $b): bool
+    {
+        if ($a === '' || $b === '') {
+            return false;
+        }
+
+        return $a === $b || str_starts_with($a, $b) || str_starts_with($b, $a);
     }
 }
